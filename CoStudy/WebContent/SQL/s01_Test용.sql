@@ -4,4 +4,4 @@ insert into user_Info values(1,'kosta211','k1234','Ko','sta','010-1234-5678','07
 
 COMMIT;
 
-SELECT * FROM userinfo;
+SELECT * FROM user_info;
