@@ -8,7 +8,7 @@ import CoStudy.mapper.UserMapper;
 
 public class UserDao {
 	
-	public static UserDao u_dao=new UserDao();
+	private static UserDao u_dao=new UserDao();
 	
 	public static UserDao getInstance() {
 		return u_dao;

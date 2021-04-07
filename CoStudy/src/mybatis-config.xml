@@ -22,7 +22,7 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="CoStudy/mapper/User.xml"/>
+		<mapper resource="CoStudy/mapper/user.xml"/>
 	</mappers>
 	
 </configuration>

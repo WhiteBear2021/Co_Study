@@ -24,7 +24,7 @@ public class UserController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserDao u_dao=new UserDao();
+		UserDao u_dao=UserDao.getInstance();
 		UserVO user=u_dao.selectUser();
 		System.out.println(user);
 	}
