@@ -14,23 +14,23 @@
     <div class="form-group userUpdate">
         <h3>My Profile</h3>
         <input type="hidden" name="user_no" value="">
-        아이디 :  ${user.user_id}
+        이름 : 
         <br>
-        생년월일 : ${user.user_birth}
+        생년월일 : 
         <br>
-        이름 : ${user.user_lastName}${user.user_FirstName}
+        이름 : 
         <br>
-        휴대전화 번호 :${user.user_phoneNo }
+        휴대전화 번호 :
         <br>
-        우편번호 : ${user.user_post }
+        우편번호 : 
         <br>
-        주소 :	${user.user_address1 }
+        주소 :
         <br>
-        상세주소 : ${user.user_address2 }
+        상세주소 :
         <br>
-        이메일 주소 : ${user.user_email }
+        이메일 주소 : 
         <br>
-        가입일 : ${user.user_register_date }
+        가입일 : 
     </div>
 
 </body>
