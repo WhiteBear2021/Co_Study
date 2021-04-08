@@ -11,7 +11,7 @@ public class MyPageAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		forward.setPath("");
+		forward.setPath("../view/user/userProfile.jsp");
 		forward.setRedirect(false);
 		return forward;
 	}

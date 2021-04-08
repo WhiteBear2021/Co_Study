@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import CoStudy.action.manageUser.UserInfoAction;
+import CoStudy.action.user.MyPageAction;
 import CoStudy.action.user.SignUpAction;
 import CoStudy.action.user.SignUpFormAction;
-import CoStudy.dao.UserDao;
-import CoStudy.domain.UserVO;
+import CoStudy.action.user.UserUpdateAction;
+import CoStudy.action.user.UserUpdateFormAction;
 
 /**
  * Servlet implementation class UserController
@@ -44,6 +44,27 @@ public class UserController extends HttpServlet {
 			}    		
     	}else if(command.equals("signUpAction")) {
     		action = new SignUpAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("myPageAction")) {
+    		action = new MyPageAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("userUpdateFormAction")) {
+    		action = new UserUpdateFormAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("userUpdateAction")) {
+    		action = new UserUpdateAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
