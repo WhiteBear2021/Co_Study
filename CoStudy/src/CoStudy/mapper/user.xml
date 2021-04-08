@@ -9,8 +9,8 @@
   </select>
   
   <insert id = "insertUser" parameterType="User">
- 	insert into user values(
- 		USER_INFO_SEQ.NEXTVAL, #{user_no}, #{category_no}, #{user_id}, #{user_pw}, #{user_lastName}, #{user_firstName}, #{user_phoneNo}, #{user_post}, #{user_address1}, #{user_address2}, #{user_birth}, #{user_email}, SYSDATE
+ 	insert into user_info values(
+ 		seq_user_info.NEXTVAL, 1, #{user_id}, #{user_pw}, #{user_lastName}, #{user_firstName}, #{user_phoneNo}, #{user_post}, #{user_address1}, #{user_address2}, #{user_birth}, #{user_email}, SYSDATE
  	) 
   	
   </insert>

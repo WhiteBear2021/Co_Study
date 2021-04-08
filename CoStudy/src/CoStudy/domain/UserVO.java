@@ -8,7 +8,7 @@ public class UserVO {
 	private String user_lastName;			//회원 성
 	private String user_firstName;			//회원 이름
 	private String user_phoneNo;			//회원 전화번호
-	private String user_post;				//회원 주소1
+	private String user_post;				//우편번호
 	private String user_address1;			//회원 주소2
 	private String user_address2;			//회원 주소3
 	private String user_birth;				//회원 생년월일
@@ -16,7 +16,6 @@ public class UserVO {
 	private String user_register_date;		//회원 등록일
 	public UserVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public UserVO(int user_no, int category_no, String user_id, String user_pw, String user_lastName,
 			String user_firstName, String user_phoneNo, String user_post, String user_address1, String user_address2,

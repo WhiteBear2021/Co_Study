@@ -16,11 +16,12 @@ public class SignUpAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward = new ActionForward();
+		ActionForward forward= new ActionForward();
 		UserService service = UserService.getInstance();
-		service.insertUserService(request);
-		forward.setRedirect(true);
-		forward.setPath("userInfoAction.do");
+		int re=service.insertUserService(request);
+		System.out.println("insert 갯수:"+re);
+		forward.setRedirect(false);
+		forward.setPath("userInfo");
 		return forward;
 	}
 

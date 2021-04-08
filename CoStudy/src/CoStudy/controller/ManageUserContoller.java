@@ -1,6 +1,8 @@
 package CoStudy.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.manageUser.UserInfoAction;
-import CoStudy.action.user.SignUpAction;
 
 /**
  * Servlet implementation class ManageUserContoller
@@ -38,6 +39,15 @@ public class ManageUserContoller extends HttpServlet {
 				e.printStackTrace();
 			}
     		
+    	}
+    	
+    	if(forward != null) {
+    		if(forward.isRedirect()) {
+    			response.sendRedirect(forward.getPath());
+    		}else {
+    			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
+    			dispatcher.forward(request,response);
+    		}
     	}
 	}
 

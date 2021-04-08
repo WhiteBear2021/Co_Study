@@ -25,7 +25,7 @@ public class UserInfoAction implements Action {
 		request.setAttribute("userList", list);
 		
 		forward.setRedirect(false);
-		forward.setPath("/userList.jsp");
+		forward.setPath("../view/manager/userInfoList.jsp");
 		return forward;
 	}
 

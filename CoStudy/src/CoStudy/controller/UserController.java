@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.manageUser.UserInfoAction;
 import CoStudy.action.user.SignUpAction;
+import CoStudy.action.user.SignUpFormAction;
 import CoStudy.dao.UserDao;
 import CoStudy.domain.UserVO;
 
@@ -35,13 +36,19 @@ public class UserController extends HttpServlet {
     	CoStudy.action.ActionForward forward = null;
     	
     	if(command.equals("signUp")) {
+    		action = new SignUpFormAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}    		
+    	}else if(command.equals("signUpAction")) {
     		action = new SignUpAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
-    		
+			}   
     	}
     	
     	if(forward != null) {
