@@ -1,6 +1,8 @@
 package CoStudy.domain;
 
-public class UserVO {
+import java.io.Serializable;
+
+public class UserVO implements Serializable{
 	private int user_no;					//회원번호
 	private int category_no;				//카테고리번호
 	private String user_id;					//회원아이디

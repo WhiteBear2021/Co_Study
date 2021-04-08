@@ -20,8 +20,8 @@ public class SignUpAction implements Action{
 		UserService service = UserService.getInstance();
 		int re=service.insertUserService(request);
 		System.out.println("insert 갯수:"+re);
-		forward.setRedirect(false);
-		forward.setPath("userInfo");
+		forward.setRedirect(true);
+		forward.setPath("../manageUser/userInfo");
 		return forward;
 	}
 

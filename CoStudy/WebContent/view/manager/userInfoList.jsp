@@ -26,7 +26,7 @@
 			<td>작성일자</td>
 			<td>조회수</td> -->
 		</tr>
-		<c:forEach var="user" items="${list }">
+		<c:forEach var="user" items="${userList}">
 		<tr>	
 			<td>${user.user_no }</td>	
 			<td>${user.user_id}</td>
@@ -38,7 +38,7 @@
 			<td>${user.user_birth}</td>
 			<td>${user.user_email}</td>
 			<td>
-				<fmt:parseDate var="dt" value="${user.user_register_date }" pattern="yyyy-MM-dd"/>
+				<fmt:parseDate var="dt" value="${user.user_register_date }" pattern="yyyy-MM-dd "/>
 				<fmt:formatDate value="${dt }" pattern="yyyy/MM/dd"/>
 			</td>			
 		</tr>

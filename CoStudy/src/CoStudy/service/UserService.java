@@ -44,7 +44,7 @@ public class UserService {
 		user.setUser_birth(request.getParameter("user_birth"));
 		user.setUser_email(request.getParameter("user_email"));
 		user.setUser_register_date(request.getParameter("user_register_date"));		
-		
+		System.out.println(user);
 		return u_dao.insertUser(user);
 	}
 	
