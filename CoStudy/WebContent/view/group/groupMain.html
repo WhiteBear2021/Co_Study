@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="../../css/groupMain_style.css">
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+	
+    <script type="text/javascript" src="../../js/jquery.js" ></script>
+    <script type="text/javascript" src="../../js/timer.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../css/timer.css">
 </head>
 <body>
 <body>
@@ -16,24 +19,26 @@
 			<ul class="sidebar-nav">
 				<!--nav-->
 				<li>
-				   <nav id="side-userbox">
-					<input type="image" name="user_name" value="이름">
-				   </nav>
+					<nav id="side-userbox">
+						<input type="image" name="user_name" value="이름">
+					</nav>
 				</li>
 				<li>
-				   <nav id="side-timer">
-				   	TIMER
-				   </nav>
-				  </li>
-				<li>
-				   <nav id="side-todo">
-					TODO
-				   </nav>
+					<nav id="side-timer">
+						<section id="timer">
+							<span id="time_output">00:00:00</span><br>
+							<div class="content_center">
+								<input type="button" id="timer_bnt_save" value="저장"> 
+								<input type="button" id="timer_bnt_start" value="시작">
+							</div>
+						</section>
+					</nav>
 				</li>
 				<li>
-				   <nav id="side-groupschedule">
-					GroupSchedule
-				   </nav>
+					<nav id="side-todo">TODO</nav>
+				</li>
+				<li>
+					<nav id="side-groupschedule">GroupSchedule</nav>
 				</li>
 			</ul>
 		</div>
@@ -56,42 +61,39 @@
 <script
 	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
 <script src="../../js/side.js"></script>
-	<div class="container" id="groupMain-body">
-		<div id="background-body">
-			<div class="col-md-9" id="peed">
+<div class="container" id="groupMain-body">
+	<div id="background-body">
+		<div class="col-md-9" id="peed">
 			<a> 여긴 피드다 </a>
+		</div>
+		<div class="col-md-3" id="groupMain-right">
+			<div id="groupMain-right-top">
+				<div id="right-sidebar-gibox"></div>
+				<div id="right_sidebar_fileBox"></div>
 			</div>
-   <div class="col-md-3" id="groupMain-right">
-	<div id="groupMain-right-top">
-		<div id="right-sidebar-gibox">
-		</div>
-		<div id="right_sidebar_fileBox">
-		</div>
-	</div>
-	<div id="groupMain-right-bottom">
-		<div id="right-sidebar-userlist">
-			<table class="table table-hover" id="userlist">
-				<tr>
- 					 <td>...</td>
- 					 
-				</tr>	
-				<tr>
- 					 <td>...</td>
-				</tr>
-				<tr>
- 					 <td>...</td>
-				</tr>
-				<tr>
- 					 <td>...</td>
-				</tr>
-			</table>
-		</div>
-		<div id="right-sidebar-groupchat">
+			<div id="groupMain-right-bottom">
+				<div id="right-sidebar-userlist">
+					<table class="table table-hover" id="userlist">
+						<tr>
+							<td>...</td>
+
+						</tr>
+						<tr>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>...</td>
+						</tr>
+					</table>
+				</div>
+				<div id="right-sidebar-groupchat"></div>
+			</div>
 		</div>
 	</div>
-   </div>
-  </div>
-	</div>
-	
+</div>
+
 </body>
 </html>

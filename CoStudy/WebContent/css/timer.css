@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#time_output{
+    color: #FF9500!important;
+    font-size: 54px;
+}
+
+#timer_bnt_start{
+    color: #fff;
+    background-color: #59b87e;
+    border-color: #59b87e;
+}
+
+#timer_bnt_save{
+    color: #fff;
+    background-color: #fbad10;
+    border-color: #fbad10;
+}
+
+#timer{
+    display: inline-block;
+}
+
+.content_center{
+    text-align: center;
+}
