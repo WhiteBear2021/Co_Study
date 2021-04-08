@@ -32,5 +32,27 @@ public class UserDao {
 			}
 		}
 		return user;
-	}//selectMember() 끝
+	}//selectUser() 끝
+	
+	public int insertUser(UserVO user) {
+		
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		try {
+			re = sqlSession.getMapper(UserMapper.class).insertUser(user);
+			if(re>0) {
+				sqlSession.commit(); //이거 해줘야 insert됨...
+			}else {
+				sqlSession.rollback();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null)
+				sqlSession.close();
+		}
+		return re;
+		
+	}//insertUser함수 끝
 }
