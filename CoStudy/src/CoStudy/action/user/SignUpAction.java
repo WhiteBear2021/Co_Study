@@ -15,7 +15,7 @@ public class SignUpAction implements Action{
 		UserService service = UserService.getInstance();
 		service.insertUserService(request);
 		forward.setRedirect(true);
-		
+		forward.setPath("userInfoAction.do");
 		return forward;
 	}
 
