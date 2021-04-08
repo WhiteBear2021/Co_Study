@@ -10,45 +10,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.manageUser.UserInfoAction;
-import CoStudy.action.user.SignUpAction;
-import CoStudy.action.user.SignUpFormAction;
-import CoStudy.dao.UserDao;
-import CoStudy.domain.UserVO;
 
 /**
- * Servlet implementation class UserController
+ * Servlet implementation class ManageUserContoller
  */
-@WebServlet("/user/*")
-public class UserController extends HttpServlet {
+@WebServlet("/manageUser/*")
+public class ManageUserContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
-    public UserController() {
+    public ManageUserContoller() {
         super();
     }
-
+    
     private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	String requestURI = request.getRequestURI();
     	String contextPath = request.getContextPath();
-    	String command = requestURI.substring(contextPath.length()+6);
-    	System.out.println("최종요청: "+command);
+    	String command = requestURI.substring(contextPath.length()+12);
+    	System.out.println("최종요청2: "+command);
     	
     	CoStudy.action.Action action = null;
     	CoStudy.action.ActionForward forward = null;
     	
-    	if(command.equals("signUp")) {
-    		action = new SignUpFormAction();
+    	if(command.equals("userInfo")) {
+    		action = new UserInfoAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}    		
-    	}else if(command.equals("signUpAction")) {
-    		action = new SignUpAction();
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}   
+			}
+    		
     	}
     	
     	if(forward != null) {
