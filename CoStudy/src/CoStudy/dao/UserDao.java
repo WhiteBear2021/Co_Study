@@ -1,5 +1,7 @@
 package CoStudy.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
@@ -22,13 +24,11 @@ public class UserDao {
 			user=sqlSession.getMapper(UserMapper.class).selectUser();
 		} catch (Exception e) {
 			e.printStackTrace();
-			// TODO: handle exception
 		}finally {
 			try {
 				if(sqlSession!=null)sqlSession.close();
 			} catch (Exception e2) {
 				e2.printStackTrace();
-				// TODO: handle exception
 			}
 		}
 		return user;
@@ -55,4 +55,21 @@ public class UserDao {
 		return re;
 		
 	}//insertUser함수 끝
+	
+public List<UserVO> userInfo() {
+		
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		List<UserVO> list = null;
+		try {
+			list = sqlSession.getMapper(UserMapper.class).userInfo();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null)
+				sqlSession.close();
+		}
+	
+		return list;
+	}//userInfo 함수 끝
 }
