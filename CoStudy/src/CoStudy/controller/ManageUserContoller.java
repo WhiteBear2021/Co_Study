@@ -25,8 +25,8 @@ public class ManageUserContoller extends HttpServlet {
     private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	String requestURI = request.getRequestURI();
     	String contextPath = request.getContextPath();
-    	String command = requestURI.substring(contextPath.length()+6);
-    	System.out.println("최종요청: "+command);
+    	String command = requestURI.substring(contextPath.length()+12);
+    	System.out.println("최종요청2: "+command);
     	
     	CoStudy.action.Action action = null;
     	CoStudy.action.ActionForward forward = null;
@@ -52,11 +52,11 @@ public class ManageUserContoller extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		doProcess(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		doProcess(request, response);
 	}
 
 }
