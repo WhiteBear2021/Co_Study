@@ -13,7 +13,7 @@ import CoStudy.domain.UserVO;
 /**
  * Servlet implementation class UserController
  */
-@WebServlet("/User/*")
+@WebServlet("/user/*")
 public class UserController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
