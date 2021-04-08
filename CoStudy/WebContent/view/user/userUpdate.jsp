@@ -11,26 +11,26 @@
 </head>
 <body>
    
-    <div class="form-group userUpdate">
+    <div class="form-group">
         <h3>My Profile</h3>
         <input type="hidden" name="user_no" value="">
-        아이디 :  ${user.user_id}
+        아이디 :  ${sessionScope.user.user_id}
         <br>
-        생년월일 : ${user.user_birth}
+        생년월일 : ${sessionScope.user.user_birth}
         <br>
-        이름 : ${user.user_lastName}${user.user_FirstName}
+        이름 : ${sessionScope.user.user_lastName}${sessionScope.user.user_FirstName}
         <br>
-        휴대전화 번호 :${user.user_phoneNo }
+        휴대전화 번호 :${sessionScope.user.user_phoneNo }
         <br>
-        우편번호 : ${user.user_post }
+        우편번호 : ${sessionScope.user.user_post }
         <br>
-        주소 :	${user.user_address1 }
+        주소 :	${sessionScope.user.user_address1 }
         <br>
-        상세주소 : ${user.user_address2 }
+        상세주소 : ${sessionScope.user.user_address2 }
         <br>
-        이메일 주소 : ${user.user_email }
+        이메일 주소 : ${sessionScope.user.user_email }
         <br>
-        가입일 : ${user.user_register_date }
+        가입일 : ${sessionScope.user.user_register_date }
     </div>
 
 </body>
