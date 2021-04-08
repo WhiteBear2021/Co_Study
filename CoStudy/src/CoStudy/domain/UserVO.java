@@ -1,14 +1,16 @@
 package CoStudy.domain;
 
-public class UserVO {
+import java.io.Serializable;
+
+public class UserVO implements Serializable{
 	private int user_no;					//회원번호
-	private String category_no;				//카테고리번호
+	private int category_no;				//카테고리번호
 	private String user_id;					//회원아이디
 	private String user_pw;					//회원비밀번호
 	private String user_lastName;			//회원 성
 	private String user_firstName;			//회원 이름
 	private String user_phoneNo;			//회원 전화번호
-	private String user_post;			//회원 주소1
+	private String user_post;				//우편번호
 	private String user_address1;			//회원 주소2
 	private String user_address2;			//회원 주소3
 	private String user_birth;				//회원 생년월일
@@ -16,9 +18,8 @@ public class UserVO {
 	private String user_register_date;		//회원 등록일
 	public UserVO() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public UserVO(int user_no, String category_no, String user_id, String user_pw, String user_lastName,
+	public UserVO(int user_no, int category_no, String user_id, String user_pw, String user_lastName,
 			String user_firstName, String user_phoneNo, String user_post, String user_address1, String user_address2,
 			String user_birth, String user_email, String user_register_date) {
 		super();
@@ -42,10 +43,10 @@ public class UserVO {
 	public void setUser_no(int user_no) {
 		this.user_no = user_no;
 	}
-	public String getCategory_no() {
+	public int getCategory_no() {
 		return category_no;
 	}
-	public void setCategory_no(String category_no) {
+	public void setCategory_no(int category_no) {
 		this.category_no = category_no;
 	}
 	public String getUser_id() {
@@ -122,6 +123,6 @@ public class UserVO {
 				+ ", user_address2=" + user_address2 + ", user_birth=" + user_birth + ", user_email=" + user_email
 				+ ", user_register_date=" + user_register_date + "]";
 	}
-
+	
 	
 }
