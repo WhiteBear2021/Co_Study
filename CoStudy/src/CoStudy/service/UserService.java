@@ -1,6 +1,6 @@
 package CoStudy.service;
 
-import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -31,8 +31,8 @@ public class UserService {
 	public int insertUserService(HttpServletRequest request) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		UserVO user= new UserVO();
-		user.setUser_no(Integer.parseInt(request.getParameter("user_no")));
-		user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
+		//user.setUser_no(Integer.parseInt(request.getParameter("user_no")));
+		//user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
 		user.setUser_id(request.getParameter("user_id"));
 		user.setUser_pw(request.getParameter("user_pw"));
 		user.setUser_lastName(request.getParameter("user_lastName"));
@@ -46,5 +46,11 @@ public class UserService {
 		user.setUser_register_date(request.getParameter("user_register_date"));		
 		
 		return u_dao.insertUser(user);
+	}
+	
+	public List<UserVO> userInfoService(HttpServletRequest request) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		
+		return u_dao.userInfo();
 	}
 }
