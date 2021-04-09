@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="../managerAsset/css/style.css">
+    <link rel="stylesheet" href="../../managerAsset/css/style.css">
     <style>
         body {
             background-color: #3D5A5B;

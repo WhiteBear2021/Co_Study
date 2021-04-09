@@ -19,7 +19,7 @@ public class SignUpAction implements Action{
 		ActionForward forward= new ActionForward();
 		UserService service = UserService.getInstance();
 		forward.setRedirect(true);
-		forward.setPath("../manageUser/userInfo");
+		forward.setPath("../user/login");
 		return forward;
 	}
 
