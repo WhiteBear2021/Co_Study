@@ -7,6 +7,7 @@
 	<properties resource="CoStudy/config/jdbc.properties" />
 	<typeAliases>
 		<typeAlias type="CoStudy.domain.UserVO" alias="User"/>
+		<typeAlias type="CoStudy.domain.LoginVO" alias="Login"/>
 	</typeAliases>
 	
 	<environments default="development">

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import CoStudy.dao.UserDao;
+import CoStudy.domain.LoginVO;
 import CoStudy.domain.UserVO;
 
 public class UserService {
@@ -49,8 +50,13 @@ public class UserService {
 	}
 	
 	public List<UserVO> userInfoService(HttpServletRequest request) throws Exception {
-		request.setCharacterEncoding("utf-8");
-		
 		return u_dao.userInfo();
+	}
+	
+	public UserVO login(HttpServletRequest request) throws Exception{
+		LoginVO login = new LoginVO();
+		login.setUserId(request.getParameter("userId"));
+		login.setUserPw(request.getParameter("userPw"));
+		return u_dao.login(login);
 	}
 }

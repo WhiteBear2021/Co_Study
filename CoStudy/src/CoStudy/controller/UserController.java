@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import CoStudy.action.user.LoginAction;
+import CoStudy.action.user.LoginFormAction;
 import CoStudy.action.user.MyPageAction;
 import CoStudy.action.user.SignUpAction;
 import CoStudy.action.user.SignUpFormAction;
@@ -26,8 +28,8 @@ public class UserController extends HttpServlet {
         super();
     }
 
-    private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String requestURI = request.getRequestURI();
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String requestURI = request.getRequestURI();
     	String contextPath = request.getContextPath();
     	String command = requestURI.substring(contextPath.length()+6);
     	System.out.println("최종요청: "+command);
@@ -70,6 +72,20 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
+    	}else if(command.equals("login")) {
+    		action = new LoginFormAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}  
+    	}else if(command.equals("loginAction")) {
+    		action = new LoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}  
     	}
     	
     	if(forward != null) {
@@ -82,12 +98,8 @@ public class UserController extends HttpServlet {
     	}
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doProcess(request, response);
-	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doProcess(request, response);
+		doGet(request, response);
 	}
 
 }

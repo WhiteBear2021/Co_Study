@@ -3,15 +3,21 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.UserMapper">
-<cache />
-  <select id="userInfo" resultType="User">
-    select * from User_Info
-  </select>
-  
-  <insert id = "insertUser" parameterType="User">
- 	insert into user_info values(
- 		seq_user_info.NEXTVAL, #{user_id}, #{user_pw}, #{user_lastName}, #{user_firstName}, #{user_phoneNo}, #{user_post}, sysdate,  #{user_email},1, #{user_address1}, #{user_address2}, SYSDATE
- 	) 
-  	
-  </insert>
+	<cache />
+	<select id="userInfo" resultType="User">
+		select * from User_Info
+	</select>
+
+	<insert id="insertUser" parameterType="User">
+		insert into user_info values(
+		seq_user_info.NEXTVAL, #{user_id}, #{user_pw}, #{user_lastName}, #{user_firstName},
+		#{user_phoneNo}, #{user_post}, sysdate, #{user_email}, 1,
+		#{user_address1}, #{user_address2}, SYSDATE
+		)
+
+	</insert>
+
+	<select id="login" parameterType="Login" resultType = "User">
+		select * from user_info where user_id=#{userId} and user_pw = #{userPw}
+	</select>
 </mapper>
