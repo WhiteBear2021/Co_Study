@@ -15,11 +15,12 @@ public class LoginAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		UserService service = UserService.getInstance();	     
-		forward.setRedirect(true);
-		forward.setPath("../manageUser/userInfo");
+		HttpSession session = request.getSession();
+		UserService service = UserService.getInstance();	     		
 		UserVO user = service.login(request);
-		System.out.println(user);
+		session.setAttribute("user", user);
+		forward.setRedirect(true);
+		forward.setPath("../index.jsp");
 		return forward;
 	}
 

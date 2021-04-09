@@ -45,7 +45,7 @@ public class UserDao {
 		try {
 			re = sqlSession.getMapper(UserMapper.class).insertUser(user);
 			if (re > 0) {
-				sqlSession.commit(); // 이거 해줘야 insert됨...
+				sqlSession.commit(); 
 			} else {
 				sqlSession.rollback();
 			}

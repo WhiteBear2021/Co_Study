@@ -4,12 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인</title>
 </head>
 <body class="hold-transition login-page">
 	<div class="login-box-body">
 		<p class="login-box-msg">로그인 페이지</p>
 		<form action="../../user/loginAction" method="post">
+			<div>
+				<input type='radio' name='member' value='user' checked/>회원
+				<input type='radio' name='member' value='user' />관리자
+			</div>
 			<div class ="form-group has-feedback">
 				<input type ="text" name ="userId" placeholder="아이디">
 			</div>
