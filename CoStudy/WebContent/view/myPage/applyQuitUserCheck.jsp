@@ -3,10 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width", initial-scale="1">
+<link rel="stylesheet" href="/CoStudy/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="/CoStudy/css/main.css">
+<link rel="stylesheet" href="/CoStudy/css/flaticon.css">
+<link rel="stylesheet" href="/CoStudy/css/slicknav.css">
+<link rel="stylesheet" href="/CoStudy/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/CoStudy/css/style.css">
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="../common/header.jsp"></jsp:include> 
 	<section>
 
 			<nav>
@@ -21,7 +29,7 @@
 	   			</ul>
 	   		</nav>
 	   		
-	   	<h2>본인 확인</h2>
+	   	<h3>본인 확인 Check</h3>
 	    <p>회원 정보 확인을 위하여 비밀번호를 입력하세요</p>
 	    <p>${sessionScope.user.user_id}</p>
 	    <form action="applyQuitUser" method="post">

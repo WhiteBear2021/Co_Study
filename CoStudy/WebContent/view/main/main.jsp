@@ -44,29 +44,21 @@
                                     <a href="#">마이페이지</a>
                                         <ul class="submenu">
                                             <li>
-                                            <a href="#">나의 프로필</a>
+                                            <a href="/CoStudy/user/myPageAction.do">나의 프로필</a>
                                             </li>
                                             <li>
-                                            <a href="#">공부 일기</a>
+                                            <a href="/CoStudy/myPage/studyDiaryListAction.do">공부 일기</a>
                                             </li>
                                             <li>
-                                            <a href="#">일정 관리</a>
+                                            <a href="/CoStudy/myPage/scheduleListAction.do">일정 관리</a>
                                             </li>
                                             <li>
-                                            <a href="#">1:1 채팅 목록</a>
+                                            <a href="/CoStudy/myPage/joinGroupListAction.do">1:1 채팅 목록</a>
                                             </li>
                                             <li>
-                                            <a href="#">참가 그룹 목록</a>
+                                            <a href="/CoStudy/myPage/joinGroupListAction.do">참가 그룹 목록</a>
                                             </li>
-                                            <li>
-                                            <a href="#">공부 일기</a>
-                                            </li>
-                                            <li>
-                                            <a href="#">공부 일기</a>
-                                            </li>
-                                            <li>
-                                            <a href="#">공부 일기</a>
-                                            </li>
+
                                         </ul>
                                     </li>
                                     <li>
