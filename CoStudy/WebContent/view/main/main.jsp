@@ -44,10 +44,28 @@
                                     <a href="#">마이페이지</a>
                                         <ul class="submenu">
                                             <li>
-                                            <a href="#">contact4_1</a>
+                                            <a href="#">나의 프로필</a>
                                             </li>
                                             <li>
-                                            <a href="#">contact4_2</a>
+                                            <a href="#">공부 일기</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">일정 관리</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">1:1 채팅 목록</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">참가 그룹 목록</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">공부 일기</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">공부 일기</a>
+                                            </li>
+                                            <li>
+                                            <a href="#">공부 일기</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -120,10 +138,28 @@
                                         </a>
                                         <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
                                             <li>
-                                            <a href="#" role="menuitem" tabindex="-1">contact4_1</a>
+                                            <a href="#" role="menuitem" tabindex="-1">나의 프로필</a>
                                             </li>
                                             <li>
-                                            <a href="#" role="menuitem" tabindex="-1">contact4_2</a>
+                                            <a href="#" role="menuitem" tabindex="-1">공부 일기</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">일정 관리</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">1:1 치탱 목록</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">참가 그룹 목록</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">관심분야 수정</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">회원정보 수정</a>
+                                            </li>
+                                            <li>
+                                            <a href="#" role="menuitem" tabindex="-1">회원 탈퇴 신청</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -173,26 +209,14 @@
   </div>
 
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
-   crossorigin="anonymous">
-   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
-   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
-   crossorigin="anonymous">
-   </script> 
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-   </script> 
-   <script> $('.carousel').carousel({ interval: 2000 //기본 5초 }) </script> 
+
    <div id="demo" class="carousel slide" data-ride="carousel"> 
    <div class="carousel-inner">
     <!-- 슬라이드 쇼 --> 
     <div class="carousel-item active"> <!--가로-->
      <img class="d-block w-100" src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="First slide"> 
      <div class="carousel-caption d-none d-md-block">
-      <h5>TEST</h5> 
-      <p>testtesttest</p> 
+     
       </div> 
       </div> 
       <div class="carousel-item"> 
@@ -227,7 +251,7 @@
 
 
 	<footer class="container-fluid navbar-fixed-bottom" id="foo">
-		<h3 class="text-secondary">(주)Costudy 사업자 정보</h3>
+		<h3 class="text-secondary" id="fo">(주)Costudy 사업자 정보</h3>
 		<p>(주)Costudy | 경기도 시흥시 황고개로 206번길 43</p>
 		<p>
 			CEO : 안주원 | Git Master : 박현우 | 사업자등록번호 : 941602-00-035792 <span
@@ -247,5 +271,19 @@
 	<script src="../../js/jquery.slicknav.min.js"></script>
 
 	<script src="../../css/js/main.js"></script>
+	
+	
+	   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+   crossorigin="anonymous">
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+   crossorigin="anonymous">
+   </script> 
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+   </script> 
+ <script> $('.carousel').carousel({ interval: 2000 }) </script>  
 </body>
 </html>
