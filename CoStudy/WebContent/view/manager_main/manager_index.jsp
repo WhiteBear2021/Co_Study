@@ -60,7 +60,7 @@ body {
 								class="feather icon-layout"></i></span><span class="pcoded-mtext">사용자
 								관리</span></a>
 						<ul class="pcoded-submenu">
-							<li><a href="#" target="_blank">전체 회원 리스트</a></li>
+							<li><a href="userInfo.do" target="_blank">전체 회원 리스트</a></li>
 							<li><a href="#" target="_blank">통계_회원</a></li>
 							<li><a href="#" target="_blank">새로운 회원</a></li>
 						</ul></li>
