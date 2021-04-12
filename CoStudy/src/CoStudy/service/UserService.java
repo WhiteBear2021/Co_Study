@@ -39,13 +39,12 @@ public class UserService {
 		user.setUser_lastName(request.getParameter("user_lastName"));
 		user.setUser_firstName(request.getParameter("user_firstName"));
 		user.setUser_phoneNo(request.getParameter("user_phoneNo"));
-		user.setUser_post(request.getParameter("user_post"));
-		user.setUser_address1(request.getParameter("user_address1"));
-		user.setUser_address2(request.getParameter("user_address2"));
+		user.setUser_address1(request.getParameter("addr2"));
+		user.setUser_address2(request.getParameter("addr3"));
+		user.setUser_post(request.getParameter("addr1"));
 		user.setUser_birth(request.getParameter("user_birth"));
 		user.setUser_email(request.getParameter("user_email"));
 		user.setUser_register_date(request.getParameter("user_register_date"));		
-		System.out.println(user);
 		return u_dao.insertUser(user);
 	}
 	

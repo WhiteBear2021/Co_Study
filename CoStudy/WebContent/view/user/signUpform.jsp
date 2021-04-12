@@ -11,66 +11,31 @@
 <meta name="keywords" content="Colorlib Templates">
 
 <title>회원가입</title>
-
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="../../signUp/js/addressapi.js"></script>
 <!-- Icons font CSS-->
 <link
 	href="../../signUp/vendor/mdi-font/css/material-design-iconic-font.min.css"
 	rel="stylesheet" media="all">
-<link href="../../signUp/vendor/font-awesome-4.7/css/font-awesome.min.css"
+<link
+	href="../../signUp/vendor/font-awesome-4.7/css/font-awesome.min.css"
 	rel="stylesheet" media="all">
-	
+
 <!-- Font special for pages-->
 <link
 	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
 	rel="stylesheet">
-	
+
 <!-- Vendor CSS-->
-<link href="../../signUp/vendor/select2/select2.min.css" rel="stylesheet"
-	media="all">
+<link href="../../signUp/vendor/select2/select2.min.css"
+	rel="stylesheet" media="all">
 <link href="../../signUp/vendor/datepicker/daterangepicker.css"
 	rel="stylesheet" media="all">
-	
+
 <!-- Main CSS-->
 <link href="../../signUp/css/main.css" rel="stylesheet" media="all">
 
 </head>
-<!-- <body>
-	<h3>회원가입</h3>
-	<hr>
-	<br>
-	
-	<form>
-		<table>
-			아이디:
-			<input type="text" name="user_id">
-			<br> 비밀번호:
-			<input type="text" name="user_pw">
-			<br> 성:
-			<input type="text" name="user_lastName">
-			<br> 이름:
-			<input type="text" name="user_firstName">
-			<br> 전화번호:
-			<input type="text" name="user_phoneNo">
-			<br> 우편번호:
-			<input type="text" name="user_post">
-			<br> 간단주소:
-			<input type="text" name="user_address1">
-			<br> 상세주소:
-			<input type="text" name="user_address2">
-			<br> 생년월일:
-			<input type="date" name="user_birth">
-			<br> 이메일:
-			<input type="text" name="user_email">
-			<br> 관심분야:
-			<input type="checkbox" name="category_no" value="IT/컴퓨터">IT/컴퓨터
-			<input type="checkbox" name="category_no" value="외국어">외국어
-			<input type="checkbox" name="category_no" value="취업">취업
-		</table>
-		
-
-	</form>
-
-</body> -->
 <body>
 	<div class="page-wrapper p-t-45 p-b-50">
 		<div class="wrapper wrapper--w790">
@@ -79,15 +44,15 @@
 					<h2 class="title">회원가입</h2>
 				</div>
 				<div class="card-body">
-					<form action = "../../user/signUpAction" method = "post">
+					<form action="../../user/signUpAction" method="post">
 						<div class="form-row m-b-55">
 							<div class="name">이름</div>
 							<div class="value">
 								<div class="row row-space">
 									<div class="col-2">
 										<div class="input-group-desc">
-											<input class="input--style-5" type="text" name="user_lastName">
-											<label class="label--desc">성</label>
+											<input class="input--style-5" type="text"
+												name="user_lastName"> <label class="label--desc">성</label>
 										</div>
 									</div>
 									<div class="col-2">
@@ -131,6 +96,42 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="form-row">
+							<div class="name">주소</div>
+							<div class="value">
+								<div class="row row-space">
+									<div class="col-2">
+										<div class="input-group-desc">
+											<input class="input--style-5" type="text" placeholder="우편번호"
+												name="addr1">
+										</div>
+									</div>
+									<div class="col-2">
+										<input type="button" class="btn btn--radius-2 btn--blue"
+											onclick="execPostCode();" value="우편번호 찾기"><br>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="name"></div>
+							<div class="value">
+								<div class="input-group">
+									<input class="input--style-5" type="text" name="addr2"
+										placeholder="주소">
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="name"></div>
+							<div class="value">
+								<div class="input-group">
+									<input class="input--style-5"  type="text" name="addr3"
+										placeholder="상세주소">
+								</div>
+							</div>
+						</div>
 						<div class="form-row">
 							<div class="name">생년월일</div>
 							<div class="value">
@@ -139,7 +140,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="form-row">
 							<div class="name">관심분야</div>
 							<div class="value">
@@ -168,7 +169,7 @@
 
 	<!-- Jquery JS-->
 	<script src="../../signUp/vendor/jquery/jquery.min.js"></script>
-	
+
 	<!-- Vendor JS-->
 	<script src="../../signUp/vendor/select2/select2.min.js"></script>
 	<script src="../../signUp/vendor/datepicker/moment.min.js"></script>
