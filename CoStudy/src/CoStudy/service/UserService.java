@@ -32,7 +32,7 @@ public class UserService {
 	public int insertUserService(HttpServletRequest request) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		UserVO user= new UserVO();
-		//user.setUser_no(Integer.parseInt(request.getParameter("user_no")));
+		
 		//user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
 		user.setUser_id(request.getParameter("user_id"));
 		user.setUser_pw(request.getParameter("user_pw"));

@@ -17,7 +17,7 @@ public class noticeDeleteAction implements Action {
 		service.noticeDeleteService(request);
 		
 		actionForward.setRedirect(true);
-		actionForward.setPath("noticeInfoAction");
+		actionForward.setPath("noticeInfoAction.do");
 
 		
 		return actionForward;

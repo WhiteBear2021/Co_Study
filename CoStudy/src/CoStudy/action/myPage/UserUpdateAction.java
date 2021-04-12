@@ -2,6 +2,7 @@ package CoStudy.action.myPage;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
@@ -22,7 +23,8 @@ public class UserUpdateAction implements Action {
 		String user_address1=request.getParameter("user_address1");
 		String user_address2=request.getParameter("user_address2");
 		String user_email=request.getParameter("user_email");
-		UserVO user=new UserVO();
+		HttpSession session=request.getSession();
+		UserVO user=(UserVO)session.getAttribute("user");
 		user.setUser_no(user_no);
 		user.setUser_pw(user_pw);
 		user.setUser_lastName(user_lastName);
@@ -34,8 +36,11 @@ public class UserUpdateAction implements Action {
 		user.setUser_email(user_email);
 		MyPageService service=MyPageService.getInstance();
 		int re=service.updateUser(user);
+		if(re>0) {
+			session.setAttribute("user", user);
+		}
 		System.out.println("update 갯수:"+re);
-		forward.setPath("../index.html");
+		forward.setPath("/CoStudy/user/myPageAction.do");
 		forward.setRedirect(true);
 		return forward;
 

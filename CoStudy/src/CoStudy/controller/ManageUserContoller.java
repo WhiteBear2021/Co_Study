@@ -32,7 +32,7 @@ public class ManageUserContoller extends HttpServlet {
 		CoStudy.action.Action action = null;
 		CoStudy.action.ActionForward forward = null;
 
-		if (command.equals("userInfo")) {
+		if (command.equals("userInfo.do")) {
 			action = new UserInfoAction();
 			try {
 				forward = action.execute(request, response);
