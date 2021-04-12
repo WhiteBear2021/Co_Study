@@ -44,42 +44,42 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}    		
-    	}else if(command.equals("signUpAction")) {
+    	}else if(command.equals("signUpAction.do")) {
     		action = new SignUpAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("myPageAction")) {
+    	}else if(command.equals("myPageAction.do")) {
     		action = new MyPageAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("userUpdateFormAction")) {
+    	}else if(command.equals("userUpdateFormAction.do")) {
     		action = new UserUpdateFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("userUpdateAction")) {
+    	}else if(command.equals("userUpdateAction.do")) {
     		action = new UserUpdateAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("login")) {
+    	}else if(command.equals("login.do")) {
     		action = new LoginFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}  
-    	}else if(command.equals("loginAction")) {
+    	}else if(command.equals("loginAction.do")) {
     		action = new LoginAction();
     		try {
 				forward = action.execute(request, response);

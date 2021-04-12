@@ -16,7 +16,7 @@ public class noticeCreateAction implements Action {
 		
 		service.noticeCreateService(request);
 		actionForward.setRedirect(true);
-		actionForward.setPath("noticeInfoAction");
+		actionForward.setPath("noticeInfoAction.do");
 		return actionForward;
 	}
 
