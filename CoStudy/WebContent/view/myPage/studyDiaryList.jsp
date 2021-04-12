@@ -8,7 +8,7 @@
 </head>
 <body>
 	<section>
-
+		
 			<nav>
 	   			<ul>
 	                <li><a href="/CoStudy/myPage/studyDiaryListAction.do">공부일기 아이콘1</a></li>
@@ -21,7 +21,7 @@
 	   			</ul>
 	   		</nav>
 	   		
-	   		<h2>참여 그룹 목록</h2>
+	   		<h2>공부일기 목록</h2>
 	</section>
 </body>
 </html>
