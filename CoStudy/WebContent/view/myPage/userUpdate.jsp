@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
-<link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../../css/user.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/user.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
     <section>
         <h3>My Profile</h3>
         <div class="form-group">
-			<form action="../../myPage/userUpdateAction" method="post">
+			<form action="userUpdateAction" method="post">
 			        <input type="hidden" name="user_no" value="${user.user_no}">
 			        <label>
 			        	아이디 : ${sessionScope.user.user_id}

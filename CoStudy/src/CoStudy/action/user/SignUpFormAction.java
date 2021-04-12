@@ -14,8 +14,8 @@ public class SignUpFormAction implements Action{
 		
 		ActionForward forward = new ActionForward();
 		UserService service = UserService.getInstance();
-		forward.setRedirect(true);
-		forward.setPath("../view/user/signUpform.jsp");
+		forward.setRedirect(false);
+		forward.setPath("/view/user/signUpform.jsp");
 		return forward;
 	}
 
