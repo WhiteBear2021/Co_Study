@@ -1,10 +1,11 @@
 package CoStudy.service;
 
-import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import CoStudy.dao.UserDao;
+import CoStudy.domain.LoginVO;
 import CoStudy.domain.UserVO;
 
 public class UserService {
@@ -31,8 +32,8 @@ public class UserService {
 	public int insertUserService(HttpServletRequest request) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		UserVO user= new UserVO();
-		user.setUser_no(Integer.parseInt(request.getParameter("user_no")));
-		user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
+		//user.setUser_no(Integer.parseInt(request.getParameter("user_no")));
+		//user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
 		user.setUser_id(request.getParameter("user_id"));
 		user.setUser_pw(request.getParameter("user_pw"));
 		user.setUser_lastName(request.getParameter("user_lastName"));
@@ -44,7 +45,18 @@ public class UserService {
 		user.setUser_birth(request.getParameter("user_birth"));
 		user.setUser_email(request.getParameter("user_email"));
 		user.setUser_register_date(request.getParameter("user_register_date"));		
-		
+		System.out.println(user);
 		return u_dao.insertUser(user);
+	}
+	
+	public List<UserVO> userInfoService(HttpServletRequest request) throws Exception {
+		return u_dao.userInfo();
+	}
+	
+	public UserVO login(HttpServletRequest request) throws Exception{
+		LoginVO login = new LoginVO();
+		login.setUserId(request.getParameter("userId"));
+		login.setUserPw(request.getParameter("userPw"));
+		return u_dao.login(login);
 	}
 }

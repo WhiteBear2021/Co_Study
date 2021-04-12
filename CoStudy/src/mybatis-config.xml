@@ -7,6 +7,8 @@
 	<properties resource="CoStudy/config/jdbc.properties" />
 	<typeAliases>
 		<typeAlias type="CoStudy.domain.UserVO" alias="User"/>
+		<typeAlias type="CoStudy.domain.LoginVO" alias="Login"/>
+		<typeAlias type="CoStudy.domain.NoticeVO" alias="Notice"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -23,6 +25,9 @@
 	
 	<mappers>
 		<mapper resource="CoStudy/mapper/user.xml"/>
+		<mapper resource="CoStudy/mapper/notice.xml"/>
+		<mapper resource="CoStudy/mapper/myPage.xml"/>		
+		
 	</mappers>
 	
 </configuration>
