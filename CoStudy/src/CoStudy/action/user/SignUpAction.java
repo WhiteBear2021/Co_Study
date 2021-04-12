@@ -21,7 +21,7 @@ public class SignUpAction implements Action{
 		int re=service.insertUserService(request);
 		System.out.println("insert 갯수:"+re);
 		forward.setRedirect(true);
-		forward.setPath("../user/login");
+		forward.setPath("login.do");
 		return forward;
 	}
 

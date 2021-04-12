@@ -39,7 +39,7 @@ public class NoticeController extends HttpServlet {
 		Action action = null;
 		ActionForward actionForward = null;
 
-		if (command.equals("noticeInfoAction")) {
+		if (command.equals("noticeInfoAction.do")) {
 			action = new noticeInfoAction();
 
 			try {
@@ -48,42 +48,42 @@ public class NoticeController extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		} else if (command.equals("noticeAction")) {
+		} else if (command.equals("noticeAction.do")) {
 			action = new noticeAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if (command.equals("noticeCreateAction")) {
+		}else if (command.equals("noticeCreateAction.do")) {
 			action = new noticeCreateAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if (command.equals("noticeDetailAction")) {
+		}else if (command.equals("noticeDetailAction.do")) {
 			action = new noticeDetailAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if (command.equals("noticeUpdateAction")) {
+		}else if (command.equals("noticeUpdateAction.do")) {
 			action = new noticeUpdateAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if (command.equals("noticeUpdateFormAction")) {
+		}else if (command.equals("noticeUpdateFormAction.do")) {
 			action = new noticeUpdateFormAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if (command.equals("noticeDeleteAction")) {
+		}else if (command.equals("noticeDeleteAction.do")) {
 			action = new noticeDeleteAction();
 			try {
 				actionForward = action.execute(request, response);

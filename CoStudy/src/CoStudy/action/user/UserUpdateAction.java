@@ -11,8 +11,8 @@ public class UserUpdateAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		forward.setPath("index.html");
 		forward.setRedirect(true);
+		forward.setPath("index.html");
 		return forward;
 	}
 
