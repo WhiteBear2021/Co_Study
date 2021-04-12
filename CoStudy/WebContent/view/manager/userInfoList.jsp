@@ -5,10 +5,10 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
-<jsp:include page="../../managerModule/head.jsp"></jsp:include><hr>
+<jsp:include page="../managerModule/head.jsp"></jsp:include><hr>
 <body class="">
 
-	<jsp:include page="../../managerModule/header.jsp"></jsp:include><hr>
+	<jsp:include page="../managerModule/header.jsp"></jsp:include><hr>
 
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
@@ -92,5 +92,5 @@
 		</div>
 	</div>
 </body>
-<jsp:include page="../../managerModule/footer.jsp"></jsp:include><hr>
+<jsp:include page="../managerModule/footer.jsp"></jsp:include><hr>
 </html>
