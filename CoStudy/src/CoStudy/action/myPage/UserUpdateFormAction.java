@@ -11,8 +11,8 @@ public class UserUpdateFormAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		forward.setPath("/CoStudy/view/myPage/userUpdate.jsp");
-		forward.setRedirect(true);
+		forward.setRedirect(false);
+		forward.setPath("/view/myPage/userUpdate.jsp");
 		return forward;
 	}
 

@@ -13,8 +13,8 @@ public class LoginFormAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("../view/user/loginForm.jsp");
+		forward.setRedirect(false);
+		forward.setPath("/view/user/loginForm.jsp");
 		return forward;
 	}
 
