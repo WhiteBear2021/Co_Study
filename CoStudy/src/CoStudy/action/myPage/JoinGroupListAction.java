@@ -10,6 +10,8 @@ public class JoinGroupListAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
+		forward.setRedirect(false);
+		forward.setPath("/view/myPage/joinGroupList.jsp");
 		return forward;
 		
 	}
