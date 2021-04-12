@@ -14,11 +14,11 @@ public class MyPageAction implements Action {
 		ActionForward forward=new ActionForward();
 		HttpSession session=request.getSession();
 		if(session.getAttribute("user")!=null) {
-			forward.setPath("../view/myPage/userProfile.jsp");
-			forward.setRedirect(true);
+			forward.setPath("/view/myPage/userProfile.jsp");
+			forward.setRedirect(false);
 		}else {
-			forward.setPath("../view/user/loginForm.jsp");
-			forward.setRedirect(true);
+			forward.setPath("login.do");
+			forward.setRedirect(false);
 		}
 		return forward;
 	}

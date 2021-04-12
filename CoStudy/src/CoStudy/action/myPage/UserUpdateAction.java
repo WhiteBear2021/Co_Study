@@ -35,7 +35,7 @@ public class UserUpdateAction implements Action {
 		MyPageService service=MyPageService.getInstance();
 		int re=service.updateUser(user);
 		System.out.println("update 갯수:"+re);
-		forward.setPath("../index.html");
+		forward.setPath("/CoStudy/user/myPageAction.do");
 		forward.setRedirect(true);
 		return forward;
 

@@ -14,7 +14,7 @@
     <section>
         <h3>My Profile</h3>
         <div class="form-group">
-			<form action="userUpdateAction" method="post">
+			<form action="userUpdateAction.do" method="post">
 			        <input type="hidden" name="user_no" value="${user.user_no}">
 			        <label>
 			        	아이디 : ${sessionScope.user.user_id}
