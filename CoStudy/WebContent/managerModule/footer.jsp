@@ -10,4 +10,7 @@
 
 
     <!-- custom-chart js -->
-    <script src="../../managerAsset/js/pages/dashboard-main.js"></script>
+
+    <script src="../managerAsset/js/pages/dashboard-main.js"></script>
+    <script src="../managerAsset/js/pages/button.js"></script>
+
