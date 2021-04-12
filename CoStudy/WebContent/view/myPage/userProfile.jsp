@@ -10,26 +10,27 @@
 <title>Insert title here</title>
 </head>
 <body>
-   	<div class="container">	
-   		<ul class="nav navbar-nav navbar-right">
+   	<section class="container">	
+   		<nav>
    			<ul>
-                <li>공부일기 아이콘1</li>
-                <li>일정관리 아이콘2</li>
-                <li>1:1 채팅목록 아이콘3</li>
-                <li>참가 그룹 목록 아이콘4</li>
-                <li>관심 분야 수정 아이콘5</li>
-                <li>회원 정보 수정 아이콘6</li>
-                <li>회원 탈퇴 신청 아이콘7</li>
+                <li><a href="../../myPage/studyDiaryListAction">공부일기 아이콘1</a></li>
+                <li><a href="../../myPage/scheduleListAction">일정관리 아이콘2</a></li>
+                <li><a href="#">1:1 채팅목록 아이콘3</a></li>
+                <li><a href="../../myPage/joinGroupListAction">참가 그룹 목록 아이콘4</a></li>
+                <li><a href="../../myPage/categoryUpdateFormAction">관심 분야 수정 아이콘5</a></li>
+                <li><a href="../../myPage/userUpdateFormAction">회원 정보 수정 아이콘6</a></li>
+                <li><a href="../../myPage/applyQuitUserCheckFromAction">회원 탈퇴 신청 아이콘7</a></li>
    			</ul>
-   		</ul>
-	    <div class="form-group">
+   		</nav>
+	    <div class="my_profile">
+	    
 	        <h3>My Profile</h3>
-	        <input type="hidden" name="user_no" value="${user.user_no}">
+
 	        아이디 :  ${sessionScope.user.user_id}
 	        <br>
 	        생년월일 : ${sessionScope.user.user_birth}
 	        <br>
-	        이름 : ${sessionScope.user.user_lastName}${sessionScope.user.user_FirstName}
+	        이름 : ${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}
 	        <br>
 	        휴대전화 번호 :${sessionScope.user.user_phoneNo }
 	        <br>
@@ -43,6 +44,6 @@
 	        <br>
 	        가입일 : ${sessionScope.user.user_register_date }
 	    </div>
-	</div>
+	</section>
 </body>
 </html>
