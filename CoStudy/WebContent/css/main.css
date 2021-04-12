@@ -4,16 +4,16 @@
 
 #page-wrapper {
     padding-left: 250px;
+    background: #3D5A5B
   }
 
-	#sidebar-wrapper {
+#sidebar-wrapper {
     position: absolute;
     width: 250px;
     margin-left: -250px;
-    background: yellow;
+    background: beige;
     overflow-x: hidden;
     overflow-y: auto;
-    margin-top: 50px;
    
   }
   
@@ -21,10 +21,10 @@
     width: 100%;
     padding: 20px;
     margin-left: 200px;
-    background: #3D5A5B
+    background-color: #3D5A5B
   }
   
-  	.sidebar-nav {
+     .sidebar-nav {
     width: 250px;
     margin: 0;
     padding: 0;
@@ -46,13 +46,19 @@
     font-size: 1.3em;
     line-height: 3em;
   }
-  
-.bg-dark {
-    background-color: #320b86!important;
-}
 
-    /* footer */
-    footer {
-      color: black;
-      padding: 15px;
-    }
+  
+  #page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+    margin-left: 200px;
+  }
+  
+  #foo{
+  background-color: #3D5A5B;
+	padding-top: 20px;
+  }
+#foo p{
+  color: white;
+}  
+	

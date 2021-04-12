@@ -374,33 +374,9 @@ input:focus::-moz-placeholder {
 
 .owl-carousel:hover .owl-nav div:hover {
     color: #fff;
-    background: #ff3500
+    background: #ff3500 
 }
 
-.btn {
-    background: #ff2020;
-    font-family: "Josefin Sans", sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    padding: 30px 28px;
-    border-radius: 0px;
-    display: inline-block;
-    line-height: 0;
-    cursor: pointer;
-    margin-bottom: 0;
-    margin: 10px;
-    cursor: pointer;
-    transition: color 0.4s linear;
-    position: relative;
-    z-index: 1;
-    -moz-user-select: none;
-    border: 0;
-    overflow: hidden;
-    margin: 0
-}
 
 .btn::before {
     content: "";
