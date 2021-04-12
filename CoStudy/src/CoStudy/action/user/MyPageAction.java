@@ -15,7 +15,7 @@ public class MyPageAction implements Action {
 		HttpSession session=request.getSession();
 		if(session.getAttribute("user")!=null) {
 			forward.setPath("../view/myPage/userProfile.jsp");
-			forward.setRedirect(false);
+			forward.setRedirect(true);
 		}else {
 			forward.setPath("../view/user/loginForm.jsp");
 			forward.setRedirect(true);

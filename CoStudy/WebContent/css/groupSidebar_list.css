@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.sidebar-nav li > #side-todo {
+	position: relative;	
+}
+
+#list{
+	position: absolute;
+	top: 29px;
+}
+
+#todo {
+	margin-top: 2px;
+	font-weight: bold;
+	
+}
+

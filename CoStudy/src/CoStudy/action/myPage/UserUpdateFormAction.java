@@ -1,4 +1,4 @@
-package CoStudy.action.user;
+package CoStudy.action.myPage;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 
-public class UserUpdateAction implements Action {
+public class UserUpdateFormAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("index.html");
+		forward.setRedirect(false);
+		forward.setPath("/view/myPage/userUpdate.jsp");
 		return forward;
 	}
 

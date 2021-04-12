@@ -37,7 +37,7 @@ public class UserController extends HttpServlet {
     	CoStudy.action.Action action = null;
     	CoStudy.action.ActionForward forward = null;
     	
-    	if(command.equals("signUp")) {
+    	if(command.equals("signUp.do")) {
     		action = new SignUpFormAction();
     		try {
 				forward = action.execute(request, response);

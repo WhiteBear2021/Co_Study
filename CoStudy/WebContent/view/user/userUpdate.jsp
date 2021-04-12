@@ -18,7 +18,7 @@
         <br>
         생년월일 : ${sessionScope.user.user_birth}
         <br>
-        이름 : ${sessionScope.user.user_lastName}${sessionScope.user.user_FirstName}
+        이름 : ${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}
         <br>
         휴대전화 번호 :${sessionScope.user.user_phoneNo }
         <br>

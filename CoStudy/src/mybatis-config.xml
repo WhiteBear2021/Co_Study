@@ -9,6 +9,10 @@
 		<typeAlias type="CoStudy.domain.UserVO" alias="User"/>
 		<typeAlias type="CoStudy.domain.LoginVO" alias="Login"/>
 		<typeAlias type="CoStudy.domain.NoticeVO" alias="Notice"/>
+		<typeAlias type="CoStudy.domain.GroupPageBoardVO" alias="GroupPageBoard"/>
+		
+		
+		
 	</typeAliases>
 	
 	<environments default="development">
@@ -27,6 +31,9 @@
 		<mapper resource="CoStudy/mapper/user.xml"/>
 		<mapper resource="CoStudy/mapper/notice.xml"/>
 		<mapper resource="CoStudy/mapper/myPage.xml"/>		
+		<mapper resource="CoStudy/mapper/groupPage.xml"/>		
+		
+		
 		
 	</mappers>
 	
