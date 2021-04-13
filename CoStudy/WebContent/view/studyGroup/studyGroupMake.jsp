@@ -3,21 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width", initial-scale="1">
-<link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../../css/studygroup.css">
-<title>Insert title here</title>
-</head>
+<jsp:include page="../common/header.jsp"></jsp:include><hr>
 <body>
+
    	<div class="container">	
-   		<ul class="nav navbar-nav navbar-left">
-   			<ul>
-   			</ul>
-   		</ul>
 	    <div class="form-group studygroupUpdate">
 	        <h3>StudyGroup 만들기</h3>
-	        <form action="makeGroupAction.do">
+	        <form action="/CoStudy/studyGroup/makeGroupAction.do">
 	        	<label>
 	        	그룹 이름 : 
 	        	<input type="text" name="studygroup_name">
@@ -74,4 +66,5 @@
 	    </div>
 	</div>
 </body>
+<jsp:include page="../common/footer.jsp"></jsp:include><hr>
 </html>

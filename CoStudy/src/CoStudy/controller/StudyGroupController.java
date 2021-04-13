@@ -55,7 +55,7 @@ public class StudyGroupController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("studyGroupList.do")) {
+    	}else if(command.equals("studyGroupListAction.do")) {
     		action = new StudyGroupListAction();
     		try {
 				forward = action.execute(request, response);

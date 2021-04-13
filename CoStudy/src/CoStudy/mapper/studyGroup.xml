@@ -7,4 +7,8 @@
 		insert into studygroup values(seq_studygroup.nextval,#{studygroup_name},#{studygroup_info},#{studygroup_location},0,10,1,sysdate,'N',#{isface},1,#{user_no})
 		
 	</insert>
+	
+	<select id="studyGroupList" resultType="StudyGroup">
+		select * from studygroup
+	</select>
 </mapper>

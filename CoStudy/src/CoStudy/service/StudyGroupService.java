@@ -1,5 +1,7 @@
 package CoStudy.service;
 
+import java.util.List;
+
 import CoStudy.dao.StudyGroupDao;
 import CoStudy.domain.StudyGroupVO;
 
@@ -16,5 +18,9 @@ public class StudyGroupService {
 	
 	public int insertStudyGroup(StudyGroupVO studyGroup) {
 		return sDao.insertStudyGroup(studyGroup);
+	}
+	
+	public List<StudyGroupVO> studyGroupList() {
+		return sDao.studyGroupList();
 	}
 }

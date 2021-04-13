@@ -1,5 +1,7 @@
 package CoStudy.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
@@ -32,4 +34,20 @@ public class StudyGroupDao {
 		}
 		return re;
 	}
+	
+	public List<StudyGroupVO> studyGroupList(){
+		List<StudyGroupVO> studyGroupList = null;
+		
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		
+		try {
+			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return studyGroupList;
+	}
+	
 }

@@ -21,6 +21,10 @@ public class MakeGroupAction implements Action {
 		String studygroup_location=request.getParameter("studygroup_location");
 		String isface=request.getParameter("isface");
 		int user_no=Integer.parseInt(request.getParameter("user_no"));
+		
+		
+		
+		
 		StudyGroupVO studyGroup=new StudyGroupVO();
 		studyGroup.setStudygroup_name(studygroup_name);
 		studyGroup.setStudygroup_info(studygroup_info);
