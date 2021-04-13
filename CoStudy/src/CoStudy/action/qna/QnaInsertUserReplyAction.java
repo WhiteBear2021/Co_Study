@@ -1,24 +1,26 @@
-package CoStudy.action.notice;
+package CoStudy.action.qna;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
-import CoStudy.domain.NoticeVO;
-import CoStudy.service.NoticeService;
+import CoStudy.service.QnaService;
 
-public class noticeDetailAction implements Action {
+public class QnaInsertUserReplyAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward actionForward=new ActionForward();
-		NoticeService service=NoticeService.getInstance();
+		QnaService service=QnaService.getInstance();
 		
-		NoticeVO notice=service.noticeDetailService(request);
-		request.setAttribute("notice", notice);
+		service.QnaInsertUserReplyService(request);
+		
+		int qna_no=Integer.parseInt(request.getParameter("qna_no"));
+		request.setAttribute("qna_no", qna_no);
+		
 		actionForward.setRedirect(false);
-		actionForward.setPath("/view/notice/manager_notice_detail.jsp");
+		actionForward.setPath("QnaDetailAction.do");
 		
 		return actionForward;
 	}

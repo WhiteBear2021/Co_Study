@@ -82,4 +82,5 @@ public class NoticeService {
 		System.out.println(Integer.parseInt(request.getParameter("notice_no")));
 		return noticeDao.noticeDelete(notice_no);
 	}
+
 }
