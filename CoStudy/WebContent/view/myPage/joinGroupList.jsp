@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +31,26 @@
 	   		</nav>
 	   		
 	   		<h3>참여 그룹 목록</h3>
+	   		<article id="group-list">
+	   			<table border="1">
+	   				<tr>
+	   					<td>스터디그룹번호</td>
+	   					<td>스터디그룹이름</td>
+	   					<td>스터디그룹정보</td>
+	   					<td>스터디그룹위치</td>
+	   					<td>등록일</td>
+	   				</tr>
+	  				<c:forEach var="studyGroup" items="${joinGroupList}">
+						<tr>
+							<td>${studyGroup.studygroup_no }</td>
+							<td>${studyGroup.studygroup_name }</td>
+							<td>${studyGroup.studygroup_info }</td>
+							<td>${studyGroup.studygroup_location }</td>
+							<td>${studyGroup.made_date }</td>		
+						</tr>
+					</c:forEach>
+	   			</table>
+	   		</article>
 	</section>
 </body>
 </html>

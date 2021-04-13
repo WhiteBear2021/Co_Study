@@ -72,6 +72,14 @@ public class MyPageDao {
 	
 	//참여중인 스터디 그룹 조회
 	public List<StudyGroupVO> joinGroupList(int user_no){
-		return null;
+		List<StudyGroupVO> joinGroupList=null;
+		SqlSession sqlSession=MySqlSessionFactory.getSession();
+		try {
+			joinGroupList=sqlSession.getMapper(MyPageMapper.class).joinGroupList(user_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		return joinGroupList;
 	}
 }

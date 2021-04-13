@@ -21,7 +21,7 @@ public class LoginAction implements Action {
 		session.setAttribute("user", user);
 		System.out.println(user);
 		forward.setRedirect(true);
-		forward.setPath("/CoStudy/main");
+		forward.setPath("/CoStudy/main/mainPage.do");
 		return forward;
 	}
 

@@ -17,4 +17,9 @@
 	<select id="studyDiaryList" parameterType="int" resultType="StudyNote">
 		select * from STUDYNOTE where user_no=#{user_no}
 	</select>
+	
+	<select id="joinGroupList" parameterType="int" resultType="StudyGroup">
+		select * from STUDYGROUP WHERE user_no=#{user_no}
+	</select>
+
 </mapper>

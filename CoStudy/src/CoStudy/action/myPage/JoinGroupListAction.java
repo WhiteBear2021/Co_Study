@@ -27,7 +27,7 @@ public class JoinGroupListAction implements Action{
 		
 		MyPageService service=MyPageService.getInstance();
 		
-		List<StudyGroupVO> joinGroupList=null;
+		List<StudyGroupVO> joinGroupList=service.joinGroupList(user_no);
 		System.out.println(joinGroupList);
 		request.setAttribute("joinGroupList",joinGroupList);
 		return forward;
