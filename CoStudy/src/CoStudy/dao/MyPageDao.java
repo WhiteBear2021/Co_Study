@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import CoStudy.config.MySqlSessionFactory;
+import CoStudy.domain.StudyGroupVO;
 import CoStudy.domain.StudyNoteVO;
 import CoStudy.domain.UserVO;
 import CoStudy.mapper.MyPageMapper;
@@ -67,5 +68,10 @@ public class MyPageDao {
 			if(sqlSession!=null) sqlSession.close();
 		}
 		return studyNoteList;
+	}
+	
+	//참여중인 스터디 그룹 조회
+	public List<StudyGroupVO> joinGroupList(int user_no){
+		return null;
 	}
 }

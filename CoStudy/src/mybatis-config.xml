@@ -12,6 +12,8 @@
 		<typeAlias type="CoStudy.domain.GroupPageBoardVO" alias="GroupPageBoard"/>
 		<typeAlias type="CoStudy.domain.StudyGroupVO" alias="StudyGroup"/>
 		<typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
+		<typeAlias type="CoStudy.domain.QnaVO" alias="Qna"/>
+		<typeAlias type="CoStudy.domain.ManagerVO" alias="Manager"/>
 		
 	</typeAliases>
 	
@@ -33,7 +35,8 @@
 		<mapper resource="CoStudy/mapper/myPage.xml"/>		
 		<mapper resource="CoStudy/mapper/groupPage.xml"/>		
 		<mapper resource="CoStudy/mapper/studyGroup.xml"/>	
-		
+		<mapper resource="CoStudy/mapper/qna.xml"/>   
+		<mapper resource="CoStudy/mapper/manager.xml"/>   
 		
 	</mappers>
 	
