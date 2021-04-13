@@ -1,6 +1,6 @@
 package CoStudy.domain;
 
-public class StudyGroupVO {
+public class GroupListVO {
 	private int studygorup_no;
 	private String studygorup_name;
 	private String studygorup_info;
@@ -15,9 +15,9 @@ public class StudyGroupVO {
 	private String user_no;
 	private String hashtag;
 	
-	public StudyGroupVO() {}
+	public GroupListVO() {}
 
-	public StudyGroupVO(int studygorup_no, String studygorup_name, String studygorup_info, String studygorup_location,
+	public GroupListVO(int studygorup_no, String studygorup_name, String studygorup_info, String studygorup_location,
 			int report_number, int max_user_number, int current_user_number, String made_date, int isdelete, int isface,
 			int categori_no, String user_no, String hashtag) {
 		super();

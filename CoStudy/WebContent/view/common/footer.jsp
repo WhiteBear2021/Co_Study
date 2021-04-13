@@ -27,7 +27,9 @@
 		<p>통신판매업신고 : 1998-가연가연-0508 | suhyeon27@Costudy.com</p>
 		<p>회사번호 : 010-2978-8131 | 호스팅 사업자 : Kosta 211 Middle Project</p>
 	</footer>
+	<script src="../../js/jquery-1.12.4.min.js"></script>
 
+	<script src="../../js/jquery.slicknav.min.js"></script>
 
 	<script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../../bootstrap/jquery-ui.min.js"></script>
