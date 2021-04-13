@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 import CoStudy.domain.UserVO;
+import CoStudy.service.ManageUserService;
 import CoStudy.service.UserService;
 
 public class ChattingListAction implements Action {
@@ -16,7 +17,7 @@ public class ChattingListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		
-		UserService userService = UserService.getInstance();
+		ManageUserService userService = ManageUserService.getInstance();
 		List<UserVO> list = userService.userInfoService(request);
 		request.setAttribute("userList", list);
 
