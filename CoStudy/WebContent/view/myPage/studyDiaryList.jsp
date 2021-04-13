@@ -34,10 +34,10 @@
 							</ul>
 							<c:forEach var="diary" items="${studyNoteList}">
 								<ul>
-									<li>${dairy.studyNote_no}</li>
-									<li>${dairy.studyNote_keyword}</li>
-									<li>${dairy.studyNote_file}</li>
-									<li>${dairy.user_no}</li>				
+									<li>${diary.studyNote_no}</li>
+									<li>${diary.studyNote_keyword}</li>
+									<li>${diary.studyNote_file}</li>
+									<li>${diary.user_no}</li>				
 								</ul>
 							</c:forEach>
 	   		</article>
