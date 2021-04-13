@@ -49,6 +49,14 @@ public class MainController extends HttpServlet {
 				e.printStackTrace();
 			}
 
+		}else {
+			action = new MainPageAction();
+			try {
+				forward = action.execute(request, response);
+//		    	System.out.println("mainController 실행");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
     	
        	if(forward != null) {
