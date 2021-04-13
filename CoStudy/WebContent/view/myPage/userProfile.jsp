@@ -5,18 +5,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
-<link rel="stylesheet" href="/CoStudy/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="/CoStudy/css/main.css">
-<link rel="stylesheet" href="/CoStudy/css/flaticon.css">
-<link rel="stylesheet" href="/CoStudy/css/slicknav.css">
-<link rel="stylesheet" href="/CoStudy/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="/CoStudy/css/style.css">
+<link rel="stylesheet" href="/css/myPage/myPage.css">
 <title>Insert title here</title>
 </head>
 <body>
 <jsp:include page="../common/header.jsp"></jsp:include> 
-	<section>
-		
+	<section id="wrap">
+		<aside id="left_side_nav">
 			<nav>
 	   			<ul>
 	                <li><a href="/CoStudy/myPage/studyDiaryListAction.do">공부일기 아이콘1</a></li>
@@ -28,6 +23,9 @@
 	                <li><a href="/CoStudy/myPage/applyQuitUserCheckFormAction.do">회원 탈퇴 신청 아이콘7</a></li>
 	   			</ul>
 	   		</nav>
+	   	</aside>
+	   	
+	   	
 	    <div class="my_profile">
 	    
 	        <h3>My Profile</h3>
@@ -51,5 +49,7 @@
 	        가입일 : ${sessionScope.user.user_register_date }
 	    </div>
 	</section>
+	
+	<jsp:include page="/view/common/footer.jsp"></jsp:include> 
 </body>
 </html>

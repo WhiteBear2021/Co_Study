@@ -12,13 +12,13 @@
 
 <title>회원가입</title>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="../../js/signUp/addressapi.js"></script>
+<script src="../js/signUp/addressapi.js"></script>
 <!-- Icons font CSS-->
 <link
-	href="../../vendor/signUp/mdi-font/css/material-design-iconic-font.min.css"
+	href="../vendor/mdi-font/css/material-design-iconic-font.min.css"
 	rel="stylesheet" media="all">
 <link
-	href="../../vendor/signUp/font-awesome-4.7/css/font-awesome.min.css"
+	href="../vendor/font-awesome-4.7/css/font-awesome.min.css"
 	rel="stylesheet" media="all">
 
 <!-- Font special for pages-->
@@ -27,13 +27,13 @@
 	rel="stylesheet">
 
 <!-- Vendor CSS-->
-<link href="../../vendor/select2/select2.min.css"
+<link href="../vendor/select2/select2.min.css"
 	rel="stylesheet" media="all">
-<link href="../../vendor/datepicker/daterangepicker.css"
+<link href="../vendor/datepicker/daterangepicker.css"
 	rel="stylesheet" media="all">
 
 <!-- Main CSS-->
-<link href="../../css/signUp/main.css" rel="stylesheet" media="all">
+<link href="../css/signUp/main.css" rel="stylesheet" media="all">
 
 </head>
 <body>
@@ -104,7 +104,7 @@
 									<div class="col-2">
 										<div class="input-group-desc">
 											<input class="input--style-5" type="text" placeholder="우편번호"
-												name="addr1">
+												name="addr1" id="addr1">
 										</div>
 									</div>
 									<div class="col-2">
@@ -117,8 +117,8 @@
 						<div class="form-row">
 							<div class="name"></div>
 							<div class="value">
-								<div class="input-group">
-									<input class="input--style-5" type="text" name="addr2"
+								<div class="input-group"> 
+									<input class="input--style-5" type="text" name="addr2" id="addr2"
 										placeholder="주소">
 								</div>
 							</div>
@@ -127,7 +127,7 @@
 							<div class="name"></div>
 							<div class="value">
 								<div class="input-group">
-									<input class="input--style-5"  type="text" name="addr3"
+									<input class="input--style-5"  type="text" name="addr3" id="addr3"
 										placeholder="상세주소">
 								</div>
 							</div>
@@ -168,15 +168,15 @@
 	</div>
 
 	<!-- Jquery JS-->
-	<script src="../../vendor/signUp/jquery/jquery.min.js"></script>
+	<script src="../vendor/jquery/jquery.min.js"></script>
 
 	<!-- Vendor JS-->
-	<script src="../../vendor/signUp/select2/select2.min.js"></script>
-	<script src="../../vendor/signUp/datepicker/moment.min.js"></script>
-	<script src="../../vendor/signUp/datepicker/daterangepicker.js"></script>
+	<script src="../vendor/select2/select2.min.js"></script>
+	<script src="../vendor/datepicker/moment.min.js"></script>
+	<script src="../vendor/datepicker/daterangepicker.js"></script>
 
 	<!-- Main JS-->
-	<script src="../../js/signUp/global.js"></script>
+	<script src="../js/signUp/global.js"></script>
 
 </body>
 </html>

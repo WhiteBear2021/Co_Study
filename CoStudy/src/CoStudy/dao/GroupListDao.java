@@ -6,20 +6,20 @@ import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.StudyGroupVO;
 import CoStudy.mapper.StudyGroupMapper;
 
-public class StudyGroupDao {
+public class GroupListDao {
 	
-	private static StudyGroupDao s_dao=new StudyGroupDao();
+	private static GroupListDao s_dao=new GroupListDao();
 	
-	public static StudyGroupDao getInstance() {
+	public static GroupListDao getInstance() {
 		return s_dao;
 	}
 	
 	
 	public StudyGroupVO selectStudyGroup() {
-		StudyGroupVO studygroup=null;
+		StudyGroupVO grouplist=null;
 		SqlSession sqlSession=MySqlSessionFactory.getSession();
 		try {
-			studygroup=sqlSession.getMapper(StudyGroupMapper.class).selectStudyGroup();
+			grouplist=sqlSession.getMapper(StudyGroupMapper.class).selectStudyGroup();
 		} catch (Exception e) {
 			e.printStackTrace();
 			// TODO: handle exception
@@ -31,6 +31,6 @@ public class StudyGroupDao {
 				// TODO: handle exception
 			}
 		}
-		return studygroup;
+		return grouplist;
 	}//selectMember() 끝
 }

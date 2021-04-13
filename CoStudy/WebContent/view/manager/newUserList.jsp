@@ -32,7 +32,7 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-header">
-							<h5>전체 사용자 리스트</h5>
+							<h5>새로운 사용자 리스트</h5>
 						</div>
 						<div class="card-body">
 							<div class="tab-content" id="myTabContent">
@@ -59,7 +59,7 @@
 															</tr>
 														</thead>
 														<tbody>
-															<c:forEach var="user" items="${userList}">
+															<c:forEach var="user" items="${newUserList}">
 																<tr>
 																	<td>${user.user_no }</td>
 																	<td>${user.user_id}</td>

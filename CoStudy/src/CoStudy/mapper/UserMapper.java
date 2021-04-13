@@ -9,5 +9,6 @@ public interface UserMapper {
 	UserVO selectUser();
 	int insertUser(UserVO user);
 	List<UserVO> userInfo();
+	List<UserVO> newUserInfo();
 	UserVO login(LoginVO login);
 }
