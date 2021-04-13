@@ -1,10 +1,5 @@
 package CoStudy.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
@@ -42,39 +37,7 @@ public class UserDao {
 
 	}// insertUser함수 끝
 
-	public List<UserVO> userInfo() {
-
-		SqlSession sqlSession = MySqlSessionFactory.getSession();
-		List<UserVO> list = null;
-		try {
-			list = sqlSession.getMapper(UserMapper.class).userInfo();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (sqlSession != null)
-				sqlSession.close();
-		}
-
-		return list;
-	}// userInfo 함수 끝
 	
-	public List<UserVO> newUserInfo() {
-
-		SqlSession sqlSession = MySqlSessionFactory.getSession();
-		List<UserVO> list = null;
-		try {
-			list = sqlSession.getMapper(UserMapper.class).newUserInfo();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (sqlSession != null)
-				sqlSession.close();
-		}
-
-		return list;
-	}// userInfo 함수 끝
 
 	public UserVO login(LoginVO login) throws Exception {
 

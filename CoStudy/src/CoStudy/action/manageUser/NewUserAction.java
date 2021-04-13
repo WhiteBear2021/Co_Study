@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 import CoStudy.domain.UserVO;
-import CoStudy.service.UserService;
+import CoStudy.service.ManageUserService;
 
-public class newUserAction implements Action{
+public class NewUserAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
-		UserService service = UserService.getInstance();
+		ManageUserService service = ManageUserService.getInstance();
 		List<UserVO> list = service.newUserService(request);
 		request.setAttribute("newUserList", list);
 		
