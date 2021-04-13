@@ -5,16 +5,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
-<link rel="stylesheet" href="/CoStudy/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="/CoStudy/css/main.css">
-<link rel="stylesheet" href="/CoStudy/css/flaticon.css">
-<link rel="stylesheet" href="/CoStudy/css/slicknav.css">
-<link rel="stylesheet" href="/CoStudy/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="/CoStudy/css/style.css">
+
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="../common/header.jsp"></jsp:include> 
+<jsp:include page="/view/common/header.jsp"></jsp:include> 
 	<section>
 		
 			<nav>
