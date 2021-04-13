@@ -39,7 +39,7 @@
                                     <a href="#">그룹 참가하기</a>
                                     </li>
                                     <li class="hot">
-                                    <a href="#">그룹 만들기</a>
+                                    <a href="/CoStudy/studyGroup/makeGroupFormAction.do">그룹 만들기</a>
                                     </li>
                                     <li>
                                     <a href="#">마이페이지</a>
@@ -184,7 +184,11 @@
      </div>
         <!-- Header End -->
     </header>
+	<script src="../../js/jquery-1.12.4.min.js"></script>
 
+	<script src="../../js/jquery.slicknav.min.js"></script>
+
+	<script src="../../css/js/main.js"></script>
 	<script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../../bootstrap/jquery-ui.min.js"></script>
 

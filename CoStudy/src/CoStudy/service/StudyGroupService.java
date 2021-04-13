@@ -1,10 +1,10 @@
 package CoStudy.service;
 
-import CoStudy.dao.StudyGroupDao;
+import CoStudy.dao.GroupListDao;
 
 public class StudyGroupService {
 	private static StudyGroupService s_service=new StudyGroupService();
-	private static StudyGroupDao s_dao;
+	private static GroupListDao s_dao;
 
 	
 	
