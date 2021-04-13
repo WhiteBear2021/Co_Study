@@ -16,7 +16,7 @@
 <body>
 <jsp:include page="../common/header.jsp"></jsp:include> 
 	<section>
-
+		
 			<nav>
 	   			<ul>
 	                <li><a href="/CoStudy/myPage/studyDiaryListAction.do">공부일기 아이콘1</a></li>
@@ -29,7 +29,7 @@
 	   			</ul>
 	   		</nav>
 	   		
-	   		<h3>참여 그룹 목록</h3>
+	   		<h3>공부일기 목록</h3>
 	</section>
 </body>
 </html>

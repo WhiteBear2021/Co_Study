@@ -1,5 +1,7 @@
 package CoStudy.mapper;
 
-public interface GroupPageMapper {
+import CoStudy.domain.GroupPageBoardVO;
 
+public interface GroupPageMapper {
+	int insertGroupBoard(GroupPageBoardVO groupPageBoardVO);
 }

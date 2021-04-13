@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.myPage.ApplyQuitUserAction;
+import CoStudy.action.myPage.ApplyQuitUserCheckAction;
 import CoStudy.action.myPage.ApplyQuitUserCheckFormAction;
 import CoStudy.action.myPage.ApplyQuitUserFormAction;
 import CoStudy.action.myPage.CategoryUpdateAction;
@@ -47,91 +48,98 @@ public class MyPageController extends HttpServlet {
     	CoStudy.action.Action action = null;
     	CoStudy.action.ActionForward forward = null;
     	
-    	if(command.equals("applyQuitUserAction")) {
+    	if(command.equals("applyQuitUserAction.do")) {
     		action = new ApplyQuitUserAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("applyQuitUserCheckFormAction")) {
-    		action = new ApplyQuitUserCheckFormAction();
-    		try {
-				forward = action.execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}   
-    	}else if(command.equals("applyQuitUserFormAction")) {
+    	}else if(command.equals("applyQuitUserFormAction.do")) {
     		action = new ApplyQuitUserFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("categoryUpdateAction")) {
+    	}else if(command.equals("applyQuitUserCheckAction.do")) {
+    		action = new ApplyQuitUserCheckAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("applyQuitUserCheckFormAction.do")) {
+    		action = new ApplyQuitUserFormAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("categoryUpdateAction.do")) {
     		action = new CategoryUpdateAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("categoryUpdateFormAction")) {
+    	}else if(command.equals("categoryUpdateFormAction.do")) {
     		action = new CategoryUpdateFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("joinGroupListAction")) {
+    	}else if(command.equals("joinGroupListAction.do")) {
     		action = new JoinGroupListAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("scheduleListAction")) {
+    	}else if(command.equals("scheduleListAction.do")) {
     		action = new ScheduleListAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("scheduleManagementAction")) {
+    	}else if(command.equals("scheduleManagementAction.do")) {
     		action = new ScheduleManagementAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("studyDiaryAction")) {
+    	}else if(command.equals("studyDiaryAction.do")) {
     		action = new StudyDiaryAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("studyDiaryFormAction")) {
+    	}else if(command.equals("studyDiaryFormAction.do")) {
     		action = new StudyDiaryFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("studyDiaryListAction")) {
+    	}else if(command.equals("studyDiaryListAction.do")) {
     		action = new StudyDiaryListAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("userUpdateAction")) {
+    	}else if(command.equals("userUpdateAction.do")) {
     		action = new UserUpdateAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("userUpdateFormAction")) {
+    	}else if(command.equals("userUpdateFormAction.do")) {
     		action = new UserUpdateFormAction();
     		try {
 				forward = action.execute(request, response);
