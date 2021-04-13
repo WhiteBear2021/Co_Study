@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.main.MainPageAction;
+import CoStudy.action.manageUser.UserInfoAction;
 
 /**
  * Servlet implementation class MainController
@@ -30,17 +31,26 @@ public class MainController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	 	CoStudy.action.Action action = new MainPageAction();
-    	CoStudy.action.ActionForward forward=null;
-//    	System.out.println("mainController 실행");
-		try {
-			forward = action.execute(request, response);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block+
-			e.printStackTrace();
+    	
+    	String requestURI = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		String command = requestURI.substring(contextPath.length() + 6);
+		System.out.println("최종요청2: " + command);
+
+		CoStudy.action.Action action = null;
+		CoStudy.action.ActionForward forward = null;
+
+		if (command.equals("mainPage.do")) {
+			action = new MainPageAction();
+			try {
+				forward = action.execute(request, response);
+//		    	System.out.println("mainController 실행");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
 		}
     	
-
        	if(forward != null) {
     		if(forward.isRedirect()) {
 //    			System.out.println("sendRedirect");

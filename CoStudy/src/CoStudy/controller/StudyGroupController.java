@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.studyGroup.MakeGroupAction;
 import CoStudy.action.studyGroup.MakeGroupFormAction;
+import CoStudy.action.studyGroup.StudyGroupDetailAction;
 import CoStudy.action.studyGroup.StudyGroupListAction;
 import CoStudy.action.user.LoginAction;
 import CoStudy.action.user.LoginFormAction;
@@ -57,6 +58,13 @@ public class StudyGroupController extends HttpServlet {
 			}   
     	}else if(command.equals("studyGroupListAction.do")) {
     		action = new StudyGroupListAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("studyGroupDetailAction.do")) {
+    		action = new StudyGroupDetailAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

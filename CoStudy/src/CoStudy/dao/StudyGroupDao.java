@@ -50,4 +50,18 @@ public class StudyGroupDao {
 		return studyGroupList;
 	}
 	
+	public StudyGroupVO studyGroupDetail(int studygroup_no) {
+		StudyGroupVO studyGroupDetail = null;
+		
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		
+		try {
+			studyGroupDetail=sqlSession.getMapper(StudyGroupMapper.class).studyGroupDetail(studygroup_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return studyGroupDetail;
+	}
+	
 }

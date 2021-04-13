@@ -23,4 +23,8 @@ public class StudyGroupService {
 	public List<StudyGroupVO> studyGroupList() {
 		return sDao.studyGroupList();
 	}
+	
+	public StudyGroupVO studyGroupDetail(int studygroup_no) {
+		return sDao.studyGroupDetail(studygroup_no);
+	}
 }

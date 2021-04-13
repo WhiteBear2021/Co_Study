@@ -23,7 +23,7 @@
 		</tr>
 		<c:forEach var="studyGroup" items="${studyGroupList }">
 			<tr>
-				<td>${studyGroup.studygroup_no }</td>
+				<td><a href="studyGroupDetailAction.do?studygroup_no=${studyGroup.studygroup_no }">${studyGroup.studygroup_no }</a></td>
 				<td>${studyGroup.studygroup_name }</td>
 				<td>${studyGroup.made_date }</td>
 				<td>${studyGroup.categori_no }</td>

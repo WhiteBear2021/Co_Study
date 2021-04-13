@@ -11,4 +11,8 @@
 	<select id="studyGroupList" resultType="StudyGroup">
 		select * from studygroup
 	</select>
+	
+	<select id="studyGroupDetail" parameterType="int" resultType="StudyGroup">
+		select * from studygroup where studygroup_no=#{studygroup_no}
+	</select>
 </mapper>
