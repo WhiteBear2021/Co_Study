@@ -28,11 +28,11 @@
 	        	</label><br>
 	        	<label>
 	        	그룹 지역 :
-	        	<input type="text" name="studygroup_location ">
-	        	</label><br>
-	        	<label>
-	        	 누적 신고수 : 
-	        	<input type="text" name="report_number">
+	        	<select name="studygroup_location">
+	        		<option value="서울">서울</option>
+	        		<option value="부산">부산</option>
+	        		<option value="대구">대구</option>
+	        	</select>
 	        	</label><br>
 	        	<label>
 	        	최대인원 :	
