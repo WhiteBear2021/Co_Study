@@ -3,7 +3,7 @@ package CoStudy.dao;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
-import CoStudy.domain.GroupListVO;
+import CoStudy.domain.StudyGroupVO;
 import CoStudy.mapper.StudyGroupMapper;
 
 public class GroupListDao {
@@ -15,8 +15,8 @@ public class GroupListDao {
 	}
 	
 	
-	public GroupListVO selectStudyGroup() {
-		GroupListVO grouplist=null;
+	public StudyGroupVO selectStudyGroup() {
+		StudyGroupVO grouplist=null;
 		SqlSession sqlSession=MySqlSessionFactory.getSession();
 		try {
 			grouplist=sqlSession.getMapper(StudyGroupMapper.class).selectStudyGroup();

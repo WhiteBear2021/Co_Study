@@ -1,7 +1,7 @@
 package CoStudy.mapper;
 
-import CoStudy.domain.GroupListVO;
+import CoStudy.domain.StudyGroupVO;
 
 public interface StudyGroupMapper {
-	GroupListVO selectStudyGroup();
+	StudyGroupVO selectStudyGroup();
 }
