@@ -10,26 +10,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.main.MainPageAction;
-import CoStudy.action.myPage.ApplyQuitUserAction;
 
 /**
  * Servlet implementation class MainController
  */
-@WebServlet({ "/main", "/" })
+@WebServlet("/main/*")
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
     public MainController() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    	CoStudy.action.Action action = new MainPageAction();
+	 	CoStudy.action.Action action = new MainPageAction();
     	CoStudy.action.ActionForward forward=null;
-    	System.out.println("mainController 실행");
+//    	System.out.println("mainController 실행");
 		try {
 			forward = action.execute(request, response);
 		} catch (Exception e) {
@@ -50,7 +53,9 @@ public class MainController extends HttpServlet {
     	}
 	}
 
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
