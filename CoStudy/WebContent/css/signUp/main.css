@@ -237,7 +237,7 @@ body {
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  background-color: #17a2b8;
+  background-color: #3D5A5B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -293,6 +293,10 @@ h6 {
   background: -moz-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
   background: -o-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
   background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+}
+
+.bg-gra-03{
+	background: #3D5A5B;
 }
 
 

@@ -1,5 +1,6 @@
 package CoStudy.service;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,6 +51,14 @@ public class UserService {
 	
 	public List<UserVO> userInfoService(HttpServletRequest request) throws Exception {
 		return u_dao.userInfo();
+	}
+	
+	public List<UserVO> newUserService(HttpServletRequest request) throws Exception {
+		//여기서 오늘 날짜를 받아서 21/04/12 형식으로 바꿔서 xml에 넣어주자 
+		String dateString = null;
+		SimpleDateFormat sd = new SimpleDateFormat("yy/MM/dd");
+		dateString=sd.format("오늘날짜"); //여기 바꿔야함
+		return u_dao.newUserInfo();
 	}
 	
 	public UserVO login(HttpServletRequest request) throws Exception{

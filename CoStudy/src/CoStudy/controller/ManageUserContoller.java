@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.manageUser.UserInfoAction;
+import CoStudy.action.manageUser.newUserAction;
 
 /**
  * Servlet implementation class ManageUserContoller
@@ -34,6 +35,14 @@ public class ManageUserContoller extends HttpServlet {
 
 		if (command.equals("userInfo.do")) {
 			action = new UserInfoAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}else if (command.equals("newUser.do")) {
+			action = new newUserAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
