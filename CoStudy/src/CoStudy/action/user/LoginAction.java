@@ -20,7 +20,7 @@ public class LoginAction implements Action {
 		UserVO user = service.login(request);
 		session.setAttribute("user", user);
 		forward.setRedirect(true);
-//		forward.setPath("../index.jsp");
+		forward.setPath("/CoStudy/main");
 		return forward;
 	}
 
