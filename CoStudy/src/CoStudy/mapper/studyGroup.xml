@@ -3,7 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.StudyGroupMapper">
-  <select id="selectStudyGroup" resultType="">
-    select * from StudyGroup_Info
-  </select>
+	<insert id="insertStudyGroup" parameterType="StudyGroup">
+		insert into studygroup values(seq_studygroup.nextval,#{studygroup_name},#{studygroup_info},#{studygroup_location},0,10,1,sysdate,'N',#{isface},1,#{user_no})
+		
+	</insert>
 </mapper>
