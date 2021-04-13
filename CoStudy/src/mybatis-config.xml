@@ -4,44 +4,43 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<properties resource="CoStudy/config/jdbc.properties" />
-	<typeAliases>
-		<typeAlias type="CoStudy.domain.UserVO" alias="User"/>
-		<typeAlias type="CoStudy.domain.LoginVO" alias="Login"/>
-		<typeAlias type="CoStudy.domain.NoticeVO" alias="Notice"/>
-		<typeAlias type="CoStudy.domain.GroupPageBoardVO" alias="GroupPageBoard"/>
-		<typeAlias type="CoStudy.domain.StudyGroupVO" alias="StudyGroup"/>
-		<typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
-		<typeAlias type="CoStudy.domain.QnaVO" alias="Qna"/>
-		<typeAlias type="CoStudy.domain.ManagerVO" alias="Manager"/>
-		
-	</typeAliases>
-	
-	<environments default="development">
-		<environment id="development">
-			<transactionManager type="JDBC"/>
-			<dataSource type="POOLED">
-				<property name="driver" value="${oracle.driver}" />
-				<property name="url" value="${oracle.url}" />
-				<property name="username" value="${oracle.username}" />
-				<property name="password" value="${oracle.password}" />
-			</dataSource>
-		</environment>		
-	</environments>
-	
-	<mappers>
-		<mapper resource="CoStudy/mapper/user.xml"/>
-		<mapper resource="CoStudy/mapper/notice.xml"/>
-		<mapper resource="CoStudy/mapper/myPage.xml"/>		
-		<mapper resource="CoStudy/mapper/groupPage.xml"/>		
-		<mapper resource="CoStudy/mapper/studyGroup.xml"/>	
-		<mapper resource="CoStudy/mapper/qna.xml"/>   
-		<mapper resource="CoStudy/mapper/manager.xml"/>   
-		
-	</mappers>
-	
+   <properties resource="CoStudy/config/jdbc.properties" />
+   <typeAliases>
+      <typeAlias type="CoStudy.domain.UserVO" alias="User"/>
+      <typeAlias type="CoStudy.domain.LoginVO" alias="Login"/>
+      <typeAlias type="CoStudy.domain.NoticeVO" alias="Notice"/>
+      <typeAlias type="CoStudy.domain.GroupPageBoardVO" alias="GroupPageBoard"/>
+      <typeAlias type="CoStudy.domain.StudyGroupVO" alias="StudyGroup"/>
+      <typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
+      <typeAlias type="CoStudy.domain.QnaVO" alias="Qna"/>
+      <typeAlias type="CoStudy.domain.ManagerVO" alias="Manager"/>
+      
+   </typeAliases>
+   
+   <environments default="development">
+      <environment id="development">
+         <transactionManager type="JDBC"/>
+         <dataSource type="POOLED">
+            <property name="driver" value="${oracle.driver}" />
+            <property name="url" value="${oracle.url}" />
+            <property name="username" value="${oracle.username}" />
+            <property name="password" value="${oracle.password}" />
+         </dataSource>
+      </environment>      
+   </environments>
+   
+   <mappers>
+      <mapper resource="CoStudy/mapper/user.xml"/>
+      <mapper resource="CoStudy/mapper/notice.xml"/>
+      <mapper resource="CoStudy/mapper/myPage.xml"/>      
+      <mapper resource="CoStudy/mapper/groupPage.xml"/>      
+      <mapper resource="CoStudy/mapper/studyGroup.xml"/>   
+      <mapper resource="CoStudy/mapper/qna.xml"/>   
+      <mapper resource="CoStudy/mapper/manager.xml"/>   
+      
+   </mappers>
+   
 </configuration>
-
 
 
 

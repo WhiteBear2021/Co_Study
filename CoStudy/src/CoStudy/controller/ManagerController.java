@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import CoStudy.action.manageUser.UserInfoAction;
-import CoStudy.action.manageUser.NewUserAction;
+import CoStudy.action.manager.AddManagerAction;
+import CoStudy.action.manager.ManagerList;
 
 /**
- * Servlet implementation class ManageUserContoller
+ * Servlet implementation class ManagerController
  */
-@WebServlet("/manageUser/*")
-public class ManageUserContoller extends HttpServlet {
+@WebServlet("/manager/*")
+public class ManagerController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ManageUserContoller() {
+	public ManagerController() {
 		super();
 	}
 
@@ -27,27 +27,28 @@ public class ManageUserContoller extends HttpServlet {
 			throws ServletException, IOException {
 		String requestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
-		String command = requestURI.substring(contextPath.length() + 12);
+		String command = requestURI.substring(contextPath.length() + 9);
 		System.out.println("최종요청: " + command);
 
 		CoStudy.action.Action action = null;
 		CoStudy.action.ActionForward forward = null;
 
-		if (command.equals("userInfo.do")) {
-			action = new UserInfoAction();
+		if (command.equals("addManager.do")) {
+			action = new AddManagerAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
-		}else if (command.equals("newUser.do")) {
-			action = new NewUserAction();
+		} else if (command.equals("managerList.do")) {
+			action = new ManagerList();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+
 		}
 
 		if (forward != null) {
