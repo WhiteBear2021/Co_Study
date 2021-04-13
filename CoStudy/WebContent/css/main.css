@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+#page-wrapper {
+    background: #3D5A5B
+  }
 
 
   #page-content-wrapper {
@@ -7,17 +10,12 @@
     padding: 20px;
     background-color: #3D5A5B
   }
-
-  
-  #page-content-wrapper {
-    width: 100%;
-    padding: 20px;
-  }
   
   #foo{
   background-color: #3D5A5B;
 	padding-top: 20px;
   }
+  
 #foo p{
   color: white;
 }  

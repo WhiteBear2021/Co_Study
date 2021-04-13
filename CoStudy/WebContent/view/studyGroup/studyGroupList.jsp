@@ -5,11 +5,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="../common/header.jsp"></jsp:include><hr>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<a href="noticeAction">글작성</a>
+<a href="noticeAction">방 만들기</a>
 	<table border="1">
 		<tr>
 			<td>번호</td>

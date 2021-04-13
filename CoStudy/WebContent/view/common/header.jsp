@@ -36,7 +36,7 @@
                             <nav>  
                                 <ul id="navigation">  
                                     <li>
-                                    <a href="#">그룹 참가하기</a>
+                                    <a href="/CoStudy/studyGroup/studyGroupListAction.do">그룹 참가하기</a>
                                     </li>
                                     <li class="hot">
                                     <a href="/CoStudy/studyGroup/makeGroupFormAction.do">그룹 만들기</a>
@@ -189,17 +189,11 @@
 	<script src="../../js/jquery.slicknav.min.js"></script>
 
 	<script src="../../css/js/main.js"></script>
+	
 	<script type="text/javascript" src="../../bootstrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../../bootstrap/jquery-ui.min.js"></script>
 
 
-	<script src="../../js/jquery-1.12.4.min.js"></script>
-
-	<script src="../../js/jquery.slicknav.min.js"></script>
-
-	<script src="../../css/js/main.js"></script>
-	
-	
 	   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
    crossorigin="anonymous">
