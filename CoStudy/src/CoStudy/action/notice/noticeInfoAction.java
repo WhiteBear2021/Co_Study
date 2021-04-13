@@ -22,7 +22,7 @@ public class noticeInfoAction implements Action {
 		request.setAttribute("listPage", listPage);
 		
 		actionForward.setRedirect(false);
-		actionForward.setPath("/notice/manager_notice_list.jsp");
+		actionForward.setPath("/view/notice/manager_notice_list.jsp");
 	
 		return actionForward;
 	}

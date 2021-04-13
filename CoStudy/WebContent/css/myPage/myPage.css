@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#wrap{
+    width: 1000px;
+    height: 900px;
+}
+nav{
+    width: 20%;
+    height: 900px;
+    float: left;
+}
+#study-diary{
+    width: 60%;
+    height: 900px;
+    float: left;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+nav ul li{
+    width: 80%;
+    height: 100px;
+    margin:0 auto;
+    background-color: burlywood;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}

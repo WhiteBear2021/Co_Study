@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <jsp:include page="../managerModule/head.jsp"></jsp:include><hr>
 <body class="">
 
-<jsp:include page="../managerModule/header.jsp"></jsp:include><hr>
+	<jsp:include page="../managerModule/header.jsp"></jsp:include><hr>
 
 	<div class="pcoded-main-container">
 		<div class="pcoded-content">
-				<div class="page-header">
+
+			<div class="page-header">
 				<div class="page-block">
 					<div class="row align-items-center">
 						<div class="col-md-12">
@@ -26,92 +29,106 @@
 					</div>
 				</div>
 			</div>
-			
+
 
 			<div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5>Basic Tabs</h5>
-                        </div>
-                        <div class="card-body">
-                            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">서비스소개</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-uppercase" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">이용방법</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">개인정보</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">개인정보/탈퇴</a>
-                                </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">문제해결</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">신고/패널티</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <div class="col-xl-12">
-                                        <div class="card">
+				<div class="col-sm-12">
+					<div class="card">
+						<div class="card-header">
+							<h5>1:1 대화 리스트</h5>
+						</div>
+						<div class="card-body">
 
-                                            <div class="card-body table-border-style">
-                                                <div class="table-responsive">
-                                                    <table class="table table-striped">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>공지사항번호</th>
-                                                                <th>제목</th>
-                                                                <th>내용</th>
-                                                               
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th>공지사항 번호</th>
-                                                                <th>공지사항</th>
-                                                                <th>2222222</th>
-                                                                <th>3333333</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>#</th>
-                                                                <th>1111111</th>
-                                                                <th>2222222</th>
-                                                                <th>3333333</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>#</th>
-                                                                <th>1111111</th>
-                                                                <th>2222222</th>
-                                                                <th>3333333</th>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <p class="mb-0">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four
-                                        loko
-                                        farm-to-table
-                                        craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. accusamus tattooed echo park.</p>
-                                </div>
-                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                    <p class="mb-0">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed
-                                        craft beer,
-                                        iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Lnyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="home" role="tabpanel"
+									aria-labelledby="home-tab">
+									<div class="col-xl-12">
+										<div class="card">
+
+											<div class="card-body table-border-style">
+												<div class="table-responsive">
+
+													<table class="table table-striped"
+														style="text-align: center;">
+														<thead>
+															<tr>
+																<td>글번호</td>
+																<td>글제목</td>
+																<td>글내용</td>
+																<td>작성일자</td>
+																<td>부모번호</td>
+																<td>읽음여부</td>
+																<td>깊이(레벨)</td>
+																<td>회원번호</td>
+																<td>관리자번호</td>
+															</tr>
+														</thead>
+														<tbody>
+
+															<c:forEach var="qna" items="${qnaPage.list }">
+																<tr>
+																	<th>${qna.qna_no }</th>
+																	<th><a
+																		href="QnaDetailAction.do?qna_no=${qna.qna_no }">${qna.qna_title }</a></th>
+																	<th>${qna.qna_content }</th>
+																	<th>${qna.regdate }</th>
+																	<th>${qna.parentNo }</th>
+																	<th>${qna.isread }</th>
+																	<th>${qna.levels }</th>
+																	<th>${qna.user_no }</th>
+																	<th>${qna.manager_no }</th>
+																</tr>
+
+															</c:forEach>
+
+
+
+														</tbody>
+													</table>
+
+													<nav aria-label="...">
+														<ul class="pagination">
+															<c:if test="${qnaPage.startPage > 3 }">
+																<li class="page-item"><a class="page-link"
+																	href="QnaInfoAction.do?pageNum=${qnaPage.startPage -1 }">Previous</a></li>
+															</c:if>
+
+															<!-- 페이지목록 -->
+															<c:forEach var="pageNo" begin="${qnaPage.startPage }"
+																end="${qnaPage.endPage }">
+																<c:if test="${qnaPage.requestPage == pageNo }">
+																	<li class="page-item active"><span
+																		class="page-link">${pageNo }<span
+																			class="sr-only">(current)</span></span></li>
+																</c:if>
+																<c:if test="${qnaPage.requestPage != pageNo }">
+																	<li class="page-item"><a class="page-link"
+																		href="QnaInfoAction.do?pageNum=${pageNo }">${pageNo }</a></li>
+
+																</c:if>
+															</c:forEach>
+
+															<!-- 이후 영역 -->
+															<c:if
+																test="${qnaPage.endPage < qnaPage.totalPageCount}">
+
+																<li class="page-item"><a class="page-link"
+																	href="QnaInfoAction.do?pageNum=${qnaPage.endPage +1 }">Next</a></li>
+															</c:if>
+														</ul>
+													</nav>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</div>

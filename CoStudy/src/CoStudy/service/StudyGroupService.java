@@ -1,15 +1,30 @@
 package CoStudy.service;
 
+import java.util.List;
+
 import CoStudy.dao.StudyGroupDao;
+import CoStudy.domain.StudyGroupVO;
 
 public class StudyGroupService {
-	private static StudyGroupService s_service=new StudyGroupService();
-	private static StudyGroupDao s_dao;
+	private static StudyGroupService sService=new StudyGroupService();
+	private static StudyGroupDao sDao;
 
 	
 	
 	public static StudyGroupService getInstance() {
-		s_dao=s_dao.getInstance();
-		return s_service;
+		sDao=sDao.getInstance();
+		return sService;
+	}
+	
+	public int insertStudyGroup(StudyGroupVO studyGroup) {
+		return sDao.insertStudyGroup(studyGroup);
+	}
+	
+	public List<StudyGroupVO> studyGroupList() {
+		return sDao.studyGroupList();
+	}
+	
+	public StudyGroupVO studyGroupDetail(int studygroup_no) {
+		return sDao.studyGroupDetail(studygroup_no);
 	}
 }
