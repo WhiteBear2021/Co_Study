@@ -11,7 +11,7 @@
 		<typeAlias type="CoStudy.domain.NoticeVO" alias="Notice"/>
 		<typeAlias type="CoStudy.domain.GroupPageBoardVO" alias="GroupPageBoard"/>
 		<typeAlias type="CoStudy.domain.StudyGroupVO" alias="StudyGroup"/>
-		
+		<typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
 		
 	</typeAliases>
 	
