@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +12,10 @@
 <link type="text/css" rel="stylesheet" href="../css/timer.css">
 <link type="text/css" rel="stylesheet"
 	href="../css/groupSidebar_list.css">
+
 </head>
 <body>
+
 	<div id="wrapper">
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
@@ -71,12 +73,36 @@
 	</div>
 
 	<div class="container" class="row" id="group-Main-body">
-
+		<input type="hidden" name="studyGroup_no" value="1">
 		<div id="background-body">
 
-			<div class="col-lg-9" class="col-md-" id="peed">
+			<div class="col-lg-9" id="peed">
 				<div id="selectGroupBoard">
-					
+					<div style="overflow: scroll; width: 700px; height: 550px;">
+
+
+						<p>스터디그룹번호</p>
+
+						<p>글내용</p>
+
+
+						<c:forEach var="lists" items="${list }">
+							<div style="width: 450px; height: 150px; background-color: gray;">
+
+								<p>${lists.studyGroup_no }</p>
+								<p>${lists.page_board_content }</p>
+
+
+							</div>
+							<br>
+							<br>
+							<br>
+							<br>
+						</c:forEach>
+
+					</div>
+
+
 				</div>
 
 			</div>

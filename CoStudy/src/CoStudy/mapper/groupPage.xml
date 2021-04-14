@@ -5,11 +5,18 @@
 <mapper namespace="CoStudy.mapper.GroupPageMapper">
 	<cache />
 	<insert id="insertGroupBoard" parameterType="GroupPageBoard">
-		INSERT INTO group_page_board values (
-		seq_group_page_board.NEXTVAL,'title',#{page_board_content},'aa', sysdate ,null,1)
+		INSERT INTO
+		group_page_board values (
+		seq_group_page_board.NEXTVAL,'title',#{page_board_content},'aa',
+		sysdate ,null,1)
 	</insert>
-	
-	<select id="selectGroupBoard" resultType="GroupPageBoard">
-		SELECT page_board_content FROM group_page_board
+
+	<select id="selectGroupBoard" resultType="GroupPageBoard" parameterType="int">
+		<!-- SELECT page_board_content FROM group_page_board -->
+		SELECT * 
+		FROM group_page_board
+		where STUDYGROUP_NO=#{STUDYGROUP_NO}
+		order by PAGE_BOARD_NO desc
 	</select>
+
 </mapper>
