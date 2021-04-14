@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="noticeAction">방 만들기</a>
+<a href="makeGroupFormAction.do">방 만들기</a>
 	<table border="1">
 		<tr>
 			<td>번호</td>

@@ -13,7 +13,7 @@
 	</select>
 	
 	<select id="studyGroupDetail" parameterType="int" resultType="StudyGroup">
-		select * from studygroup where user_no=#{user_no}
+		select * from studygroup where studygroup_no=#{studygroup_no}
 	</select>
 	
 	
