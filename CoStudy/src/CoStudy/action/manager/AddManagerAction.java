@@ -15,7 +15,7 @@ public class AddManagerAction implements Action{
 		ManagerService service = ManagerService.getInstance();
 		int re=service.addManagerService(request);
 		System.out.println("insert 갯수:"+re);
-		forward.setRedirect(false);
+		forward.setRedirect(true);
 		forward.setPath("managerList.do");
 		return forward;
 	}

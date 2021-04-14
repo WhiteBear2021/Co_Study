@@ -53,5 +53,4 @@ public class ManagerDao {
 		return list;
 	}
 	
-
 }
