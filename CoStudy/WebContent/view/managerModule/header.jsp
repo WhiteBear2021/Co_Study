@@ -56,7 +56,7 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">공지사항
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="/CoStudy/Notice/noticeInfoAction" target="_blank">공지사항 리스트</a></li>
+						<li><a href="/CoStudy/Notice/noticeInfoAction.do" target="_blank">공지사항 리스트</a></li>
 						<li><a href="/CoStudy/Notice/noticeAction" target="_blank">공지사항 등록</a></li>
 
 					</ul></li>
