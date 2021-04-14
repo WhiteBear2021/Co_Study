@@ -234,7 +234,7 @@ a:hover,
 
 a,
 button {
-    color: #fff;
+    color: black;
     outline: medium none
 }
 
@@ -2855,6 +2855,10 @@ input:focus {
     -ms-transition: all .3s ease-out 0s;
     -o-transition: all .3s ease-out 0s;
     transition: all .3s ease-out 0s
+}
+
+.header-area .main-header .menu-wrapper .header-right ul li a{
+	padding: 20px 10px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
