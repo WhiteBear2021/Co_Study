@@ -1,6 +1,8 @@
 package CoStudy.domain;
 
-public class GroupPageBoardVO {
+import java.io.Serializable;
+
+public class GroupPageBoardVO implements Serializable {
 	private int page_board_no;
 	private String page_board_title;
 	private String page_board_content;
