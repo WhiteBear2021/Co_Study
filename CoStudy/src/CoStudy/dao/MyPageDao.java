@@ -9,7 +9,7 @@ import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.StudyGroupVO;
 import CoStudy.domain.StudyNoteVO;
 import CoStudy.domain.UserVO;
-import CoStudy.mapper.MyPageMapper;
+
 
 public class MyPageDao {
 	private static MyPageDao myDao=new MyPageDao();
