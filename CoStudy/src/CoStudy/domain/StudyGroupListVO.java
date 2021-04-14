@@ -4,7 +4,7 @@ import java.util.List;
 
 public class StudyGroupListVO {
 
-	private List<StudyGroupVO> studyGroup;
+	private List<StudyGroupVO> list;
 	private int requestPage;
 	private int totalPageCount;
 	private int startPage;
@@ -12,22 +12,21 @@ public class StudyGroupListVO {
 	
 	public StudyGroupListVO() {}
 
-	public StudyGroupListVO(List<StudyGroupVO> studyGroup, int requestPage, int totalPageCount, int startPage,
-			int endPage) {
+	public StudyGroupListVO(List<StudyGroupVO> list, int requestPage, int totalPageCount, int startPage, int endPage) {
 		super();
-		this.studyGroup = studyGroup;
+		this.list = list;
 		this.requestPage = requestPage;
 		this.totalPageCount = totalPageCount;
 		this.startPage = startPage;
 		this.endPage = endPage;
 	}
 
-	public List<StudyGroupVO> getStudyGroup() {
-		return studyGroup;
+	public List<StudyGroupVO> getList() {
+		return list;
 	}
 
-	public void setStudyGroup(List<StudyGroupVO> studyGroup) {
-		this.studyGroup = studyGroup;
+	public void setList(List<StudyGroupVO> list) {
+		this.list = list;
 	}
 
 	public int getRequestPage() {
@@ -64,9 +63,10 @@ public class StudyGroupListVO {
 
 	@Override
 	public String toString() {
-		return "StudyGroupListVO [studyGroup=" + studyGroup + ", requestPage=" + requestPage + ", totalPageCount="
-				+ totalPageCount + ", startPage=" + startPage + ", endPage=" + endPage + "]";
+		return "StudyGroupListVO [list=" + list + ", requestPage=" + requestPage + ", totalPageCount=" + totalPageCount
+				+ ", startPage=" + startPage + ", endPage=" + endPage + "]";
 	}
+	
 	
 	
 }

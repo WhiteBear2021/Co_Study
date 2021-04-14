@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
+import CoStudy.domain.StudyGroupListVO;
 import CoStudy.domain.StudyGroupVO;
 import CoStudy.service.StudyGroupService;
 
@@ -19,8 +20,12 @@ public class StudyGroupListAction implements Action {
 		forward.setRedirect(false);
 		
 		StudyGroupService service = StudyGroupService.getInstance();
-		List<StudyGroupVO> studyGroupList =service.studyGroupList();
-		request.setAttribute("studyGroupList", studyGroupList);
+		/*
+		 * List<StudyGroupVO> studyGroupList =service.studyGroupList();
+		 * request.setAttribute("studyGroupList", studyGroupList);
+		 */
+		StudyGroupListVO listPage=service.studyGroupListInpoSerive(request);
+		request.setAttribute("listPage", listPage);
 		
 		return forward;
 	}
