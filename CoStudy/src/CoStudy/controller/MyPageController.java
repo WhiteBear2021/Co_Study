@@ -70,7 +70,7 @@ public class MyPageController extends HttpServlet {
 				e.printStackTrace();
 			}   
     	}else if(command.equals("applyQuitUserCheckFormAction.do")) {
-    		action = new ApplyQuitUserFormAction();
+    		action = new ApplyQuitUserCheckFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
