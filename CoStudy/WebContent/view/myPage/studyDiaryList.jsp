@@ -9,33 +9,7 @@
 <link rel="stylesheet" href="../css/myPage/myPage.css">
 <title>Insert title here</title>
 <style>
-	table{
-		margin:0 auto;
-		width:600px;
-		border-collapse: collapse;
-/* 		30 200 200 70 */
-	}
-	td, th{
-		border: 1px solid lightgray;
-		text-align:center;
-		padding:5px;
-	}
-	th{
-		background:gray;
-		color:#fff;
-	}
-	#no{
-		width:80px;
-	}
-	#title{
-		width:200px;
-	}
-	#fileName{
-		width:200px;
-	}
-	#regDate{	
-		width:120px;
-	}
+
 </style>
 </head>
 <body>
