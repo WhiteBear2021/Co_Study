@@ -25,7 +25,7 @@ public class LoginAction implements Action {
 			forward.setPath("/CoStudy/main/mainPage.do");
 		}else {
 			forward.setRedirect(true);
-			forward.setPath("/CoStudy/user/login.do");
+			forward.setPath("login.do");
 		}
 
 		return forward;
