@@ -34,7 +34,7 @@
 				<div class="col-lg-12 col-md-12">
 					<div class="card chat-card">
 						<div class="card-header">
-							<h5>Chat</h5>
+							<h5>${qna_number }번글 1:1문의</h5>
 							<div class="card-header-right">
 								<div class="btn-group card-option">
 									<button type="button" class="btn dropdown-toggle"
@@ -90,8 +90,7 @@
 											<div class="msg">
 												<h5 style="color: white;">${qna.qna_title }</h5>
 												<p class="m-b-0">${qna.qna_content }</p>
-												<%-- <p class="m-b-0" style="font-weight: bold;">${qna.qna_title }</p>
-												<h5>${qna.qna_content }</h5> --%>
+												
 											</div>
 											<p class="text-muted m-b-0">
 												<i class="fa fa-clock-o m-r-10"></i>${qna.regdate }
