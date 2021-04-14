@@ -26,8 +26,8 @@
 		                <li><a href="/CoStudy/myPage/applyQuitUserCheckFormAction.do">회원 탈퇴 신청 아이콘</a></li>
 		   			</ul>
 		   		</nav>
-	   			<div id="contents">
-				   			<a href="studyDiaryFormAction.do">Study Diary 작성하러 가기</a>
+		   		<button id="write_btn"><a href="studyDiaryFormAction.do" style="color:black;">Study Diary 작성</a></button>
+	   			<div id="contents">				   			
 				   			<h3>Study Diary List</h3>
 				   			<hr style="width:800px">
 							<table>
