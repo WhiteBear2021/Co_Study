@@ -7,4 +7,5 @@ import CoStudy.domain.ManagerVO;
 public interface ManagerMapper {
 	int insertManager(ManagerVO manager);
 	List<ManagerVO> managerList();
+	int deleteManager(int manager_no);
 }
