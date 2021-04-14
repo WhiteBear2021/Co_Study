@@ -23,7 +23,6 @@ public class ManageUserService {
 	}
 	
 	public List<UserVO> newUserService(HttpServletRequest request) throws Exception {
-		//여기서 오늘 날짜를 받아서 21/04/12 형식으로 바꿔서 xml에 넣어주자 
 		String dateString = null;
 		SimpleDateFormat sd = new SimpleDateFormat("yy/MM/dd");
 		dateString=sd.format(new Date()); //여기 바꿔야함
