@@ -82,7 +82,7 @@
 					</div>
 
 				</form>
-			<div class="col-lg-3" id="group-Main-right" style="right: 0;">
+			<div class="col-lg-3 col-md-12" id="group-Main-right" style="right: 0;">
 				<div id="group-Main-right-top" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
 					<div id="right-sidebar-fileBox"></div>
