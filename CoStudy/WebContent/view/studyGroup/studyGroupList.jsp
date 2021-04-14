@@ -33,6 +33,30 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<!-- 페이지 영역 -->
+	<!-- 이전 영역 -->
+	<c:if test="${studyGroupListVO.startPage > 5 }">
+		<a href="stduyGroupListAction.do?pageNum=${studyGroupListVO.startPage -1 }">[이전]</a>
+	</c:if>
+	
+	<!-- 페이지 목록 -->
+	<c:forEach var="pageNO" begin="${studyGroupListVO.startPage }" end="${studyGroupListVO.endPage }">
+		<c:if test="${studyGroupListVO.requestPage == pageNo }"><b></c:if>
+		<a href="studyGroupListAction.do?pageNum=${pageNo }">[${pageNo }]</a>
+		<c:if test="${studyGroupListVO.requestPage == pageNo }"></b></c:if>
+	</c:forEach>
+	
+	<!-- 이후 영역 -->
+	<c:if test="${studyGroupListVO.endPage < studyGroupListVO.totalPageCount }">
+		<a href="studyGroupListAction.do?pageNum=${studyGroupListVO.endPage +1 }">[이후]</a>
+	</c:if>
+	
+	
+	
+	
+	
+	
 </body>
 <jsp:include page="../common/footer.jsp"></jsp:include> 
 </html>
