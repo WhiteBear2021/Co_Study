@@ -8,7 +8,35 @@
 <meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="../css/myPage/myPage.css">
 <title>Insert title here</title>
-
+<style>
+	table{
+		margin:0 auto;
+		width:600px;
+		border-collapse: collapse;
+/* 		30 200 200 70 */
+	}
+	td, th{
+		border: 1px solid lightgray;
+		text-align:center;
+		padding:5px;
+	}
+	th{
+		background:gray;
+		color:#fff;
+	}
+	#no{
+		width:80px;
+	}
+	#title{
+		width:200px;
+	}
+	#fileName{
+		width:200px;
+	}
+	#regDate{	
+		width:120px;
+	}
+</style>
 </head>
 <body>
 	<jsp:include page="../common/header.jsp"></jsp:include><hr> 
@@ -28,22 +56,26 @@
 				   			<a href="studyDiaryFormAction.do">Study Diary 작성하러 가기</a>
 				   			<h3>Study Diary List</h3>
 				   			<hr style="width:800px">
-							<ul>
-								<li>글번호</li>
-								<li>제목/키워드</li>
-								<li>파일</li>
-								<li>작성날짜</li>
-							</ul>
-							<c:forEach var="diary" items="${studyNoteList}">
-								<ul>
-									<li>${diary.studyNote_no}</li>
-									<li>${diary.studyNote_keyword}</li>
-									<li>${diary.studyNote_file}</li>
-									<li>${diary.user_no}</li>				
-								</ul>
-							</c:forEach>
+							<table>
+								<tr>
+									<th id="no">글번호</th>
+									<th id="title">제목/키워드</th>
+									<th id="fileName">파일</th>
+									<th id="regDate">작성날짜</th>
+
+								</tr>	
+								<c:forEach var="diary" items="${studyNoteList}">
+									<tr>
+										<td>${diary.studyNote_no}</td>
+										<td>${diary.studyNote_keyword}</td>
+										<td>${diary.studyNote_file}</td>
+										<td>${diary.studyNote_date}</td>
+		
+									</tr>
+								</c:forEach>
+							</table>
 	   			</div>
-	   		</div>
+	   	</div>
 	
 </body>
 </html>
