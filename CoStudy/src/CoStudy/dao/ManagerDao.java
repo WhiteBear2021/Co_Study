@@ -53,4 +53,25 @@ public class ManagerDao {
 		return list;
 	}
 	
+	public int deleteManager(int manager_no) {
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		
+		try {
+			re = sqlSession.getMapper(ManagerMapper.class).deleteManager(manager_no);
+			if (re > 0) {
+				sqlSession.commit(); 
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession!=null) {
+				sqlSession.close();
+			}
+		}
+		return re;
+	}
+	
 }

@@ -15,7 +15,7 @@
 		select * from manager
 	</select>
 	
-	<delete id="deleteManager" parameterType="Int">
-		
+	<delete id="deleteManager" parameterType="int">
+		delete from manager where manager_no = #{manager_no}
 	</delete>
 </mapper>

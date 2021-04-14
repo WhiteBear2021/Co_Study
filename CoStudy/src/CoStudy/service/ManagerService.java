@@ -30,5 +30,9 @@ public class ManagerService {
 		return mgdao.managerList();
 	}
 	
+	public int deleteManagerService(int manager_no) throws Exception {
+		return mgdao.deleteManager(manager_no);
+	}
+	
 
 }

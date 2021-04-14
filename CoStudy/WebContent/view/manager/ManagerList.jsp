@@ -59,7 +59,7 @@
 																	<td>${manager.manager_id }</td>
 																	<td>${manager.manager_pw }</td>
 																	<td>
-																		<input type="button" class="btn_delete" onclick="location.href='deleteManager.do?seq=${manager.manager_no }'" value="삭제">
+																		<input type="button" onclick="location.href='deleteManager.do?manager_no=${manager.manager_no }'" value="삭제">
 																	</td>
 																</tr>
 															</c:forEach>

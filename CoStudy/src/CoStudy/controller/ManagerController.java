@@ -49,8 +49,9 @@ public class ManagerController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (command.equals("deleteAction.do")) {
+		} else if (command.equals("deleteManager.do")) {
 			action = new DeleteManagerAction();
+			System.out.println("controller");
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
