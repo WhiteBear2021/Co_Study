@@ -1,11 +1,15 @@
 package CoStudy.service;
 
-import org.apache.ibatis.session.SqlSession;
+import java.util.List;
 
-import CoStudy.config.MySqlSessionFactory;
+import javax.servlet.http.HttpServletRequest;
+
+
+
+
 import CoStudy.dao.GroupPageDao;
 import CoStudy.domain.GroupPageBoardVO;
-import CoStudy.mapper.GroupPageMapper;
+
 
 public class GroupPageService {
 	private static GroupPageService gpService=new GroupPageService();
@@ -21,4 +25,7 @@ public class GroupPageService {
 		return gpDao.insertBoard(groupPageBoardVO);
 	}
 	
+	public List<GroupPageBoardVO> groupBoardService(HttpServletRequest request) throws Exception {
+		return gpDao.groupBoardList();
+	}
 }
