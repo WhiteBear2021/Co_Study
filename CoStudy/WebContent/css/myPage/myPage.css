@@ -23,12 +23,46 @@
 	}
 	#contents{
 		width:800px;
-		height:1000px;
+		height:500px;
 		margin:0 auto;
 		float:left;
 		padding:0;
+		background:beige;
 	}
 	ul li a{
 		color:black;
 		text-decoration: none;
+	}
+	
+	#write_btn{
+		margin-bottom:5px;
+	}
+	
+	/*테이블 관련 css  */
+		table{
+		margin:0 auto;
+		width:600px;
+		border-collapse: collapse;
+/* 		30 200 200 70 */
+	}
+	td, th{
+		border: 1px solid lightgray;
+		text-align:center;
+		padding:5px;
+	}
+	th{
+		background:gray;
+		color:#fff;
+	}
+	#no{
+		width:80px;
+	}
+	#title{
+		width:200px;
+	}
+	#fileName{
+		width:200px;
+	}
+	#regDate{	
+		width:120px;
 	}

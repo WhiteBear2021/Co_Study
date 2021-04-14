@@ -20,8 +20,14 @@ public class LoginAction implements Action {
 		UserVO user = service.login(request);
 		session.setAttribute("user", user);
 		System.out.println(user);
-		forward.setRedirect(true);
-		forward.setPath("/CoStudy/main/mainPage.do");
+		if(user!=null) {
+			forward.setRedirect(true);
+			forward.setPath("/CoStudy/main/mainPage.do");
+		}else {
+			forward.setRedirect(true);
+			forward.setPath("login.do");
+		}
+
 		return forward;
 	}
 

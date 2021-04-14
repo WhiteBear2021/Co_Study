@@ -26,14 +26,12 @@
 	   			<div id="contents">
 			   		<h3>참여 그룹 목록</h3>
 					<hr style="width:800px">
-			   		<table border="1">
-			   				<tr>
-			   					<td>스터디그룹번호</td>
+			   		<table>
 
-			   				</tr>
 			  				<c:forEach var="studyGroup" items="${joinGroupList}">
-								<tr>
-									<td>${studyGroup.studygroup_no }<br>
+			  					<tr>
+			   					<td>그룹번호 : ${studyGroup.studygroup_no }
+									<hr>
 									${studyGroup.studygroup_name }<br>
 									${studyGroup.studygroup_info }<br>
 									${studyGroup.studygroup_location }<br>
