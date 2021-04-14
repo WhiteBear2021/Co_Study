@@ -1,11 +1,14 @@
 package CoStudy.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.GroupPageBoardVO;
 import CoStudy.mapper.GroupPageMapper;
-import CoStudy.mapper.UserMapper;
+
+
 
 public class GroupPageDao {
 	private static GroupPageDao gpDao=new GroupPageDao();
@@ -32,5 +35,22 @@ public class GroupPageDao {
 				sqlSession.close();
 		}
 		return re;
+	}
+	
+	public List<GroupPageBoardVO> groupBoardList() {
+
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		List<GroupPageBoardVO> list = null;
+		try {
+			list = sqlSession.getMapper(GroupPageMapper.class).groupBoardList();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null)
+				sqlSession.close();
+		}
+
+		return list;
 	}
 }

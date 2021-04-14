@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,17 +73,26 @@
 	<div class="container" class="row" id="group-Main-body">
 
 		<div id="background-body">
-			<div class="col-lg-9" class="col-md-" id="peed"></div>
-			<form action="groupWriting.do" method="get">
-					<div id="write">
-						<input type="hidden" name="page_board_writer" value="aa">
-						<input id="text-box" type="text" name="page_board_content"
-							style="width: 600px; height: 70px;">
-						<button id="button" type="submit" style="width: 70px; height: 70px;">작성</button>
-					</div>
 
-				</form>
-			<div class="col-lg-3 col-md-12" id="group-Main-right" style="right: 0;">
+			<div class="col-lg-9" class="col-md-" id="peed">
+				<div id="selectGroupBoard">
+					
+				</div>
+
+			</div>
+
+			<form action="groupWriting.do" method="get">
+				<div id="write">
+					<input type="hidden" name="page_board_writer" value="aa"> <input
+						id="text-box" type="text" name="page_board_content"
+						style="width: 600px; height: 70px;">
+					<button id="button" type="submit"
+						style="width: 70px; height: 70px;">작성</button>
+				</div>
+
+			</form>
+			<div class="col-lg-3 col-md-12" id="group-Main-right"
+				style="right: 0;">
 				<div id="group-Main-right-top" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
 					<div id="right-sidebar-fileBox"></div>

@@ -15,7 +15,7 @@ public class GroupWritingAction implements Action {
 		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("groupWritingForm.do");
+		forward.setPath("groupBoardList.do");
 		
 		String page_board_content = request.getParameter("page_board_content");
 		String page_board_writer = request.getParameter("page_board_writer");
