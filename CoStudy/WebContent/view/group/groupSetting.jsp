@@ -6,11 +6,11 @@
 <meta charset="UTF-8">
 <link rel='stylesheet'
 	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel="stylesheet" href="../css/groupMain_style.css">
+<link rel="stylesheet" href="../../css/groupMain_style.css">
 
-<link type="text/css" rel="stylesheet" href="../css/timer.css">
+<link type="text/css" rel="stylesheet" href="../../css/timer.css">
 <link type="text/css" rel="stylesheet"
-	href="../css/groupSidebar_list.css">
+	href="../../css/groupSidebar_list.css">
 </head>
 <body>
 	<div id="wrapper">
@@ -72,16 +72,11 @@
 	<div class="container" class="row" id="group-Main-body">
 
 		<div id="background-body">
-			<div class="col-lg-9" class="col-md-" id="peed"></div>
-			<form action="groupWriting.do" method="get">
-					<div id="write">
-						<input type="hidden" name="page_board_writer" value="aa">
-						<input id="text-box" type="text" name="page_board_content"
-							style="width: 600px; height: 70px;">
-						<button id="button" type="submit" style="width: 70px; height: 70px;">작성</button>
-					</div>
+			<div class="col-lg-9" class="col-md-" id="setting"></div>
+			
+					
 
-				</form>
+				
 			<div class="col-lg-3 col-md-12" id="group-Main-right" style="right: 0;">
 				<div id="group-Main-right-top" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
