@@ -8,7 +8,6 @@ public class ManagerVO implements Serializable{
 	private String manager_pw;
 	
 	public ManagerVO() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getManager_no() {
