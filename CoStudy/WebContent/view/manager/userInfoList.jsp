@@ -43,7 +43,7 @@
 
 											<div class="card-body table-border-style">
 												<div class="table-responsive">
-													<table class="table table-striped"
+													<table class="table"
 														style="text-align: center;">
 														<thead>
 															<tr>

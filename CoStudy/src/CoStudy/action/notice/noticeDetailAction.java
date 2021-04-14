@@ -18,7 +18,7 @@ public class noticeDetailAction implements Action {
 		NoticeVO notice=service.noticeDetailService(request);
 		request.setAttribute("notice", notice);
 		actionForward.setRedirect(false);
-		actionForward.setPath("/notice/manager_notice_detail.jsp");
+		actionForward.setPath("/view/notice/manager_notice_detail.jsp");
 		
 		return actionForward;
 	}

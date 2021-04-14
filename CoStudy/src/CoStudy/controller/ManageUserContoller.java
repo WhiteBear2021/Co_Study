@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.manageUser.UserInfoAction;
+import CoStudy.action.manageUser.NewUserAction;
 
 /**
  * Servlet implementation class ManageUserContoller
@@ -27,7 +28,7 @@ public class ManageUserContoller extends HttpServlet {
 		String requestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String command = requestURI.substring(contextPath.length() + 12);
-		System.out.println("최종요청2: " + command);
+		System.out.println("최종요청: " + command);
 
 		CoStudy.action.Action action = null;
 		CoStudy.action.ActionForward forward = null;
@@ -40,6 +41,13 @@ public class ManageUserContoller extends HttpServlet {
 				e.printStackTrace();
 			}
 
+		}else if (command.equals("newUser.do")) {
+			action = new NewUserAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 
 		if (forward != null) {

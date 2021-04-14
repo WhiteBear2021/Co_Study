@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.myPage.ApplyQuitUserAction;
+import CoStudy.action.myPage.ApplyQuitUserCheckAction;
 import CoStudy.action.myPage.ApplyQuitUserCheckFormAction;
 import CoStudy.action.myPage.ApplyQuitUserFormAction;
 import CoStudy.action.myPage.CategoryUpdateAction;
@@ -54,14 +55,21 @@ public class MyPageController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("applyQuitUserCheckFormAction.do")) {
-    		action = new ApplyQuitUserCheckFormAction();
+    	}else if(command.equals("applyQuitUserFormAction.do")) {
+    		action = new ApplyQuitUserFormAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("applyQuitUserFormAction.do")) {
+    	}else if(command.equals("applyQuitUserCheckAction.do")) {
+    		action = new ApplyQuitUserCheckAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}   
+    	}else if(command.equals("applyQuitUserCheckFormAction.do")) {
     		action = new ApplyQuitUserFormAction();
     		try {
 				forward = action.execute(request, response);

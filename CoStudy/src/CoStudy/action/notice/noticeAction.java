@@ -12,7 +12,7 @@ public class noticeAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward actionForward=new ActionForward();
 		actionForward.setRedirect(false);
-		actionForward.setPath("/notice/manager_notice_form.jsp");
+		actionForward.setPath("/view/notice/manager_notice_form.jsp");
 		return actionForward;
 	}
 

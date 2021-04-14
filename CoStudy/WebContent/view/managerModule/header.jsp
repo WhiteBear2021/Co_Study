@@ -70,9 +70,11 @@
 
 					</ul></li>
 
-				<li class="nav-item"><a href="#" class="nav-link "><span
+				<li class="nav-item"><a href="/CoStudy/Qna/QnaInfoAction.do" class="nav-link "><span
 						class="pcoded-micon"><i class="feather icon-home"></i></span><span
 						class="pcoded-mtext">1:1 문의 관리</span></a></li>
+						
+						
 				<li class="nav-item pcoded-hasmenu"><a href="#!"
 					class="nav-link "><span class="pcoded-micon"><i
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">스터디그룹

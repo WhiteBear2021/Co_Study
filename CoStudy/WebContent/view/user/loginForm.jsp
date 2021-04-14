@@ -4,17 +4,21 @@
 <html>
 <head>
 
-<link href="../../css/login.css" rel="stylesheet" type="text/css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="../css/login.css" rel="stylesheet" type="text/css">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>로그인</title>
 </head>
 
 <body>
 	<div id="login">
-		<h3 class="text-center text-white pt-5">로그인</h3>
+		<h3 class="text-center text-white pt-5"></h3>
 		<div class="container">
 			<div id="login-row"
 				class="row justify-content-center align-items-center">
@@ -25,8 +29,7 @@
 							<h3 class="text-center text-info">COSTUDY</h3>
 							<br> <br>
 							<div class="form-group">
-								<input
-									type='radio' name='member' value='user' checked />회원 <input
+								<input type='radio' name='member' value='user' checked />회원 <input
 									type='radio' name='member' value='user' />관리자
 							</div>
 							<div class="form-group">
@@ -44,7 +47,7 @@
 									value="로그인">
 							</div>
 							<div id="register-link" class="text-right">
-								<a href="../../user/signUp.do" class="text-info">회원가입 하기</a>
+								<a href="../user/signUp.do" class="text-info">회원가입 하기</a>
 							</div>
 						</form>
 					</div>

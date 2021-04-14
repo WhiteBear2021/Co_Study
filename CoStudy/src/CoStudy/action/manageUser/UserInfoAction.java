@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 import CoStudy.domain.UserVO;
-import CoStudy.service.UserService;
+import CoStudy.service.ManageUserService;
 
 /**
  * 모든 회원 보여주기 
@@ -20,7 +20,7 @@ public class UserInfoAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
-		UserService service = UserService.getInstance();
+		ManageUserService service = ManageUserService.getInstance();
 		List<UserVO> list = service.userInfoService(request);
 		request.setAttribute("userList", list);
 		
