@@ -15,8 +15,6 @@ import CoStudy.action.user.LogoutAction;
 import CoStudy.action.user.MyPageAction;
 import CoStudy.action.user.SignUpAction;
 import CoStudy.action.user.SignUpFormAction;
-import CoStudy.action.user.UserUpdateAction;
-import CoStudy.action.user.UserUpdateFormAction;
 
 /**
  * Servlet implementation class UserController
