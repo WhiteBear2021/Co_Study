@@ -21,15 +21,11 @@
    <div class="carousel-inner">
     <!-- 슬라이드 쇼 --> 
     <div class="carousel-item active"> <!--가로-->
-     <img class="d-block w-100" src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="First slide"> 
-     <div class="carousel-caption d-none d-md-block">
-     
-      </div> 
-      </div> 
+     <img class="d-block" src="https://cdn.geojenews.com/news/photo/201912/52693_38034_361.jpg" alt="First slide">  </div> 
       <div class="carousel-item"> 
-      <img class="d-block w-100" src="https://images.pexels.com/photos/2355519/pexels-photo-2355519.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Second slide"> </div> 
+      <img class="d-block" src="https://www.theguru.co.kr/data/photos/20200731/art_15960061554972_7668c4.png" alt="Second slide"> </div> 
       <div class="carousel-item"> 
-      <img class="d-block w-100" src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Third slide"> </div> 
+      <img class="d-block" src="https://i.pinimg.com/originals/56/94/e2/5694e2e5cfabd75a36724889b187fbd8.jpg" alt="Third slide"> </div> 
       <!-- / 슬라이드 쇼 끝 -->
       
        <!-- 왼쪽 오른쪽 화살표 버튼 --> 

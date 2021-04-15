@@ -46,9 +46,10 @@
 													<table class="table" style="text-align: center;">
 														<thead>
 															<tr>
-																<td>회원번호</td>
+																<td>관리자번호</td>
 																<td>아이디</td>
 																<td>비밀번호</td>
+																<td></td>
 															</tr>
 														</thead>
 														<tbody>
@@ -57,6 +58,9 @@
 																	<td>${manager.manager_no }</td>
 																	<td>${manager.manager_id }</td>
 																	<td>${manager.manager_pw }</td>
+																	<td>
+																		<input type="button" onclick="location.href='deleteManager.do?manager_no=${manager.manager_no }'" value="삭제">
+																	</td>
 																</tr>
 															</c:forEach>
 														</tbody>
@@ -65,12 +69,16 @@
 											</div>
 
 										</div>
-										<div>
+										<div class="form-row float-right">
+
 											<form action="addManager.do" method="post">
-												<input type="text" placeholder="아이디" name="manager_id" id="manager_id">
-												<input type="text" placeholder="비밀번호" name="manager_pw" id="manager_pw">
+
+												<input type="text" placeholder="아이디" name="manager_id"
+													id="manager_id"> <input type="text"
+													placeholder="비밀번호" name="manager_pw" id="manager_pw">
 												<input type="submit" value="추가">
 											</form>
+
 										</div>
 
 									</div>

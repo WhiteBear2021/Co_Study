@@ -36,13 +36,13 @@
                             <nav>  
                                 <ul id="navigation">  
                                     <li>
-                                    <a href="/CoStudy/studyGroup/studyGroupListAction.do">그룹 참가하기</a>
+                                    <a href="/CoStudy/studyGroup/studyGroupListAction.do">그룹 전체보기</a>
                                     </li>
                                     <li class="hot">
                                     <a href="/CoStudy/studyGroup/makeGroupFormAction.do">그룹 만들기</a>
                                     </li>
                                     <li>
-                                    <a href="#">마이페이지</a>
+                                    <a href="/CoStudy/user/myPageAction.do">마이페이지</a>
                                         <ul class="submenu">
                                             <li>
                                             <a href="/CoStudy/user/myPageAction.do">나의 프로필</a>
@@ -83,25 +83,21 @@
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
-                            <ul>
+                        <ul id="navigation">
+                        <%if (session.getAttribute("user")!=null) { %>
                                 <li>
-                                    
-                                </li>
-                                <li>
-                                 <a href="#">
-                                 <span class="flaticon-user">
-                                 </span>
-                                 </a>
+                                 <a href="/CoStudy/user/loginout.do">로그아웃</a>
                                  </li>
-                                 <li> 
-                                 <a href="#">
-                                 <span class="flaticon-user">
-                                 </span>
-                                 </a>
+                           <% } else { %>
+                           		<li>
+                                 <a href="/CoStudy/user/login.do">로그인</a>
                                  </li>
-                                
-                            </ul>
-                        </div>
+                                 
+                                 <li>
+                                 <a href="/CoStudy/user/signUp.do">회원가입</a>
+                                 </li>
+                                 <% } %>
+                           </ul>
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">

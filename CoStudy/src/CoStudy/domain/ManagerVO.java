@@ -6,7 +6,7 @@ public class ManagerVO implements Serializable{
 	private int manager_no;
 	private String manager_id;
 	private String manager_pw;
-	
+
 	public ManagerVO() {
 	}
 
@@ -41,5 +41,10 @@ public class ManagerVO implements Serializable{
 		this.manager_pw = manager_pw;
 	}
 	
+	@Override
+	public String toString() {
+		return "ManagerVO [manager_no=" + manager_no + ", manager_id=" + manager_id + ", manager_pw=" + manager_pw
+				+ "]";
+	}
 	
 }

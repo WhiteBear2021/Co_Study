@@ -2,13 +2,16 @@ package CoStudy.service;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import CoStudy.dao.StudyGroupDao;
+import CoStudy.domain.StudyGroupListVO;
 import CoStudy.domain.StudyGroupVO;
 
 public class StudyGroupService {
 	private static StudyGroupService sService=new StudyGroupService();
 	private static StudyGroupDao sDao;
-
+	private static final int PAGE_SIZE = 5;
 	
 	
 	public static StudyGroupService getInstance() {
@@ -20,8 +23,42 @@ public class StudyGroupService {
 		return sDao.insertStudyGroup(studyGroup);
 	}
 	
-	public List<StudyGroupVO> studyGroupList() {
-		return sDao.studyGroupList();
+	/*
+	 * public List<StudyGroupVO> studyGroupList() { return
+	 * sDao.studyGroupList(startRow); }
+	 */
+	
+	public StudyGroupListVO studyGroupListInpoSerive(HttpServletRequest request) throws Exception{
+		//총 글갯수
+				int totalCount=sDao.countstudyGroupList();
+				//총 페이지 수
+				int totalPageCount=totalCount/PAGE_SIZE;
+				if (totalPageCount%PAGE_SIZE>0) {
+					totalPageCount++;
+				}
+				//현재 페이지
+				String pageNum=request.getParameter("pageNum");
+				if (pageNum==null) {
+					pageNum="1";
+				}
+				//현제페이지(숫자)
+				int requestPage=Integer.parseInt(pageNum);
+				//startpage
+				int startPage=requestPage-(requestPage-1)%3;
+				//endPage
+				int endPage=startPage+2;
+				if (endPage>totalPageCount) {
+					endPage=totalPageCount;
+				}
+				//
+				int startRow=(requestPage-1)*PAGE_SIZE;
+				
+				List<StudyGroupVO> studuGroupList = sDao.studyGroupList(startRow);
+				
+				StudyGroupListVO listPage=
+						new StudyGroupListVO(studuGroupList, requestPage, totalPageCount, startPage, endPage);
+				
+				return listPage;
 	}
 	
 	public StudyGroupVO studyGroupDetail(int studygroup_no) {

@@ -2,10 +2,12 @@ package CoStudy.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.StudyGroupVO;
+import CoStudy.mapper.NoticeMapper;
 import CoStudy.mapper.StudyGroupMapper;
 
 public class StudyGroupDao {
@@ -35,16 +37,19 @@ public class StudyGroupDao {
 		return re;
 	}
 	
-	public List<StudyGroupVO> studyGroupList(){
+	public List<StudyGroupVO> studyGroupList(int startRow){
 		List<StudyGroupVO> studyGroupList = null;
-		
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		
 		try {
-			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList();
+			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList(new RowBounds(startRow,5));
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (sqlSession != null) {
+				sqlSession.close();
+			}
 		}
 		
 		return studyGroupList;
@@ -64,4 +69,18 @@ public class StudyGroupDao {
 		return studyGroupDetail;
 	}
 	
+	public int countstudyGroupList() {
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		int re=0;
+		try {
+			re=sqlSession.getMapper(StudyGroupMapper.class).countstudyGroupList();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return re;
+	}
 }

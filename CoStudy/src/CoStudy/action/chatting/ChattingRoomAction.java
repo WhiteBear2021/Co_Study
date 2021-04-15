@@ -19,12 +19,12 @@ public class ChattingRoomAction implements Action {
 		HttpSession session = request.getSession();
 		String room = request.getParameter("roomNo");
 		
-		//UserVO me = (UserVO) session.getAttribute("user");
-		//String myName = me.getUser_firstName()+me.getUser_lastName();
-		//System.out.println(myName+"1111");
+		UserVO me = (UserVO) session.getAttribute("user");
+		String myName = me.getUser_lastName() + me.getUser_firstName();
+
 		forward.setRedirect(true);
 		
-		forward.setPath("http://localhost:3000?room="+room);
+		forward.setPath("http://localhost:3000?room="+room+"&myName="+myName);
 		return forward;
 	}
 

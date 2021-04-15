@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="noticeAction">방 만들기</a>
+<a href="makeGroupFormAction.do">방 만들기</a>
 	<table border="1">
 		<tr>
 			<td>번호</td>
@@ -21,7 +21,7 @@
 			<td>현재인원</td>
 			<td>최대인원</td>
 		</tr>
-		<c:forEach var="studyGroup" items="${studyGroupList }">
+		<c:forEach var="studyGroup" items="${listPage.list }">
 			<tr>
 				<td><a href="studyGroupDetailAction.do?studygroup_no=${studyGroup.studygroup_no }">${studyGroup.studygroup_no }</a></td>
 				<td>${studyGroup.studygroup_name }</td>
@@ -33,6 +33,30 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<!-- 페이지 영역 -->
+	<!-- 이전 영역 -->
+	<c:if test="${listPage.startPage > 5 }">
+		<a href="stduyGroupListAction.do?pageNum=${listPage.startPage -1 }">[이전]</a>
+	</c:if>
+	
+	<!-- 페이지 목록 -->
+	<c:forEach var="pageNO" begin="${listPage.startPage }" end="${listPage.endPage }">
+		<c:if test="${listPage.requestPage == pageNo }"><b></c:if>
+		<a href="studyGroupListAction.do?pageNum=${pageNo }">[${pageNo }]</a>
+		<c:if test="${listPage.requestPage == pageNo }"></b></c:if>
+	</c:forEach>
+	
+	<!-- 이후 영역 -->
+	<c:if test="${listPage.endPage < listPage.totalPageCount }">
+		<a href="studyGroupListAction.do?pageNum=${listPage.endPage +1 }">[이후]</a>
+	</c:if>
+	
+	
+	
+	
+	
+	
 </body>
 <jsp:include page="../common/footer.jsp"></jsp:include> 
 </html>
