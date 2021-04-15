@@ -8,6 +8,8 @@ public interface GroupPageMapper {
 	int insertGroupBoard(GroupPageBoardVO groupPageBoardVO);
 	List<GroupPageBoardVO> selectGroupBoard(int studyGroup_no);
 	List<GroupPageBoardVO> groupAcceptUser(int user_no);
+	List<GroupPageBoardVO> groupBoardList();
+
 	
 }
 

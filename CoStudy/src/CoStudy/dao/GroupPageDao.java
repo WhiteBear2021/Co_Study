@@ -40,11 +40,12 @@ public class GroupPageDao {
 		return re;
 	}
 	
-	public List<GroupPageBoardVO> selectGroupBoard(int studyGroup_no){
+
+	public List<GroupPageBoardVO> selectGroupBoard(int studygroup_no){
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		List<GroupPageBoardVO> list=null;
 		try {
-			list = sqlSession.getMapper(GroupPageMapper.class).selectGroupBoard(studyGroup_no);
+			list = sqlSession.getMapper(GroupPageMapper.class).selectGroupBoard(studygroup_no);
 			System.out.println(list);
 		} catch (Exception e) {
 			e.printStackTrace();

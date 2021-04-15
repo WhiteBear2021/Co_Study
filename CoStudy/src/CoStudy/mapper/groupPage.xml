@@ -4,11 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.GroupPageMapper">
 	<cache />
-	<insert id="insertGroupBoard" parameterType="GroupPageBoard">
+	<insert id="insertGroupBoard" parameterType="GroupPageBoard" >
 		INSERT INTO
 		group_page_board values (
 		seq_group_page_board.NEXTVAL,'title',#{page_board_content},'aa',
-		sysdate ,null,1)
+		sysdate ,null,3)
 	</insert>
 
 	<select id="selectGroupBoard" resultType="GroupPageBoard" parameterType="int">
