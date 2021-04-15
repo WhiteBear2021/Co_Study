@@ -30,12 +30,9 @@
 						</nav>
 				</div>
 				<div class="col-lg-8" id="contents">
-					<h3>공부일기 쓰기</h3>
-					<hr style="width:800px;" class="text-primary">
+					<h3>참여 그룹 목록</h3>
+					<hr style="width:800px;">
 					<div class="row">
-						
-							<h3>참여 그룹 목록</h3>
-							<hr style="width: 800px">
 								<c:forEach var="studyGroup" items="${joinGroupList}">
 									<div class="col-lg-4">
 													
