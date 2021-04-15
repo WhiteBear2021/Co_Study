@@ -124,6 +124,7 @@
 				<div id="group-Main-right-top" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
 					<div id="right-sidebar-fileBox"></div>
+					<a href="../chatting/chattingRoom.do?roomNo=${roomNo}" onclick="window.open(this.href, '_blank', 'width=800, height=1000'); return false;">그룹 채팅</a>
 				</div>
 				<div id="group-Main-right-bottom" class="col-md-5">
 					<div id="right-sidebar-userlist">
