@@ -49,7 +49,7 @@
 								</div>
 								<div class="form-group col-md-3">
 									<label style="font-weight: bold;">그룹 관심 카테고리</label> 
-									<input type="text" disabled class="form-control" name="categori_no" value="${studyGroupDetail.categori_no }">
+									<input type="text" disabled class="form-control" name="category_no" value="${studyGroupDetail.category_no }">
 								</div>
 								<div class="form-group col-md-2">
 									<label style="font-weight: bold;">그룹 위치</label> 
@@ -80,7 +80,7 @@
 								</div>
 								<br>
 								<div style="text-align: center;">
-									<a href=""><button type="button" class="button type1">신청하기</button></a>
+									<a href="applyStudyGroupAction.do"><button type="button" class="button type1">신청하기</button></a>
 									<a href=""><button type="button" class="button type1">취소</button></a>
 								</div> 
 							</form>

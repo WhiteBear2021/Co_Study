@@ -1,9 +1,14 @@
 package CoStudy.domain;
+import java.io.Serializable;
 
-public class ApplyGroupMemberVO {
+public class ApplyGroupMemberVO implements Serializable{
 	private char isAccept;
 	private int user_no;
 	private int studyGroup_no;
+	
+	public ApplyGroupMemberVO() {
+		
+	}
 	
 	
 	public ApplyGroupMemberVO(char isAccept, int user_no, int studyGroup_no) {

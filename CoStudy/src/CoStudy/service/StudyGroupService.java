@@ -5,22 +5,20 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import CoStudy.dao.StudyGroupDao;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.StudyGroupListVO;
 import CoStudy.domain.StudyGroupVO;
 
 public class StudyGroupService {
 	private static StudyGroupService sService=new StudyGroupService();
 	private static StudyGroupDao sDao;
-	private static final int PAGE_SIZE = 5;
+	private static final int PAGE_SIZE = 20;
 	
 	
 	public static StudyGroupService getInstance() {
 		sDao=sDao.getInstance();
+		
 		return sService;
-	}
-	
-	public int insertStudyGroup(StudyGroupVO studyGroup) {
-		return sDao.insertStudyGroup(studyGroup);
 	}
 	
 	/*
@@ -64,4 +62,13 @@ public class StudyGroupService {
 	public StudyGroupVO studyGroupDetail(int studygroup_no) {
 		return sDao.studyGroupDetail(studygroup_no);
 	}
+	
+	public int insertStudyGroup(StudyGroupVO studyGroup) {
+		return sDao.insertStudyGroup(studyGroup);
+	}
+	
+	public int insertApplyGroupStudy(ApplyGroupMemberVO ApplystudyGroup) {
+		return sDao.insertApplyGroupStudy(ApplystudyGroup);
+	}
+
 }
