@@ -72,7 +72,7 @@ public class GroupPageController extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		} else if (command.equals("groupBoardList.do")) {
+		} else if (command.equals("groupAcceptUser.do")) {
 			action = new GroupAcceptUserAction();
 			try {
 				forward = action.execute(request, response);

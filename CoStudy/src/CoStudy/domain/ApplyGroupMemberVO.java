@@ -1,5 +1,6 @@
 package CoStudy.domain;
 
+
 import java.io.Serializable;
 
 public class ApplyGroupMemberVO implements Serializable{
