@@ -22,11 +22,7 @@ public class StudyGroupService {
 	public int insertStudyGroup(StudyGroupVO studyGroup) {
 		return sDao.insertStudyGroup(studyGroup);
 	}
-	
-	/*
-	 * public List<StudyGroupVO> studyGroupList() { return
-	 * sDao.studyGroupList(startRow); }
-	 */
+
 	
 	public StudyGroupListVO studyGroupListInpoSerive(HttpServletRequest request) throws Exception{
 		//총 글갯수

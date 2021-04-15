@@ -80,28 +80,57 @@
 					<div style="overflow: scroll; width: 700px; height: 550px;">
 						<p>스터디그룹번호</p>
 						<p>글내용</p>
+						<p>${studygroup_no }</p>
 						<c:forEach var="lists" items="${list }">
 							<div style="width: 450px; height: 150px; background-color: gray;">
 
 								<p>${lists.studyGroup_no }</p>
 								<p>${lists.page_board_content }</p>
+								<p>${lists.page_board_no }</p>
+
+								<form action="insertGroupReply.do" method="get">
+
+									<input type="hidden" name="studyGroup_no"
+										value="${lists.studyGroup_no }">
+									<h2>${lists.studyGroup_no }</h2>
+
+									<input type="hidden" name="page_board_no"
+										value="${lists.page_board_no }"> <input id="text"
+										type="text" name="group_reply_writer"> <input
+										id="text" type="text" name="group_reply_content">
+
+									<button id="button" type="submit"
+										style="width: 70px; height: 70px;">작성</button>
+
+
+								</form>
 
 
 							</div>
-							<br>
-							<br>
-							<br>
-							<br>
+
+							<c:forEach var="relist" items="${relist }">
+								<c:if test="${lists.page_board_no==relist.page_board_no }">
+									<h6>댓글</h6>
+									<p>${relist.group_reply_no }</p>
+									<p>${relist.group_reply_writer }</p>
+									<p>${relist.group_reply_content }</p>
+									<p>${relist.page_board_no }</p>
+								</c:if>
+							</c:forEach>
+
+
+
+
 						</c:forEach>
-						<div style="width: 650px; height: 100px;">
-							
-						</div>
+
+
 					</div>
 
 
 				</div>
 
 			</div>
+
 
 			<form action="groupWriting.do" method="get">
 				<div id="write">

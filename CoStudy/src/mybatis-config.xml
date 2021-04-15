@@ -14,6 +14,7 @@
       <typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
       <typeAlias type="CoStudy.domain.QnaVO" alias="Qna"/>
       <typeAlias type="CoStudy.domain.ManagerVO" alias="Manager"/>
+      <typeAlias type="CoStudy.domain.GroupReplyVO" alias="GroupReply"/>
       
    </typeAliases>
    
@@ -37,6 +38,7 @@
       <mapper resource="CoStudy/mapper/studyGroup.xml"/>   
       <mapper resource="CoStudy/mapper/qna.xml"/>   
       <mapper resource="CoStudy/mapper/manager.xml"/>   
+      <mapper resource="CoStudy/mapper/groupReply.xml"/>   
       
    </mappers>
    

@@ -2,14 +2,11 @@ package CoStudy.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.GroupPageBoardVO;
-import CoStudy.domain.QnaVO;
 import CoStudy.mapper.GroupPageMapper;
-import CoStudy.mapper.QnaMapper;
 
 
 
@@ -57,19 +54,5 @@ public class GroupPageDao {
 		return list;
 	}
 	
-	public List<GroupPageBoardVO> groupAcceptUser(int user_no){
-		SqlSession sqlSession = MySqlSessionFactory.getSession();
-		List<GroupPageBoardVO> list=null;
-		try {
-			list = sqlSession.getMapper(GroupPageMapper.class).groupAcceptUser(user_no);
-			System.out.println(list);
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (sqlSession != null) {
-				sqlSession.close();
-			}
-		}
-		return list;
-	}
+
 }

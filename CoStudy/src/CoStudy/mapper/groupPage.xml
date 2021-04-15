@@ -19,6 +19,6 @@
 		order by PAGE_BOARD_NO desc
 	</select>
 	
-	<select id=""></select>
+	
 
 </mapper>

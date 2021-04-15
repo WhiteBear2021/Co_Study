@@ -14,18 +14,7 @@ public class GroupWritingAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ActionForward forward = new ActionForward();
-
-		/*
-		 * String page_board_content = request.getParameter("page_board_content");
-		 */ /* String page_board_writer = request.getParameter("page_board_writer"); */
-
-		/*
-		 * GroupPageBoardVO groupPageBoardVO = new GroupPageBoardVO();
-		 */
-		/* groupPageBoardVO.setPage_board_writer(page_board_writer); */
-		/*
-		 * groupPageBoardVO.setPage_board_content(page_board_content);
-		 */		 
+	 
 		
 		System.out.println("테:" + request.getParameter("studygroup_no")); 
 		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
