@@ -20,6 +20,7 @@ public class NoticeService {
 	}
 
 	public NoticePageVO noticeInfoService(HttpServletRequest request) throws Exception {
+		request.setCharacterEncoding("utf-8");
 		//총 글갯수
 		int totalCount=noticeDao.countNotice();
 		//총 페이지 수
@@ -53,6 +54,7 @@ public class NoticeService {
 	}
 
 	public int noticeCreateService(HttpServletRequest request) throws Exception {
+		request.setCharacterEncoding("utf-8");
 		NoticeVO notice = new NoticeVO();
 		notice.setNotice_title(request.getParameter("notice_title"));
 		notice.setNotice_content(request.getParameter("notice_content"));
@@ -62,6 +64,7 @@ public class NoticeService {
 		return noticeDao.noticeCreate(notice);
 	}
 	public NoticeVO noticeDetailService(HttpServletRequest request)throws Exception{
+		request.setCharacterEncoding("utf-8");
 		int notice_no=Integer.parseInt(request.getParameter("notice_no"));
 		NoticeVO notice=noticeDao.noticeDetail(notice_no);
 		
@@ -69,6 +72,7 @@ public class NoticeService {
 		
 	}
 	public int noticeUpdateService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		NoticeVO notice=new NoticeVO();
 		notice.setNotice_no(Integer.parseInt(request.getParameter("notice_no")));
 		notice.setNotice_title(request.getParameter("notice_title"));
@@ -78,6 +82,7 @@ public class NoticeService {
 	}
 	
 	public int noticeDeleteService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		int notice_no=Integer.parseInt(request.getParameter("notice_no"));
 		System.out.println(Integer.parseInt(request.getParameter("notice_no")));
 		return noticeDao.noticeDelete(notice_no);

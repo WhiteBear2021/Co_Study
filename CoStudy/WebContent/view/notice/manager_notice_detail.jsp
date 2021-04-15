@@ -49,8 +49,8 @@
 									value="${notice.notice_no }">
 									
 								<div style="text-align: center;">
-									<a href="noticeUpdateFormAction?notice_no=${notice.notice_no }"><button type="button" class="button type1">수정하기</button></a>
-									<a href="noticeDeleteAction?notice_no=${notice.notice_no }"><button type="button" class="button type1">삭제하기</button></a>
+									<a href="noticeUpdateFormAction.do?notice_no=${notice.notice_no }"><button type="button" class="button type1">수정하기</button></a>
+									<a href="noticeDeleteAction.do?notice_no=${notice.notice_no }"><button type="button" class="button type1">삭제하기</button></a>
 								</div> 
 							
 							</form>
