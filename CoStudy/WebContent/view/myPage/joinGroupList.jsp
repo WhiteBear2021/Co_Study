@@ -30,13 +30,15 @@
 
 			  				<c:forEach var="studyGroup" items="${joinGroupList}">
 			  					<tr>
-			   					<td>그룹번호 : ${studyGroup.studygroup_no }
+			   					<td>
+			   						그룹번호 : ${studyGroup.studygroup_no }
+			   						<a href=" ../groupPage/groupBoardList.do?groupNo=${studyGroup.studygroup_no }">그룹 입장</a>
 									<hr>
 									${studyGroup.studygroup_name }<br>
 									${studyGroup.studygroup_info }<br>
 									${studyGroup.studygroup_location }<br>
 									${studyGroup.made_date }
-									</td>		
+								</td>		
 								</tr>
 							</c:forEach>
 			   			</table>
