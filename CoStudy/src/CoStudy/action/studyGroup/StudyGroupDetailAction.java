@@ -15,6 +15,7 @@ public class StudyGroupDetailAction implements Action {
 		ActionForward forward = new ActionForward();
 		forward.setPath("/view/studyGroup/studyGroupDetail.jsp");
 		forward.setRedirect(false);
+		
 		StudyGroupService service=StudyGroupService.getInstance();
 		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
 		System.out.println(studygroup_no);

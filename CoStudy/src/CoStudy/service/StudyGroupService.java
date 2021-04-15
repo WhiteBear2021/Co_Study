@@ -16,11 +16,8 @@ public class StudyGroupService {
 	
 	public static StudyGroupService getInstance() {
 		sDao=sDao.getInstance();
+		
 		return sService;
-	}
-	
-	public int insertStudyGroup(StudyGroupVO studyGroup) {
-		return sDao.insertStudyGroup(studyGroup);
 	}
 	
 	/*
@@ -64,4 +61,9 @@ public class StudyGroupService {
 	public StudyGroupVO studyGroupDetail(int studygroup_no) {
 		return sDao.studyGroupDetail(studygroup_no);
 	}
+	
+	public int insertStudyGroup(StudyGroupVO studyGroup) {
+		return sDao.insertStudyGroup(studyGroup);
+	}
+	
 }

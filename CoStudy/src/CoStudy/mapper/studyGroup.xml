@@ -4,8 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.StudyGroupMapper">
 	<insert id="insertStudyGroup" parameterType="StudyGroup">
-		insert into studygroup values(seq_studygroup.nextval,#{studygroup_name},#{studygroup_info},#{studygroup_location},0,10,1,sysdate,'N',#{isface},1,#{user_no})
-		
+		insert into studygroup values(seq_studygroup.nextval,#{studygroup_name},#{studygroup_info},#{studygroup_location},0,#{max_user_number},#{current_user_number},sysdate,'N',#{isface},#{category_no},#{user_no})
 	</insert>
 	
 	<select id="studyGroupList" resultType="StudyGroup">
@@ -15,6 +14,5 @@
 	<select id="studyGroupDetail" parameterType="int" resultType="StudyGroup">
 		select * from studygroup where studygroup_no=#{studygroup_no}
 	</select>
-	
 	
 </mapper>

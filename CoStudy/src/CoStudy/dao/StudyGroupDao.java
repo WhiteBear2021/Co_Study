@@ -32,7 +32,6 @@ public class StudyGroupDao {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			// TODO: handle exception
 		}
 		return re;
 	}

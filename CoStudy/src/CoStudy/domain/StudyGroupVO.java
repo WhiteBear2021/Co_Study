@@ -11,7 +11,7 @@ public class StudyGroupVO {
 	private String made_date;
 	private String isdelete;
 	private String isface;
-	private int categori_no;
+	private int category_no;
 	private int user_no;
 	private String hashtag;
 	public StudyGroupVO() {
@@ -20,7 +20,7 @@ public class StudyGroupVO {
 	}
 	public StudyGroupVO(int studygroup_no, String studygroup_name, String studygroup_info, String studygroup_location,
 			int report_number, int max_user_number, int current_user_number, String made_date, String isdelete,
-			String isface, int categori_no, int user_no, String hashtag) {
+			String isface, int category_no, int user_no, String hashtag) {
 		super();
 		this.studygroup_no = studygroup_no;
 		this.studygroup_name = studygroup_name;
@@ -32,7 +32,7 @@ public class StudyGroupVO {
 		this.made_date = made_date;
 		this.isdelete = isdelete;
 		this.isface = isface;
-		this.categori_no = categori_no;
+		this.category_no = category_no;
 		this.user_no = user_no;
 		this.hashtag = hashtag;
 	}
@@ -96,11 +96,11 @@ public class StudyGroupVO {
 	public void setIsface(String isface) {
 		this.isface = isface;
 	}
-	public int getCategori_no() {
-		return categori_no;
+	public int getcategory_no() {
+		return category_no;
 	}
-	public void setCategori_no(int categori_no) {
-		this.categori_no = categori_no;
+	public void setcategory_no(int category_no) {
+		this.category_no = category_no;
 	}
 	public int getUser_no() {
 		return user_no;
@@ -120,7 +120,7 @@ public class StudyGroupVO {
 				+ ", studygroup_info=" + studygroup_info + ", studygroup_location=" + studygroup_location
 				+ ", report_number=" + report_number + ", max_user_number=" + max_user_number + ", current_user_number="
 				+ current_user_number + ", made_date=" + made_date + ", isdelete=" + isdelete + ", isface=" + isface
-				+ ", categori_no=" + categori_no + ", user_no=" + user_no + ", hashtag=" + hashtag + "]";
+				+ ", category_no=" + category_no + ", user_no=" + user_no + ", hashtag=" + hashtag + "]";
 	}
 
 	
