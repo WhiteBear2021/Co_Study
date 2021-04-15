@@ -74,11 +74,11 @@ public class GroupPageDao {
 		}
 		return list;
 	}
-	public int acceptMember(int user_no) {
+	public int acceptMember(ApplyGroupMemberVO vo) {
 		int re = -1;
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		try {
-			re = sqlSession.getMapper(GroupPageMapper.class).acceptMember(user_no);
+			re = sqlSession.getMapper(GroupPageMapper.class).acceptMember(vo);
 			if (re > 0) {
 				sqlSession.commit(); 
 			} else {
@@ -113,5 +113,26 @@ public class GroupPageDao {
 		}
 		return re;
 	}
+
+	public int insertAcceptMember(ApplyGroupMemberVO vo) {
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		try {
+			re = sqlSession.getMapper(GroupPageMapper.class).insertAcceptMember(vo);
+			if (re > 0) {
+				sqlSession.commit(); 
+			} else {
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null)
+				sqlSession.close();
+		}
+		return re;
+	}
+	
 
 }
