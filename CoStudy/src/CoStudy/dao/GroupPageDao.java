@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.GroupPageBoardVO;
-import CoStudy.domain.GroupPuserVO;
+import CoStudy.domain.GroupUserVO;
 import CoStudy.mapper.GroupPageMapper;
 
 
@@ -98,7 +98,7 @@ public class GroupPageDao {
 		int re = -1;
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		try {
-			re = sqlSession.getMapper(GroupPageMapper.class).refuse(user_no);
+			re = sqlSession.getMapper(GroupPageMapper.class).refuseMember(user_no);
 			if (re > 0) {
 				sqlSession.commit(); 
 			} else {

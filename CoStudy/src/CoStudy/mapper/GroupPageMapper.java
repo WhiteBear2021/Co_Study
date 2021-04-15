@@ -12,7 +12,7 @@ public interface GroupPageMapper {
 	List<GroupPageBoardVO> groupBoardList();
 	List<ApplyGroupMemberVO> selectApplyList();
 	int acceptMember(int user_no);
-	int refuse(int user_no);
+	int refuseMember(int user_no);
 }
 
 

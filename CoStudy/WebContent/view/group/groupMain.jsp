@@ -78,13 +78,11 @@
 			<div class="col-lg-9" id="peed">
 				<div id="selectGroupBoard">
 					<div style="overflow: scroll; width: 700px; height: 550px;">
-						<p>스터디그룹번호</p>
-						<p>글내용</p>
-						<p>${studygroup_no }</p>
+						
 						<c:forEach var="lists" items="${list }">
 
 
-							<div id="board-list" class="post_reply_wrap"
+							<%-- <div id="board-list" class="post_reply_wrap"
 								style="width: 600px; height: 270px;">
 								<div id="board-list-p">
 									<p>${lists.studyGroup_no }</p>
@@ -95,6 +93,7 @@
 										<input type="text" id="reply-text">
 									</form>
 								</div>
+							</div> --%>
 					
 							<div style="width: 450px; height: 150px; background-color: gray;">
 

@@ -2,15 +2,15 @@ package CoStudy.domain;
 
 import java.io.Serializable;
 
-public class GroupPuserVO implements Serializable{
+public class GroupUserVO implements Serializable{
 	private int user_no;
 	private int studyGroup_no;
 	
-	public GroupPuserVO () {
+	public GroupUserVO () {
 		
 	}
 
-	public GroupPuserVO(int user_no, int studyGroup_no) {
+	public GroupUserVO(int user_no, int studyGroup_no) {
 		super();
 		this.user_no = user_no;
 		this.studyGroup_no = studyGroup_no;
