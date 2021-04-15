@@ -5,13 +5,14 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import CoStudy.dao.StudyGroupDao;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.StudyGroupListVO;
 import CoStudy.domain.StudyGroupVO;
 
 public class StudyGroupService {
 	private static StudyGroupService sService=new StudyGroupService();
 	private static StudyGroupDao sDao;
-	private static final int PAGE_SIZE = 5;
+	private static final int PAGE_SIZE = 20;
 	
 	
 	public static StudyGroupService getInstance() {
@@ -66,4 +67,8 @@ public class StudyGroupService {
 		return sDao.insertStudyGroup(studyGroup);
 	}
 	
+	public int insertApplyGroupStudy(ApplyGroupMemberVO ApplystudyGroup) {
+		return sDao.insertApplyGroupStudy(ApplystudyGroup);
+	}
+
 }

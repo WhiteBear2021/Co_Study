@@ -6,8 +6,8 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.StudyGroupVO;
-import CoStudy.mapper.NoticeMapper;
 import CoStudy.mapper.StudyGroupMapper;
 
 public class StudyGroupDao {
@@ -32,6 +32,10 @@ public class StudyGroupDao {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
 		}
 		return re;
 	}
@@ -63,6 +67,10 @@ public class StudyGroupDao {
 			studyGroupDetail=sqlSession.getMapper(StudyGroupMapper.class).studyGroupDetail(studygroup_no);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
 		}
 		
 		return studyGroupDetail;
@@ -82,4 +90,28 @@ public class StudyGroupDao {
 		}
 		return re;
 	}
+
+	public int insertApplyGroupStudy(ApplyGroupMemberVO applystudyGroup) {
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		int re=-1;
+		try {
+			re=sqlSession.getMapper(StudyGroupMapper.class).insertApplyGroupStudy(applystudyGroup);
+			
+			if(re==-1) {
+				sqlSession.rollback();
+			}else {
+				sqlSession.commit();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return re;	
+	}
+
+
+	
 }
