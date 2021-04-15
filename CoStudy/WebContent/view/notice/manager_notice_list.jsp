@@ -63,7 +63,7 @@
 															<c:forEach var="notice" items="${listPage.list }">
 																<tr>
 																	<th>${notice.notice_no }</th>
-																	<th><a href="noticeDetailAction?notice_no=${notice.notice_no }">${notice.notice_title }</th>
+																	<th><a href="noticeDetailAction.do?notice_no=${notice.notice_no }">${notice.notice_title }</th>
 																	<th>${notice.notice_date }</th>
 																	<th>${notice.manager_no }</th>
 																</tr>
@@ -77,7 +77,7 @@
 														<ul class="pagination">
 															<c:if test="${listPage.startPage > 3 }">
 																<li class="page-item"><a class="page-link"
-																	href="noticeInfoAction?pageNum=${listPage.startPage -1 }">Previous</a></li>
+																	href="noticeInfoAction.do?pageNum=${listPage.startPage -1 }">Previous</a></li>
 															</c:if>
 
 															<!-- 페이지목록 -->
@@ -90,7 +90,7 @@
 																</c:if>
 																<c:if test="${listPage.requestPage != pageNo }">
 																	<li class="page-item"><a class="page-link"
-																		href="noticeInfoAction?pageNum=${pageNo }">${pageNo }</a></li>
+																		href="noticeInfoAction.do?pageNum=${pageNo }">${pageNo }</a></li>
 
 																</c:if>
 															</c:forEach>
@@ -100,7 +100,7 @@
 																test="${listPage.endPage < listPage.totalPageCount}">
 																
 																	<li class="page-item"><a class="page-link"
-																	href="noticeInfoAction?pageNum=${listPage.endPage +1 }">Next</a></li>
+																	href="noticeInfoAction.do?pageNum=${listPage.endPage +1 }">Next</a></li>
 															</c:if>
 														</ul>
 													</nav>

@@ -57,7 +57,7 @@
 							관리</span></a>
 					<ul class="pcoded-submenu">
 						<li><a href="/CoStudy/Notice/noticeInfoAction.do" target="_blank">공지사항 리스트</a></li>
-						<li><a href="/CoStudy/Notice/noticeAction" target="_blank">공지사항 등록</a></li>
+						<li><a href="/CoStudy/Notice/noticeAction.do" target="_blank">공지사항 등록</a></li>
 
 					</ul></li>
 				<li class="nav-item pcoded-hasmenu"><a href="#!"
@@ -65,7 +65,7 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">자주묻는질문
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="/CoStudy/Qna/QnaInfoAction" target="_blank">자주묻는질문 리스트</a></li>
+						<li><a href="#" target="_blank">자주묻는질문 리스트</a></li>
 						<li><a href="#" target="_blank">자주묻는질문 등록</a></li>
 
 					</ul></li>

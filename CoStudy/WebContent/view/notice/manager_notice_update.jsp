@@ -33,7 +33,7 @@
 				<div class="col-sm-12">
 					<div class="card">
 						<div class="card-body">
-							<form action="noticeUpdateAction" method="post">
+							<form action="noticeUpdateAction.do" method="post">
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label style="font-weight: bold;">제목</label> <input
