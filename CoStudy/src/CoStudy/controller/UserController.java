@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.user.LoginAction;
 import CoStudy.action.user.LoginFormAction;
+import CoStudy.action.user.LogoutAction;
 import CoStudy.action.user.MyPageAction;
 import CoStudy.action.user.SignUpAction;
 import CoStudy.action.user.SignUpFormAction;
@@ -67,6 +68,13 @@ public class UserController extends HttpServlet {
 			}  
     	}else if(command.equals("loginAction.do")) {
     		action = new LoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}  
+    	}else if(command.equals("logout.do")) {
+    		action = new LogoutAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
