@@ -21,10 +21,6 @@ public class StudyGroupService {
 		return sService;
 	}
 	
-	/*
-	 * public List<StudyGroupVO> studyGroupList() { return
-	 * sDao.studyGroupList(startRow); }
-	 */
 	
 	public StudyGroupListVO studyGroupListInpoSerive(HttpServletRequest request) throws Exception{
 		//총 글갯수
