@@ -18,4 +18,9 @@
 	<delete id="deleteManager" parameterType="int">
 		delete from manager where manager_no = #{manager_no}
 	</delete>
+	
+	<select id="managerLogin" parameterType="Login" resultType="Manager">
+		select *
+		from manager where manager_id=#{userId} and manager_pw = #{userPw}
+	</select>
 </mapper>

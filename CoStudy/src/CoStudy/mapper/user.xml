@@ -22,7 +22,7 @@
 		seq_user_info.NEXTVAL, #{user_id}, #{user_pw},
 		#{user_lastName}, #{user_firstName},
 		#{user_phoneNo}, #{user_post},
-		#{user_birth}, #{user_email}, 1,
+		#{user_birth}, #{user_email}, #{category_no},
 		#{user_address1}, #{user_address2},
 		SYSDATE
 	)

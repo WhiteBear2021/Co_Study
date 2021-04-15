@@ -40,23 +40,28 @@ public class GroupPageDao {
 		return re;
 	}
 	
-	/*
-	 * public List<GroupPageBoardVO> groupBoardList() {
-	 * 
-	 * SqlSession sqlSession = MySqlSessionFactory.getSession();
-	 * List<GroupPageBoardVO> list = null; try { list =
-	 * sqlSession.getMapper(GroupPageMapper.class).groupBoardList();
-	 * 
-	 * } catch (Exception e) { e.printStackTrace(); } finally { if (sqlSession !=
-	 * null) sqlSession.close(); }
-	 * 
-	 * return list; }
-	 */
-	public List<GroupPageBoardVO> selectGroupBoard(int studyGroup_no){
+
+	public List<GroupPageBoardVO> selectGroupBoard(int studygroup_no){
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		List<GroupPageBoardVO> list=null;
 		try {
-			list = sqlSession.getMapper(GroupPageMapper.class).selectGroupBoard(studyGroup_no);
+			list = sqlSession.getMapper(GroupPageMapper.class).selectGroupBoard(studygroup_no);
+			System.out.println(list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return list;
+	}
+	
+	public List<GroupPageBoardVO> groupAcceptUser(int user_no){
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		List<GroupPageBoardVO> list=null;
+		try {
+			list = sqlSession.getMapper(GroupPageMapper.class).groupAcceptUser(user_no);
 			System.out.println(list);
 		} catch (Exception e) {
 			e.printStackTrace();

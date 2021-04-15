@@ -75,7 +75,8 @@
 	<div class="container" class="row" id="group-Main-body">
 		<input type="hidden" name="studyGroup_no" value="1">
 		<div id="background-body">
-
+			<%-- <input type="hidden" name="studygroup_no"
+				value="${studyGroup.studygroup_no }"> --%>
 			<div class="col-lg-9" id="peed">
 				<div id="selectGroupBoard">
 					<div style="overflow: scroll; width: 700px; height: 550px;">
@@ -109,19 +110,24 @@
 
 			<form action="groupWriting.do" method="get">
 				<div id="write">
-					<input type="hidden" name="page_board_writer" value="aa"> <input
-						id="text-box" type="text" name="page_board_content"
+
+					<input type="hidden" name="studygroup_no" value="${studygroup_no}"> 
+					 <input id="text-box" type="text" name="page_board_content"
 						style="width: 600px; height: 70px;">
 					<button id="button" type="submit"
 						style="width: 70px; height: 70px;">작성</button>
 				</div>
 
 			</form>
+			
+			
+			
 			<div class="col-lg-3 col-md-12" id="group-Main-right"
 				style="right: 0;">
 				<div id="group-Main-right-top" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
 					<div id="right-sidebar-fileBox"></div>
+					<a href="../chatting/chattingRoom.do?roomNo=${roomNo}" onclick="window.open(this.href, '_blank', 'width=800, height=1000'); return false;">그룹 채팅</a>
 				</div>
 				<div id="group-Main-right-bottom" class="col-md-5">
 					<div id="right-sidebar-userlist">

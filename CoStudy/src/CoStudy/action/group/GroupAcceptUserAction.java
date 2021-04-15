@@ -10,20 +10,19 @@ import CoStudy.action.ActionForward;
 import CoStudy.domain.GroupPageBoardVO;
 import CoStudy.service.GroupPageService;
 
-public class GroupBoardListAction implements Action {
+public class GroupAcceptUserAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
-		GroupPageService service=GroupPageService.getInstance();
+		GroupPageService service = GroupPageService.getInstance();
 		
 		List<GroupPageBoardVO> list=service.groupBoardService(request);
 		request.setAttribute("list", list);
-		request.setAttribute("studygroup_no", request.getParameter("studygroup_no"));
-		request.setAttribute("roomNo", Integer.parseInt(request.getParameter("groupNo")));
-		forward.setPath("/view/group/groupMain.jsp");
+		
+		forward.setPath("/view/group/groupSetting.jsp");
 		forward.setRedirect(false);
-
+		
 		return forward;
 	}
 

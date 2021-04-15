@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import CoStudy.action.group.GroupAcceptUserAction;
 import CoStudy.action.group.GroupBoardListAction;
 import CoStudy.action.group.GroupWritingAction;
 import CoStudy.action.group.GroupWritingFormAction;
@@ -54,19 +55,30 @@ public class GroupPageController extends HttpServlet {
 			}
 		} else if (command.equals("groupWriting.do")) {
 			action = new GroupWritingAction();
-			try {
+			/*
+			 * System.out.println("write번호:"+Integer.parseInt(request.getParameter(
+			 * "studygroup_no")));
+			 */			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else if (command.equals("groupBoardList.do")) {
 			action = new GroupBoardListAction();
+			System.out.println("번호:"+Integer.parseInt(request.getParameter("studygroup_no")));
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
+		} else if (command.equals("groupBoardList.do")) {
+			action = new GroupAcceptUserAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		if (forward != null) {
 			if (forward.isRedirect()) {
@@ -76,7 +88,6 @@ public class GroupPageController extends HttpServlet {
 				dispatcher.forward(request, response);
 			}
 		}
-
 	}
 
 	/**
