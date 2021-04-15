@@ -4,23 +4,39 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.GroupPageMapper">
 	<cache />
-	<insert id="insertGroupBoard" parameterType="GroupPageBoard" >
+	<insert id="insertGroupBoard" parameterType="GroupPageBoard">
 		INSERT INTO
 		group_page_board values (
 		seq_group_page_board.NEXTVAL,'title',#{page_board_content},'aa',
 		sysdate ,null,3)
 	</insert>
 
-	<select id="selectGroupBoard" resultType="GroupPageBoard" parameterType="int">
+	<select id="selectGroupBoard" resultType="GroupPageBoard"
+		parameterType="int">
 		<!-- SELECT page_board_content FROM group_page_board -->
-		SELECT * 
+		SELECT *
 		FROM group_page_board
 		where STUDYGROUP_NO=#{STUDYGROUP_NO}
-		order by PAGE_BOARD_NO desc
+		order by
+		PAGE_BOARD_NO desc
 	</select>
+
+	<select id="selectApplyList" resultType="ApplyGroupMember"> 
+<!-- 	<![CDATA[
+			 select * from Apply_Group_Member where isAccept = 'N'
+		]]> -->
+		select * from Apply_Group_Member
+
+	</select>
+<!-- 	
+	<insert id="acceptMember" parameterType="AcceptMember"> 
+		INSERT INTO 
+		groupuser values (
+		
+		)
+		
+	</insert>
 	
-	<select id="selectApplyList" resultType = "ApplyGroupMember"> 
-		select * from 
-	</select>
+	 -->
 
 </mapper>

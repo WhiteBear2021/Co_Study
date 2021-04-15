@@ -86,20 +86,24 @@
 						<div id="acceptTable" class="table-box table-box--vertical"
 							style="width: 600px; height: 650px;">
 							<h2>그룹 신청 목록</h2>
+							<input type="hidden" name="studyGroup_no" value="1">
+							<%-- <input type="hidden" name="studygroup_no"
+								value="${studyGroup.studygroup_no }"> --%>
 							<table class="table table--vertical" id="accept-list">
-								<tr>
-									<td>...</td>
-
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
+								<tbody>
+									<c:forEach var="applyGroupMember" items="${applyUserList}">
+										<tr>
+											<td>${applyGroupMember.studyGroup_no }</td>
+											<td>${applyGroupMember.user_no }</td>
+											<td><input type="button"
+												onclick="location.href='acceptMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'"
+												value="수락"></td>
+											<td><input type="button"
+												onclick="location.href='refuseMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'"
+												value="거절"></td>
+										</tr>
+									</c:forEach>
+								</tbody>
 
 
 							</table>

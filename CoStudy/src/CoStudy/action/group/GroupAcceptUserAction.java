@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.GroupPageBoardVO;
 import CoStudy.service.GroupPageService;
 
@@ -16,9 +17,11 @@ public class GroupAcceptUserAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		GroupPageService service = GroupPageService.getInstance();
+		List<ApplyGroupMemberVO> list = service.applyListService(request);
+		request.setAttribute("applyUserList", list);
 		
-		forward.setPath("/view/group/groupSetting.jsp");
 		forward.setRedirect(false);
+		forward.setPath("/view/group/groupSetting.jsp");
 		
 		return forward;
 	}
