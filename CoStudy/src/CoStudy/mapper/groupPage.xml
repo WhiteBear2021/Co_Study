@@ -19,6 +19,8 @@
 		order by PAGE_BOARD_NO desc
 	</select>
 	
-	<select id=""></select>
+	<select id="selectApplyList" resultType = "ApplyGroupMember"> 
+		select * from 
+	</select>
 
 </mapper>

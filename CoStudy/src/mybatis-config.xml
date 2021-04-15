@@ -14,6 +14,7 @@
       <typeAlias type="CoStudy.domain.StudyNoteVO" alias="StudyNote"/>
       <typeAlias type="CoStudy.domain.QnaVO" alias="Qna"/>
       <typeAlias type="CoStudy.domain.ManagerVO" alias="Manager"/>
+      <typeAlias type="CoStudy.domain.ApplyGroupMemberVO" alias="ApplyGroupMember"/>
       
    </typeAliases>
    

@@ -87,18 +87,19 @@
 
 
 						<c:forEach var="lists" items="${list }">
-							<div id="board-list" class="post_reply_wrap" style="width: 600px; height: 270px;">
+							<div id="board-list" class="post_reply_wrap"
+								style="width: 600px; height: 270px;">
 								<div id="board-list-p">
 									<p>${lists.studyGroup_no }</p>
 									<p>${lists.page_board_content }</p>
 								</div>
 								<div id="reply">
-								<form action="">
-									<input type="text" id="reply-text">
-								</form>
+									<form action="">
+										<input type="text" id="reply-text">
+									</form>
 								</div>
 							</div>
-							
+
 							<br>
 						</c:forEach>
 
@@ -107,6 +108,19 @@
 
 				</div>
 
+			</div>
+			<div class="col-md-4">
+			<div class="panel panel-info" class="col-md-4" id="panel-sideVar">
+				<div>
+					<h3 class="panel-title">Panel Title</h3>
+				</div>
+				<!-- 메뉴목록 -->
+				<ul class="list-group">
+					<li class="list-group-item">
+					<input type="button" onclick="location.href='groupAcceptUser.do'" value="그룹신청 목록">
+					</li>
+				</ul>
+			</div>
 			</div>
 
 			<form action="groupWriting.do" method="get">
