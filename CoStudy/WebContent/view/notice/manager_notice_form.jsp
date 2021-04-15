@@ -35,7 +35,7 @@
 					<div class="card">
 						<div class="card-body">
 
-							<form action="noticeCreateAction" method="post">
+							<form action="noticeCreateAction.do" method="post">
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label style="font-weight: bold;">제목</label> <input
