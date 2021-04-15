@@ -6,7 +6,6 @@ import javax.servlet.http.HttpSession;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
-import CoStudy.domain.LoginVO;
 import CoStudy.domain.ManagerVO;
 import CoStudy.domain.UserVO;
 import CoStudy.service.ManagerService;
@@ -44,9 +43,6 @@ public class LoginAction implements Action {
 			}
 		}
 		
-
-		
-
 		return forward;
 	}
 

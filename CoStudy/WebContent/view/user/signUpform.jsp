@@ -146,11 +146,14 @@
 							<div class="value">
 								<div class="input-group">
 									<div class="rs-select2 js-select-simple select--no-search">
-										<select name="subject">
+										<select name="category_no">
 											<option disabled="disabled" selected="selected">선택하세요.</option>
-											<option>IT/컴퓨터</option>
-											<option>취업준비</option>
-											<option>외국어</option>
+											<option value="1">IT</option>
+											<option value="2">외국어</option>
+											<option value="3">취업</option>
+											<option value="4">자격증</option>
+											<option value="5">전공</option>
+											<option value="6">수험생</option>
 										</select>
 										<div class="select-dropdown"></div>
 									</div>

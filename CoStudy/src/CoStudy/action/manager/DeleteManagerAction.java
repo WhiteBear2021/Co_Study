@@ -14,7 +14,6 @@ public class DeleteManagerAction implements Action{
 		ActionForward forward = new ActionForward();
 		ManagerService service = ManagerService.getInstance();
 		int manager_no= Integer.parseInt(request.getParameter("manager_no"));
-		System.out.println("삭제할 seq: "+manager_no);
 		service.deleteManagerService(manager_no);
 		forward.setRedirect(false);
 		forward.setPath("managerList.do");

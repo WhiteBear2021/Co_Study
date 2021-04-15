@@ -19,7 +19,6 @@ public class UserService {
 		request.setCharacterEncoding("utf-8");
 		UserVO user = new UserVO();
 
-		// user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
 		user.setUser_id(request.getParameter("user_id"));
 		user.setUser_pw(request.getParameter("user_pw"));
 		user.setUser_lastName(request.getParameter("user_lastName"));
@@ -31,6 +30,9 @@ public class UserService {
 		user.setUser_birth(request.getParameter("user_birth"));
 		user.setUser_email(request.getParameter("user_email"));
 		user.setUser_register_date(request.getParameter("user_register_date"));
+//		user.setCategory_no(2);
+		user.setCategory_no(Integer.parseInt(request.getParameter("category_no")));
+		System.out.println(user.getCategory_no());
 		return u_dao.insertUser(user);
 	}
 
