@@ -19,6 +19,7 @@ public class QnaService {
 		return qnaService;
 	}
 	public QnaPageVo QnaInfoService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		int totalCount=qnaDao.countQna();
 		//총 페이지 수
 		int totalPageCount=totalCount/PAGE_SIZE;
@@ -50,6 +51,7 @@ public class QnaService {
 	}
 	
 	public List<QnaVO> QnaDetailService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		int qna_no=Integer.parseInt(request.getParameter("qna_no"));
 		request.setAttribute("qna_number", qna_no);
 		
@@ -59,6 +61,7 @@ public class QnaService {
 		return list;
 	}
 	public int QnaUserInsertService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		QnaVO qna=new QnaVO();
 		qna.setQna_title(request.getParameter("qna_title"));
 		qna.setQna_content(request.getParameter("qna_content"));
@@ -69,6 +72,7 @@ public class QnaService {
 		
 	}
 	public int QnaInsertManagerReplyService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		QnaVO qna=new QnaVO();
 		qna.setQna_title(request.getParameter("qna_title"));
 		qna.setQna_content(request.getParameter("qna_content"));
@@ -81,6 +85,7 @@ public class QnaService {
 	}
 	
 	public int QnaInsertUserReplyService(HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
 		QnaVO qna=new QnaVO();
 		qna.setQna_title(request.getParameter("qna_title"));
 		qna.setQna_content(request.getParameter("qna_content"));
