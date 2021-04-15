@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.manager.AddManagerAction;
 import CoStudy.action.manager.DeleteManagerAction;
 import CoStudy.action.manager.ManagerList;
+import CoStudy.action.manager.mainAction;
 
 /**
  * Servlet implementation class ManagerController
@@ -51,7 +52,13 @@ public class ManagerController extends HttpServlet {
 			}
 		} else if (command.equals("deleteManager.do")) {
 			action = new DeleteManagerAction();
-			System.out.println("controller");
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("main.do")) {
+			action = new mainAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

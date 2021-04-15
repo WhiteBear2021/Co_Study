@@ -18,8 +18,7 @@ public class SignUpAction implements Action{
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward= new ActionForward();
 		UserService service = UserService.getInstance();
-		int re=service.insertUserService(request);
-		System.out.println("insert 갯수:"+re);
+		service.insertUserService(request);
 		forward.setRedirect(true);
 		forward.setPath("login.do");
 		return forward;

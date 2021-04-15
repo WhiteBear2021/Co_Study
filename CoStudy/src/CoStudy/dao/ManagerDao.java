@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
+import CoStudy.domain.LoginVO;
 import CoStudy.domain.ManagerVO;
 import CoStudy.mapper.ManagerMapper;
 
@@ -33,6 +34,13 @@ public class ManagerDao {
 				sqlSession.close();
 		}
 		return re;
+
+	}
+	
+	public ManagerVO login(LoginVO login) throws Exception {
+
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		return sqlSession.getMapper(ManagerMapper.class).managerLogin(login);
 
 	}
 	
