@@ -4,8 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-
-
+import org.apache.catalina.Group;
 
 import CoStudy.dao.GroupPageDao;
 import CoStudy.domain.GroupPageBoardVO;
@@ -38,4 +37,8 @@ public class GroupPageService {
 		System.out.println("스터디그룹번호:"+studygroup_no);
 		return gpDao.selectGroupBoard(studygroup_no);
 	}
+
+	
 }
+
+

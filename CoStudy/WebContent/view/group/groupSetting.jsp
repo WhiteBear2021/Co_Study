@@ -7,14 +7,14 @@
 <meta charset="UTF-8">
 <link rel='stylesheet'
 	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel="stylesheet" href="../../css/groupSetting.css">
+<link rel="stylesheet" href="../css/groupSetting.css">
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-<link type="text/css" rel="stylesheet" href="../../css/timer.css">
+<link type="text/css" rel="stylesheet" href="../css/timer.css">
 
 <link type="text/css" rel="stylesheet"
-	href="../../css/groupSidebar_list.css">
+	href="../css/groupSidebar_list.css">
 
 </head>
 

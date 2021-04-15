@@ -17,9 +17,6 @@ public class GroupAcceptUserAction implements Action {
 		ActionForward forward = new ActionForward();
 		GroupPageService service = GroupPageService.getInstance();
 		
-		List<GroupPageBoardVO> list=service.groupBoardService(request);
-		request.setAttribute("list", list);
-		
 		forward.setPath("/view/group/groupSetting.jsp");
 		forward.setRedirect(false);
 		
