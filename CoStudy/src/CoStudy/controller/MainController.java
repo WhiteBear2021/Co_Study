@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.main.MainPageAction;
-import CoStudy.action.manageUser.UserInfoAction;
 
 /**
  * Servlet implementation class MainController
