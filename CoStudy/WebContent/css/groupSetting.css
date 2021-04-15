@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+#group-Main-body {
+	position: relative;
+}
+
+#setting {
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border: solid 1px black;
+}
