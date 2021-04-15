@@ -11,7 +11,8 @@ public interface GroupPageMapper {
 	List<GroupPageBoardVO> selectGroupBoard(int studyGroup_no);
 	List<GroupPageBoardVO> groupBoardList();
 	List<ApplyGroupMemberVO> selectApplyList();
-	int acceptMember(int user_no);
+	int acceptMember(ApplyGroupMemberVO vo);
+	int insertAcceptMember(ApplyGroupMemberVO vo);
 	int refuseMember(int user_no);
 }
 
