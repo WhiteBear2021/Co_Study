@@ -2,6 +2,7 @@ package CoStudy.action.studyGroup;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
@@ -21,6 +22,9 @@ public class StudyGroupDetailAction implements Action {
 		StudyGroupVO studyGroupDetail = service.studyGroupDetail(studygroup_no);
 		request.setAttribute("studyGroupDetail", studyGroupDetail);
 		
+		
+		HttpSession session=request.getSession();
+		System.out.println("user session"+session.getAttribute("user"));
 		
 		return forward;
 		
