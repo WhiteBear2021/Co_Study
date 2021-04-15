@@ -86,7 +86,7 @@
                         <ul id="navigation">
                         <%if (session.getAttribute("user")!=null) { %>
                                 <li>
-                                 <a href="/CoStudy/user/loginout.do">로그아웃</a>
+                                 <a href="/CoStudy/user/logout.do">로그아웃</a>
                                  </li>
                            <% } else { %>
                            		<li>
