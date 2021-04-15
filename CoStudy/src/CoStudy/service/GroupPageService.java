@@ -40,10 +40,12 @@ public class GroupPageService {
 		return gpDao.selectApplyList();
 	}
 	
-	public int acceptMemberService(int user_no) throws Exception {
-		return gpDao.acceptMember(user_no);
+	public int acceptMemberService(ApplyGroupMemberVO vo) throws Exception {
+		return gpDao.acceptMember(vo);
 	}
-	
+	public int insertAcceptMemberService(ApplyGroupMemberVO vo) throws Exception {
+		return gpDao.insertAcceptMember(vo);
+	}
 	public int refuseMemberService(int user_no) throws Exception {
 		return gpDao.refuseMember(user_no);
 	}
