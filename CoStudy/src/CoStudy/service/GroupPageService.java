@@ -27,7 +27,7 @@ public class GroupPageService {
 	
 	public List<GroupPageBoardVO> groupBoardService(HttpServletRequest request) throws Exception {
 		/* int studyGroup_no=Integer.parseInt(request.getParameter("studyGroup_no")); */
-		int studyGroup_no=1;
+		int studyGroup_no= Integer.parseInt(request.getParameter("groupNo"));
 		System.out.println("studyGroup_no:"+studyGroup_no);
 		return gpDao.selectGroupBoard(studyGroup_no);
 	}

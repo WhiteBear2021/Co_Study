@@ -14,8 +14,7 @@ public class GroupWritingAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		ActionForward forward = new ActionForward();
-		forward.setRedirect(false);
-		forward.setPath("groupBoardList.do");
+	
 		
 		String page_board_content = request.getParameter("page_board_content");
 		String page_board_writer = request.getParameter("page_board_writer");
@@ -28,6 +27,9 @@ public class GroupWritingAction implements Action {
 		GroupPageService service = GroupPageService.getInstance();
 		service.insertBoard(groupPageBoardVO);
 		
+		
+		forward.setRedirect(false);
+		forward.setPath("groupBoardList.do");
 		return forward;
 	}
 
