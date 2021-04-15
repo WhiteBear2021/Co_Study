@@ -1,0 +1,3 @@
+CREATE SEQUENCE seq_group_page_board
+START WITH 1
+INCREMENT BY 1;
