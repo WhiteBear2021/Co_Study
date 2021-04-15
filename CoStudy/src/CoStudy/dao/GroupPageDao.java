@@ -113,6 +113,7 @@ public class GroupPageDao {
 		}
 		return re;
 	}
+
 	public int insertAcceptMember(ApplyGroupMemberVO vo) {
 		int re = -1;
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
