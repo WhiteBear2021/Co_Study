@@ -4,17 +4,13 @@ import java.util.List;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.http.HttpServletRequest;
-
-
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
 import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.GroupPageBoardVO;
 import CoStudy.domain.GroupPuserVO;
-
 import CoStudy.mapper.GroupPageMapper;
-
 
 
 
@@ -62,6 +58,7 @@ public class GroupPageDao {
 		return list;
 	}
 	
+
 	public List<ApplyGroupMemberVO> selectApplyList(){
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		List<ApplyGroupMemberVO> list=null;
@@ -116,4 +113,5 @@ public class GroupPageDao {
 		}
 		return re;
 	}
+
 }

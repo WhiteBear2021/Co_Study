@@ -21,6 +21,7 @@
 		PAGE_BOARD_NO desc
 	</select>
 
+
 	<select id="selectApplyList" resultType="ApplyGroupMember"> 
 <!-- 	<![CDATA[
 			 select * from Apply_Group_Member where isAccept = 'N'

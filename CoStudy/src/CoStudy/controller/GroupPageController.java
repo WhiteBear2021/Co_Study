@@ -14,7 +14,11 @@ import CoStudy.action.group.GroupAcceptUserAction;
 import CoStudy.action.group.GroupBoardListAction;
 import CoStudy.action.group.GroupWritingAction;
 import CoStudy.action.group.GroupWritingFormAction;
+<<<<<<< HEAD
 import CoStudy.action.group.RefuseMemberAction;
+=======
+import CoStudy.action.group.insertGroupReplyAction;
+>>>>>>> branch 'dev' of https://github.com/WhiteBear2021/Co_Study.git
 import CoStudy.action.user.SignUpFormAction;
 
 /**
@@ -95,7 +99,21 @@ public class GroupPageController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+
+		}else if (command.equals("insertGroupReply.do")) {
+			action = new insertGroupReplyAction();
+
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
+		
+		
+		
+		
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());

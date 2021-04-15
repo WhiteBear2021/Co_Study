@@ -37,10 +37,14 @@
 	        	</label><br>
 	        	<label>
 	        	카테고리 : 
-	        	<input type="text" name="categori_no">
-	        	</label><br>
-	        	<label>
-	        	<input type="hidden" name="user_no" value="1">
+	        	<select name="studygroup_category">
+	        		<option value="1">IT</option>
+	        		<option value="2">외국어</option>
+	        		<option value="3">취업</option>
+	        		<option value="4">자격증</option>
+	        		<option value="5">전공</option>
+	        		<option value="6">수험생</option>
+	        	</select>
 	        	</label><br>
 	        	<input type="submit" value="그룹만들기">
 	        </form>
