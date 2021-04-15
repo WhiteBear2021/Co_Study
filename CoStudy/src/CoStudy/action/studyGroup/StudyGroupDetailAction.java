@@ -27,7 +27,7 @@ public class StudyGroupDetailAction implements Action {
 		forward.setPath("/view/studyGroup/studyGroupDetail.jsp");
 		forward.setRedirect(false);
 		
-		HttpSession session=request.getSession();
+
 		System.out.println("user session"+session.getAttribute("user"));
 		
 		return forward;

@@ -2,9 +2,11 @@ package CoStudy.action.notice;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
+import CoStudy.domain.ManagerVO;
 import CoStudy.service.NoticeService;
 
 public class noticeCreateAction implements Action {
@@ -14,9 +16,13 @@ public class noticeCreateAction implements Action {
 		ActionForward actionForward=new ActionForward();
 		NoticeService service=NoticeService.getInstance();
 		
+	
+		
 		service.noticeCreateService(request);
 		actionForward.setRedirect(true);
 		actionForward.setPath("noticeInfoAction.do");
+		
+		
 		return actionForward;
 	}
 
