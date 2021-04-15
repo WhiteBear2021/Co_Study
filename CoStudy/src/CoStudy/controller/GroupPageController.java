@@ -14,11 +14,8 @@ import CoStudy.action.group.GroupAcceptUserAction;
 import CoStudy.action.group.GroupBoardListAction;
 import CoStudy.action.group.GroupWritingAction;
 import CoStudy.action.group.GroupWritingFormAction;
-<<<<<<< HEAD
 import CoStudy.action.group.RefuseMemberAction;
-=======
 import CoStudy.action.group.insertGroupReplyAction;
->>>>>>> branch 'dev' of https://github.com/WhiteBear2021/Co_Study.git
 import CoStudy.action.user.SignUpFormAction;
 
 /**
