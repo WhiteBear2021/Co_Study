@@ -1,18 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <link rel='stylesheet'
 	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel="stylesheet" href="../../css/groupMain_style.css">
+<link rel="stylesheet" href="../../css/groupSetting.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 <link type="text/css" rel="stylesheet" href="../../css/timer.css">
+
 <link type="text/css" rel="stylesheet"
 	href="../../css/groupSidebar_list.css">
+
 </head>
+
 <body>
+
 	<div id="wrapper">
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
@@ -70,11 +77,42 @@
 	</div>
 
 	<div class="container" class="row" id="group-Main-body">
-
+		<input type="hidden" name="studyGroup_no" value="1">
 		<div id="background-body">
+
 			<div class="col-lg-9" id="setting">
-				
-			
+				<div id="settingBoard">
+					<div id="group-accept" class="table-wrap">
+						<div id="acceptTable" class="table-box table-box--vertical"
+							style="width: 600px; height: 650px;">
+							<h2>그룹 신청 목록</h2>
+							<table class="table table--vertical" id="accept-list">
+								<tr>
+									<td>...</td>
+
+								</tr>
+								<tr>
+									<td>...</td>
+								</tr>
+								<tr>
+									<td>...</td>
+								</tr>
+								<tr>
+									<td>...</td>
+								</tr>
+
+
+							</table>
+						</div>
+
+						<br>
+
+
+					</div>
+
+
+				</div>
+
 			</div>
 
 			<div class="col-lg-3 col-md-12" id="group-Main-right"
@@ -111,12 +149,12 @@
 <!-- partial -->
 <script
 	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src="../../js/side.js"></script>
+<script src="../js/side.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-<script type="text/javascript" src="../../js/jquery.js"></script>
-<script type="text/javascript" src="../../js/timer.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/timer.js"></script>
 
 
 </body>

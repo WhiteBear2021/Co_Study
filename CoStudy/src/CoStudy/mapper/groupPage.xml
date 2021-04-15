@@ -18,5 +18,7 @@
 		where STUDYGROUP_NO=#{STUDYGROUP_NO}
 		order by PAGE_BOARD_NO desc
 	</select>
+	
+	<select id=""></select>
 
 </mapper>
