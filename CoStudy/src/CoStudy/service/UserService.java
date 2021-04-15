@@ -35,7 +35,10 @@ public class UserService {
 	}
 
 	public UserVO login(HttpServletRequest request) throws Exception {
+	
+		
 		LoginVO login = new LoginVO();
+		
 		login.setUserId(request.getParameter("userId"));
 		login.setUserPw(request.getParameter("userPw"));
 		return u_dao.login(login);

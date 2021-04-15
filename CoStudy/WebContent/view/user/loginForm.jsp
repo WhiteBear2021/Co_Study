@@ -30,7 +30,7 @@
 							<br> <br>
 							<div class="form-group">
 								<input type='radio' name='member' value='user' checked />회원 <input
-									type='radio' name='member' value='user' />관리자
+									type='radio' name='member' value='manager' />관리자
 							</div>
 							<div class="form-group">
 								<label for="username" class="text-info">아이디:</label><br> <input
