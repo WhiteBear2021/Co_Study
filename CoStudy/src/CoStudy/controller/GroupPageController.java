@@ -54,13 +54,17 @@ public class GroupPageController extends HttpServlet {
 			}
 		} else if (command.equals("groupWriting.do")) {
 			action = new GroupWritingAction();
-			try {
+			/*
+			 * System.out.println("write번호:"+Integer.parseInt(request.getParameter(
+			 * "studygroup_no")));
+			 */			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else if (command.equals("groupBoardList.do")) {
 			action = new GroupBoardListAction();
+			System.out.println("번호:"+Integer.parseInt(request.getParameter("studygroup_no")));
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

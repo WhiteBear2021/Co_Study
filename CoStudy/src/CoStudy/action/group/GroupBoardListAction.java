@@ -19,8 +19,8 @@ public class GroupBoardListAction implements Action {
 		
 		List<GroupPageBoardVO> list=service.groupBoardService(request);
 		request.setAttribute("list", list);
-		
-		forward.setPath("/view/group/groupMain.jsp");
+		request.setAttribute("studygroup_no", request.getParameter("studygroup_no"));
+		forward.setPath("/view/group/groupMain.jsp?studygroup_no");
 		forward.setRedirect(false);
 
 		return forward;
