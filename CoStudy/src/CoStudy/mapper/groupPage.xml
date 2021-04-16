@@ -22,10 +22,10 @@
 	</select>
 
 
-	<select id="selectApplyList" resultType="ApplyGroupMember">
+	<select id="selectApplyList" resultType="ApplyGroupMember" parameterType ="int">
 		select * from Apply_Group_Member
 
-		where ISACCEPT ='O'
+		where ISACCEPT ='O' and STUDYGROUP_NO=#{STUDYGROUP_NO}
 
 	</select>
 

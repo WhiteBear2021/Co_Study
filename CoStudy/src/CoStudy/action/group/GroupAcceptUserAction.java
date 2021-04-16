@@ -19,6 +19,7 @@ public class GroupAcceptUserAction implements Action {
 		List<ApplyGroupMemberVO> list = service.applyListService(request);
 		request.setAttribute("applyUserList", list);
 		
+		request.setAttribute("studygroup_no", Integer.parseInt(request.getParameter("studygroup_no")));
 		forward.setRedirect(false);
 		forward.setPath("/view/group/groupSetting.jsp");
 		
