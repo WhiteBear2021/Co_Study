@@ -21,8 +21,8 @@ public class noticeUserListAction implements Action {
 		NoticePageVO listPage=service.noticeInfoService(request);
 		request.setAttribute("listPage", listPage);
 		
-		Forward.setRedirect(false);
 		Forward.setPath("/view/notice/user_notice_list.jsp");
+		Forward.setRedirect(false);
 	
 		return Forward;
 	}

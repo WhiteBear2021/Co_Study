@@ -11,12 +11,20 @@
 		insert into studygroup values(seq_studygroup.nextval,#{studygroup_name},#{studygroup_info},#{studygroup_location},0,#{max_user_number},#{current_user_number},sysdate,'N',#{isface},#{category_no},#{user_no})
 	</insert>
 	
-	<select id="studyGroupList" resultType="StudyGroup">
-		select * from studygroup
-	</select>
-	
 	<select id="studyGroupDetail" parameterType="int" resultType="StudyGroup">
 		select * from studygroup where studygroup_no=#{studygroup_no}
 	</select>
 	
+ 	 <select id="studyGroupListInfo" resultType="StudyGroup">
+		select * from studygroup
+		order by studygroup_no desc
+	</select>  
+	
+	<select id="countstudyGroupList" resultType="int">
+		select count(*) from studygroup
+	</select>
+	
+	<select id="getGroupNo" parameterType="String" resultType="int">
+		select * from studygroup where studygroup_name=#{studygroup_name}
+	</select>
 </mapper>

@@ -15,6 +15,7 @@ import CoStudy.action.qna.QnaDetailAction;
 import CoStudy.action.qna.QnaInfoAction;
 import CoStudy.action.qna.QnaInsertManagerReplyAction;
 import CoStudy.action.qna.QnaInsertUserReplyAction;
+import CoStudy.action.qna.QnaUserListAction;
 import CoStudy.action.qna.QnaInsertAction;
 import CoStudy.action.qna.QnaInsertFormAction;
 
@@ -76,6 +77,13 @@ public class QnaController extends HttpServlet {
 			}
 		}else if (command.equals("QnaInsertUserReplyAction.do")) {
 			action = new QnaInsertUserReplyAction();
+			try {
+				actionForward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if (command.equals("qnaUserListAction.do")) {
+			action = new QnaUserListAction();
 			try {
 				actionForward = action.execute(request, response);
 			} catch (Exception e) {

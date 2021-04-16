@@ -27,8 +27,8 @@
                     <div class="menu-wrapper">
                          <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html">
-                            	<img src="./img.png" alt="" style="max-width: 200px;">
+                            <a href="/CoStudy/main/mainPage.do">
+                            	<img src="../images/logo/logo6.png" alt="" style="max-width: 130px;">
                             </a>
                         </div> 
                         <!-- Main-menu -->
@@ -36,7 +36,7 @@
                             <nav>  
                                 <ul id="navigation">  
                                     <li>
-                                    <a href="/CoStudy/studyGroup/studyGroupListAction.do">그룹 전체보기</a>
+                                    <a href="/CoStudy/studyGroup/studyGroupListInfoAction.do">그룹 전체보기</a>
                                     </li>
                                     <li class="hot">
                                     <a href="/CoStudy/studyGroup/makeGroupFormAction.do">그룹 만들기</a>
@@ -65,10 +65,10 @@
                                     <a href="#">고객지원</a>
                                         <ul class="submenu">
                                             <li>
-                                            <a href="#">공지 사항</a>
+                                            <a href="/CoStudy/notice/noticeUserListAction.do">공지 사항</a>
                                             </li>
                                             <li>
-                                            <a href="#">1:1 질문하기</a>
+                                            <a href="/CoStudy/Qna/qnaUserListAction.do">1:1 질문하기</a>
                                             </li>
                                             <li>
                                             <a href="#">자주하는 질문</a>
@@ -158,7 +158,7 @@
                                         </a>
                                         <ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
                                             <li>
-                                            <a href="/CoStudy/notice/noticeUserListAction.do">공지 사항</a>
+                                            <a href="#">공지 사항</a>
                                             </li>
                                             <li>
                                             <a href="#" role="menuitem" tabindex="-1">1:1 질문하기</a>

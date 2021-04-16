@@ -19,7 +19,7 @@ public class StudyGroupDetailAction implements Action {
 		
 		StudyGroupService service=StudyGroupService.getInstance();
 		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
-		System.out.println(studygroup_no);
+		System.out.println("studygroup번호: " + studygroup_no);
 		StudyGroupVO studyGroupDetail = service.studyGroupDetail(studygroup_no);
 		request.setAttribute("studyGroupDetail", studyGroupDetail);
 		session.setAttribute("studyGroup", studyGroupDetail);

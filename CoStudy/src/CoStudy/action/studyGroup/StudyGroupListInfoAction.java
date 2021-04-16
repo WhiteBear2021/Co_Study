@@ -1,28 +1,25 @@
 package CoStudy.action.studyGroup;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 import CoStudy.domain.StudyGroupListVO;
-import CoStudy.domain.StudyGroupVO;
 import CoStudy.service.StudyGroupService;
 
-public class StudyGroupListAction implements Action {
+public class StudyGroupListInfoAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward = new ActionForward();
-		forward.setPath("/view/studyGroup/studyGroupList.jsp");
-		forward.setRedirect(false);
-		
+		ActionForward forward = new ActionForward();	
 		StudyGroupService service = StudyGroupService.getInstance();
 
-		StudyGroupListVO listPage=service.studyGroupListInpoSerive(request);
+		StudyGroupListVO listPage=service.studyGroupListInpo(request);
 		request.setAttribute("listPage", listPage);
+		
+		forward.setPath("/view/studyGroup/studyGroupList.jsp");
+		forward.setRedirect(false);
 		
 		return forward;
 	}
