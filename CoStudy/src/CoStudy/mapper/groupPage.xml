@@ -27,7 +27,7 @@
 			 select * from Apply_Group_Member where isAccept = 'N'
 		]]> -->
 		select * from Apply_Group_Member
-		where ISACCEPT is null 
+		where ISACCEPT = 'O';
 
 	</select>
 	
