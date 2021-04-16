@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,34 +39,42 @@
 								<i class="bi bi-person-square fs-1"></i><br>
 								<b>NickName : CoStudy</b>
 						</div>
-						<div class="bg-white col-6 border border-primary p-0 m-2">
+						<div class="bg-white col-6 border border-primary p-0 my-2">
 							<h4>Infomation</h4>
 							<label>
-							<p class="m-0 p-1"><b>아이디 :</b></p> <span class="fs-4">${sessionScope.user.user_id}</span>
+							<p class="m-0 p-1 text-primary"><b>아이디 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_id}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>생년월일 :</b></p> <span class="fs-4">${sessionScope.user.user_birth}</span>
+							<p class="m-0 p-1 text-primary"><b>생년월일 :</b></p> 
+							<span class="fs-4">&nbsp;&nbsp;	
+								<fmt:parseDate var="dt" value="${sessionScope.user.user_birth}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:parseDate>
+								<fmt:formatDate value="${dt}" pattern="yyyy-MM-dd"/>
+							</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>이름 :</b></p> <span class="fs-4">${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}</span>
+							<p class="m-0 p-1 text-primary"><b>이름 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>휴대전화 번호 :</b></p> <span class="fs-4">${sessionScope.user.user_phoneNo }</span>
+							<p class="m-0 p-1 text-primary"><b>휴대전화 번호 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_phoneNo }</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>주소 :</b></p> <span class="fs-4">${sessionScope.user.user_address1}${sessionScope.user.user_address2}</span>
+							<p class="m-0 p-1 text-primary"><b>주소 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_address1}${sessionScope.user.user_address2}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>이메일 주소 :</b></p> <span class="fs-4">${sessionScope.user.user_email }</span>
+							<p class="m-0 p-1 text-primary"><b>이메일 주소 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_email }</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1"><b>가입일 :</b></p>  <span class="fs-4">${sessionScope.user.user_register_date }</span>
+							<p class="m-0 p-1 text-primary"><b>가입일 :</b></p>  
+							<span class="fs-4">&nbsp;&nbsp;	
+								<fmt:parseDate var="dt" value="${sessionScope.user.user_register_date }" pattern="yyyy-MM-dd HH:mm:ss"></fmt:parseDate>
+								<fmt:formatDate value="${dt}" pattern="yyyy-MM-dd"/>
+							</span>
 							</label>
 
 						</div>
