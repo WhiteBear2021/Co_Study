@@ -23,7 +23,7 @@ public class StudyDiaryAction implements Action{
 		diary.setUser_no(user_no);
 		MyPageService service=MyPageService.getInstance();
 		int re=service.writeStudyDiary(diary);
-		System.out.println(re);
+//		System.out.println(re);
 		forward.setPath("studyDiaryListAction.do");
 		forward.setRedirect(false);
 		return forward;

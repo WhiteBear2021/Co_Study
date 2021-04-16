@@ -26,7 +26,7 @@ public class StudyDiaryListAction implements Action{
 			MyPageService service=MyPageService.getInstance();
 			
 			List<StudyNoteVO> studyNoteList=service.studyDiaryList(user_no);
-			System.out.println(studyNoteList);
+//			System.out.println(studyNoteList);
 			request.setAttribute("studyNoteList",studyNoteList);
 			forward.setPath("/view/myPage/studyDiaryList.jsp");
 			forward.setRedirect(false);

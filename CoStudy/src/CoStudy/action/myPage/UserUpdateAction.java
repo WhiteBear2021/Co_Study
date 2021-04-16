@@ -39,7 +39,7 @@ public class UserUpdateAction implements Action {
 		if(re>0) {
 			session.setAttribute("user", user);
 		}
-		System.out.println("update 갯수:"+re);
+//		System.out.println("update 갯수:"+re);
 		forward.setPath("/CoStudy/user/myPageAction.do");
 		forward.setRedirect(true);
 		return forward;
