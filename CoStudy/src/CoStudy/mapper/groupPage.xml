@@ -24,6 +24,7 @@
 
 	<select id="selectApplyList" resultType="ApplyGroupMember">
 		select * from Apply_Group_Member
+
 		where ISACCEPT ='O'
 
 	</select>

@@ -30,7 +30,7 @@
 		MANAGER_QNA
 		(qna_no,qna_title,qna_content,regdate,parentNo,ISREAD,levels,MANAGER_NO)
 		values
-		(seq_m_qna_no.nextval,#{qna_title},#{qna_content},SYSDATE,#{parentNo},0,2,1)
+		(seq_m_qna_no.nextval,#{qna_title},#{qna_content},SYSDATE,#{parentNo},0,2,#{manager_no})
 
 	</insert>
 

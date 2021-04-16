@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
 import CoStudy.domain.ApplyGroupMemberVO;
-import CoStudy.domain.GroupPageBoardVO;
 import CoStudy.service.GroupPageService;
 
 public class GroupAcceptUserAction implements Action {
