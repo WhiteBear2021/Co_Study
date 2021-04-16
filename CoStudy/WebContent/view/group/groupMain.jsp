@@ -105,29 +105,15 @@
 
 
 
-		<input type="hidden" name="studyGroup_no" value="1"> <input
+			<input type="hidden" name="studyGroup_no" value="1"> <input
 			type="hidden" name="studyGroup_no" value="1">
 		<div id="background-body">
-
-			<div class="col-lg-9" id="peed">
-				<div id="selectGroupBoard">
-					<div style="overflow: scroll; width: 700px; height: 550px;">
-						
-
 			<div class="container bootstrap snippets bootdey">
 				<div class="col-lg-8">
-					<div style="overflow: scroll; width: 800px; height: 600px;">
+					<div style="overflow: scroll; width: 800px; height: 700px;">
 
 
 						<c:forEach var="lists" items="${list }">
-
-
-
-							<%-- <div id="board-list" class="post_reply_wrap"
-								style="width: 600px; height: 270px;">
-								<div id="board-list-p">
-									<p>${lists.studyGroup_no }</p>
-
 							<div class="panel panel-white post panel-shadow">
 								<div class="post-heading">
 									<div class="pull-left image">
@@ -144,7 +130,6 @@
 								</div>
 								<!--글목록  -->
 								<div class="post-description">
-
 									<p>${lists.page_board_content }</p>
 
 								</div>
@@ -187,27 +172,7 @@
 									</c:forEach>
 								</div>
 
-							</div> --%>
-					
-							<div style="width: 450px; height: 150px; background-color: gray;">
 
-								<p>${lists.studyGroup_no }</p>
-								<p>${lists.page_board_content }</p>
-								<p>${lists.page_board_no }</p>
-
-								<form action="insertGroupReply.do" method="get">
-
-									<input type="hidden" name="studyGroup_no"
-										value="${lists.studyGroup_no }">
-									<h2>${lists.studyGroup_no }</h2>
-
-									<input type="hidden" name="page_board_no"
-										value="${lists.page_board_no }"> <input id="text"
-										type="text" name="group_reply_writer"> <input
-										id="text" type="text" name="group_reply_content">
-
-									<button id="button" type="submit"
-										style="width: 70px; height: 70px;">작성</button>
 
 							</div>
 
@@ -268,7 +233,6 @@
 
 
 		</div>
-	</div>
 </body>
 <!-- partial -->
 <script
