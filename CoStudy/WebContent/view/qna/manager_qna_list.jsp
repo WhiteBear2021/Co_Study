@@ -56,11 +56,9 @@
 																<td>글제목</td>
 																<td>글내용</td>
 																<td>작성일자</td>
-																<td>부모번호</td>
-																<td>읽음여부</td>
-																<td>깊이(레벨)</td>
+
 																<td>회원번호</td>
-																<td>관리자번호</td>
+
 															</tr>
 														</thead>
 														<tbody>
@@ -72,11 +70,7 @@
 																		href="QnaDetailAction.do?qna_no=${qna.qna_no }">${qna.qna_title }</a></th>
 																	<th>${qna.qna_content }</th>
 																	<th>${qna.regdate }</th>
-																	<th>${qna.parentNo }</th>
-																	<th>${qna.isread }</th>
-																	<th>${qna.levels }</th>
 																	<th>${qna.user_no }</th>
-																	<th>${qna.manager_no }</th>
 																</tr>
 
 															</c:forEach>
@@ -109,8 +103,7 @@
 															</c:forEach>
 
 															<!-- 이후 영역 -->
-															<c:if
-																test="${qnaPage.endPage < qnaPage.totalPageCount}">
+															<c:if test="${qnaPage.endPage < qnaPage.totalPageCount}">
 
 																<li class="page-item"><a class="page-link"
 																	href="QnaInfoAction.do?pageNum=${qnaPage.endPage +1 }">Next</a></li>

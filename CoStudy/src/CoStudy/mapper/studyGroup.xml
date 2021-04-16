@@ -23,4 +23,5 @@
 	<select id="countstudyGroupList" resultType="int">
 		select count(*) from studygroup
 	</select>
+
 </mapper>

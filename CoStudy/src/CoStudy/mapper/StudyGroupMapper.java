@@ -8,12 +8,10 @@ import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.StudyGroupVO;
 
 public interface StudyGroupMapper {
-	int insertStudyGroup(StudyGroupVO studyGroup);
-	StudyGroupVO studyGroupDetail(int studygroup_no);
-	int countstudyGroupList();
-	int insertApplyGroupStudy(ApplyGroupMemberVO applyGroupMember);
-	
-	
-	
-	List<StudyGroupVO> studyGroupListInfo(RowBounds row);
+   int insertStudyGroup(StudyGroupVO studyGroup);
+   StudyGroupVO studyGroupDetail(int studygroup_no);
+   int countstudyGroupList();
+   int insertApplyGroupStudy(ApplyGroupMemberVO applyGroupMember);
+   List<StudyGroupVO> studyGroupListInfo(RowBounds row);
+   int getGroupNo(String studygroup_name);
 }

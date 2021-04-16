@@ -15,7 +15,7 @@
 </head>
 <body>
 
-		<section class="container col-lg-12">
+		<section class="container col-lg-12 my-2">
 			<div class="row">
 				<div class="col-lg-3 bg-secondary m-5 text-center">
 						<nav id="side_left" class="my-auto">
@@ -39,7 +39,7 @@
 								<i class="bi bi-person-square fs-1"></i><br>
 								<b>NickName : CoStudy</b>
 						</div>
-						<div class="bg-white col-6 border border-primary p-0 my-2">
+						<div class="bg-white col-6 border border-primary p-0 m-4">
 							<h4>Infomation</h4>
 							<label>
 							<p class="m-0 p-1 text-primary"><b>아이디 :</b></p> <span class="fs-4">&nbsp;&nbsp;${sessionScope.user.user_id}</span>

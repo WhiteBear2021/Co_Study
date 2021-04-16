@@ -34,13 +34,12 @@ public class GroupPageService {
 	public List<GroupPageBoardVO> groupBoardService(HttpServletRequest request) throws Exception {
 
 		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
-
-		System.out.println("스터디그룹번호:" + studygroup_no);
 		return gpDao.selectGroupBoard(studygroup_no);
 	}
 
 	public List<ApplyGroupMemberVO> applyListService(HttpServletRequest request) throws Exception {
-		return gpDao.selectApplyList();
+		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
+		return gpDao.selectApplyList(studygroup_no);
 	}
 
 	public int acceptMemberService(ApplyGroupMemberVO vo) throws Exception {
