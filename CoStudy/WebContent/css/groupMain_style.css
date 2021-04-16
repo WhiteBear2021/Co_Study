@@ -95,7 +95,7 @@
 	margin-left: 140px;
 	position: absolute;
 	padding-right: 40px;
-
+	
 }
 
 #text-box {
@@ -114,6 +114,7 @@
 
 #group-Main-right {
 	position: absolute;
+
 }
 
 #group-Main-right-top {
@@ -121,10 +122,8 @@
 	height: 200px;
 	padding: 20px;
 	margin-top: 40px;
-	margin-left: 20px;
-	background-color: white;
-	box-shadow: 2px 2px 2px 2px;
-	border-radius: 10px;
+
+
 }
 
 #group-Main-right-bottom {
@@ -133,10 +132,8 @@
 	height: 470px;
 	padding: 20px;
 	margin-top: 20px;
-	margin-left: 20px;
-	background-color: white;
-	box-shadow: 2px 2px 2px 2px;
-	border-radius: 10px;
+	
+
 	
 }
 

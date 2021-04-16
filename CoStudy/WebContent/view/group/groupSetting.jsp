@@ -152,27 +152,26 @@ function AjaxConPost(acceptYn){
 			<div class="col-lg-9" id="setting">
 				<div id="settingBoard">
 					<div id="group-accept" class="table-wrap">
-						<div id="acceptTable" class="table-box table-box--vertical"
-							style="width: 600px; height: 650px;">
-							<h2>그룹 신청 목록</h2>
+						<div id="acceptTable" class="panel panel-white post panel-shadow"
+							>
+							<h2>그룹 신청 목록 </h2>
 							<input type="hidden" name="studyGroup_no" value="1">
 							<%-- <input type="hidden" name="studygroup_no"
 								value="${studyGroup.studygroup_no }"> --%>
 							<table class="table table--vertical" id="accept-list">
-								<tbody>
+								<tbody class="panel panel-white post panel-shadow" id="accept-list-board">
 									<c:forEach var="applyGroupMember" items="${applyUserList}">
 										<tr>
 											<td>${applyGroupMember.studyGroup_no }</td>
 											<td>${applyGroupMember.user_no }</td>
 											<td>
-											<input type="hidden" id="studyGroup_no" value="${applyGroupMember.studyGroup_no }">
-											<input type="hidden" id="user_no" value="${applyGroupMember.user_no}"> 
-											<input type="button" id="yesBtn" onclick="AjaxConPost('Y')"
-												<%-- onclick="location.href='acceptMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'" --%>
-												value="수락"></td>
-											<td><input type="button" onclick="AjaxConPost('N')"
-												<%-- onclick="location.href='refuseMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'"--%>
-												value="거절"></td>
+												<input type="hidden" id="studyGroup_no" value="${applyGroupMember.studyGroup_no }">
+												<input type="hidden" id="user_no" value="${applyGroupMember.user_no}"> 
+												<button class="btn btn--primary btn--inside uppercase" id="yesBtn" onclick="AjaxConPost('Y')">수락</button>
+											</td>
+											<td>
+												<button class="btn btn--primary btn--inside uppercase" onclick="AjaxConPost('N')">거절</button>
+											</td>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -193,11 +192,11 @@ function AjaxConPost(acceptYn){
 
 			<div class="col-lg-3 col-md-12" id="group-Main-right"
 				style="right: 0;">
-				<div id="group-Main-right-top" class="col-md-5">
+				<div id="group-Main-right-top" class="panel panel-white post panel-shadow" class="col-md-5">
 					<div id="right-sidebar-gibox"></div>
 					<div id="right-sidebar-fileBox"></div>
 				</div>
-				<div id="group-Main-right-bottom" class="col-md-5">
+				<div id="group-Main-right-bottom" class="panel panel-white post panel-shadow" class="col-md-5">
 					<div id="right-sidebar-userlist">
 						<table class="table table-hover" id="userlist">
 							<tr>
