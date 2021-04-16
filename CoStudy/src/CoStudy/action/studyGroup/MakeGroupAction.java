@@ -6,8 +6,10 @@ import javax.servlet.http.HttpSession;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.StudyGroupVO;
 import CoStudy.domain.UserVO;
+import CoStudy.service.GroupPageService;
 import CoStudy.service.StudyGroupService;
 
 public class MakeGroupAction implements Action {
@@ -16,8 +18,7 @@ public class MakeGroupAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
 		HttpSession session=request.getSession();
-		forward.setPath("studyGroupListAction.do");
-		forward.setRedirect(false);
+
 
 		UserVO user=(UserVO)session.getAttribute("user");
 		
@@ -41,6 +42,17 @@ public class MakeGroupAction implements Action {
 		studyGroup.setUser_no(user.getUser_no());
 		System.out.println(studyGroup);
 		service.insertStudyGroup(studyGroup);
+		
+		int groupNo = service.getGroupNo(studygroup_name);
+		ApplyGroupMemberVO vo = new ApplyGroupMemberVO();
+		vo.setStudyGroup_no(groupNo);
+		vo.setUser_no(user.getUser_no());
+		
+		GroupPageService groupService = GroupPageService.getInstance();
+		groupService.insertAcceptMemberService(vo);
+		
+		forward.setPath("studyGroupListAction.do");
+		forward.setRedirect(false);
 		return forward;
 	}
 

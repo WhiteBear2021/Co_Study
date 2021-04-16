@@ -66,5 +66,8 @@ public class StudyGroupService {
 	public int insertApplyGroupStudy(ApplyGroupMemberVO ApplystudyGroup) {
 		return sDao.insertApplyGroupStudy(ApplystudyGroup);
 	}
-
+	
+	public int getGroupNo(String studygroup_name) {
+		return sDao.getGroupNo(studygroup_name);
+	}
 }

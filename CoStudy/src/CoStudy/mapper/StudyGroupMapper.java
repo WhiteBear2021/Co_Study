@@ -13,4 +13,5 @@ public interface StudyGroupMapper {
 	StudyGroupVO studyGroupDetail(int studygroup_no);
 	int countstudyGroupList();
 	int insertApplyGroupStudy(ApplyGroupMemberVO applyGroupMember);
+	int getGroupNo(String studygroup_name);
 }
