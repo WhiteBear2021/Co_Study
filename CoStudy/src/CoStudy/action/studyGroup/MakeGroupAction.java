@@ -51,7 +51,7 @@ public class MakeGroupAction implements Action {
       GroupPageService groupService = GroupPageService.getInstance();
       groupService.insertAcceptMemberService(vo);
       
-      forward.setPath("studyGroupListAction.do");
+      forward.setPath("studyGroupListInfoAction.do");
       forward.setRedirect(false);
       return forward;
    }
