@@ -45,7 +45,7 @@ public class StudyGroupDao {
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		
 		try {
-			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList(new RowBounds(startRow,5));
+			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList(new RowBounds(startRow,10));
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -112,6 +112,19 @@ public class StudyGroupDao {
 		return re;	
 	}
 
-
+	public int getGroupNo(String studygroup_name) {
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		int re=-1;
+		try {
+			re=sqlSession.getMapper(StudyGroupMapper.class).getGroupNo(studygroup_name);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(sqlSession != null) {
+				sqlSession.close();
+			}
+		}
+		return re;	
+	}
 	
 }
