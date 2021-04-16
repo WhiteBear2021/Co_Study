@@ -12,7 +12,6 @@ import CoStudy.domain.UserVO;
 import CoStudy.service.UserService;
 
 public class ChattingRoomAction implements Action {
-
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
@@ -24,8 +23,7 @@ public class ChattingRoomAction implements Action {
 
 		forward.setRedirect(true);
 		
-		forward.setPath("http://localhost:3000?room="+room+"&myName="+myName);
+		forward.setPath("http://192.168.0.148:3000?room="+room+"&myName="+myName);
 		return forward;
 	}
-
 }
