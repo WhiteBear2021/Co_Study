@@ -28,10 +28,6 @@ public class StudyGroupDetailAction implements Action {
 		forward.setRedirect(false);
 		
 
-		HttpSession session=request.getSession();
-
-
-		//branch 'dev' of https://github.com/WhiteBear2021/Co_Study.git
 		System.out.println("user session"+session.getAttribute("user"));
 		
 		return forward;
