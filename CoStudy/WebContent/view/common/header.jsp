@@ -27,8 +27,8 @@
                     <div class="menu-wrapper">
                          <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html">
-                            	<img src="./img.png" alt="" style="max-width: 200px;">
+                            <a href="/CoStudy/main/mainPage.do">
+                            	<img src="../images/logo/logo6.png" alt="" style="max-width: 130px;">
                             </a>
                         </div> 
                         <!-- Main-menu -->
