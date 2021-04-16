@@ -12,7 +12,8 @@
 	href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
 	rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../css/timer.css">
-<link type="text/css" rel="stylesheet" href="../css/groupSidebar_list.css">
+<link type="text/css" rel="stylesheet"
+	href="../css/groupSidebar_list.css">
 <link rel="stylesheet" type="text/css"
 	href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
@@ -101,11 +102,7 @@
 			</div>
 		</div>
 
-
-
-
-
-			<input type="hidden" name="studyGroup_no" value="1"> <input
+		<input type="hidden" name="studyGroup_no" value="1"> <input
 			type="hidden" name="studyGroup_no" value="1">
 		<div id="background-body">
 			<div class="container bootstrap snippets bootdey">

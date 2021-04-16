@@ -58,10 +58,7 @@ public class GroupPageController extends HttpServlet {
 			}
 		} else if (command.equals("groupWriting.do")) {
 			action = new GroupWritingAction();
-			/*
-			 * System.out.println("write번호:"+Integer.parseInt(request.getParameter(
-			 * "studygroup_no")));
-			 */			try {
+			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();

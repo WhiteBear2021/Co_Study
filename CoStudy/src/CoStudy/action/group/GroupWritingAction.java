@@ -15,19 +15,15 @@ public class GroupWritingAction implements Action {
 
 		ActionForward forward = new ActionForward();
 
-		System.out.println("테:" + request.getParameter("studygroup_no")); 
 		int studygroup_no = Integer.parseInt(request.getParameter("studygroup_no"));
 		GroupPageService service = GroupPageService.getInstance();
 		service.insertBoard(request);
 
-
-		 
 		forward.setRedirect(true);
-		
-		forward.setPath("groupBoardList.do?studygroup_no="+studygroup_no);
+
+		forward.setPath("groupBoardList.do?studygroup_no=" + studygroup_no);
 
 		return forward;
 	}
 
 }
-
