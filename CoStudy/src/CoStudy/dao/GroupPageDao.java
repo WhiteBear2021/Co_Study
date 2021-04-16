@@ -2,14 +2,15 @@ package CoStudy.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.session.RowBounds;
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.http.HttpServletRequest;
 import org.apache.ibatis.session.SqlSession;
 
 import CoStudy.config.MySqlSessionFactory;
+import CoStudy.domain.ApplyGroupMemberVO;
 import CoStudy.domain.GroupPageBoardVO;
-import CoStudy.domain.QnaVO;
+import CoStudy.domain.GroupUserVO;
 import CoStudy.mapper.GroupPageMapper;
-import CoStudy.mapper.QnaMapper;
 
 
 
@@ -57,12 +58,13 @@ public class GroupPageDao {
 		return list;
 	}
 	
-	public List<GroupPageBoardVO> groupAcceptUser(int user_no){
+
+	public List<ApplyGroupMemberVO> selectApplyList(){
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
-		List<GroupPageBoardVO> list=null;
+		List<ApplyGroupMemberVO> list=null;
 		try {
-			list = sqlSession.getMapper(GroupPageMapper.class).groupAcceptUser(user_no);
-			System.out.println(list);
+			list = sqlSession.getMapper(GroupPageMapper.class).selectApplyList();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -72,4 +74,66 @@ public class GroupPageDao {
 		}
 		return list;
 	}
+	public int acceptMember(ApplyGroupMemberVO vo) {
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		try {
+			re = sqlSession.getMapper(GroupPageMapper.class).acceptMember(vo);
+			if (re > 0) {
+				sqlSession.commit(); 
+			} else {
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null)
+				sqlSession.close();
+		}
+		return re;
+	}
+	
+	public int refuseMember(int user_no) {
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		try {
+			re = sqlSession.getMapper(GroupPageMapper.class).refuseMember(user_no);
+			if (re > 0) {
+				sqlSession.commit(); 
+			} else {
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null)
+				sqlSession.close();
+		}
+		return re;
+	}
+
+
+	public int insertAcceptMember(ApplyGroupMemberVO vo) {
+		int re = -1;
+		SqlSession sqlSession = MySqlSessionFactory.getSession();
+		try {
+			re = sqlSession.getMapper(GroupPageMapper.class).insertAcceptMember(vo);
+			if (re > 0) {
+				sqlSession.commit(); 
+			} else {
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (sqlSession != null)
+				sqlSession.close();
+		}
+		return re;
+	}
+	
+
 }

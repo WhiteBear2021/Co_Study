@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import CoStudy.action.studyGroup.ApplyStudyGroupAction;
 import CoStudy.action.studyGroup.MakeGroupAction;
 import CoStudy.action.studyGroup.MakeGroupFormAction;
 import CoStudy.action.studyGroup.StudyGroupDetailAction;
@@ -70,7 +71,14 @@ public class StudyGroupController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}
+    	}else if (command.equals("applyStudyGroupAction.do")) {
+			action = new ApplyStudyGroupAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
     	
     	if(forward != null) {
     		if(forward.isRedirect()) {

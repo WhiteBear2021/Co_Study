@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import CoStudy.action.group.AcceptMemberAction;
 import CoStudy.action.group.GroupAcceptUserAction;
 import CoStudy.action.group.GroupBoardListAction;
 import CoStudy.action.group.GroupWritingAction;
 import CoStudy.action.group.GroupWritingFormAction;
+import CoStudy.action.group.RefuseMemberAction;
+import CoStudy.action.group.insertGroupReplyAction;
 import CoStudy.action.user.SignUpFormAction;
 
 /**
@@ -72,14 +75,42 @@ public class GroupPageController extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		} else if (command.equals("groupBoardList.do")) {
+		} else if (command.equals("groupAcceptUser.do")) {
 			action = new GroupAcceptUserAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}else if (command.equals("acceptMember.do")) {
+			action = new AcceptMemberAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if (command.equals("refuseMember.do")) {
+			action = new RefuseMemberAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}else if (command.equals("insertGroupReply.do")) {
+			action = new insertGroupReplyAction();
+
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
+		
+		
+		
+		
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());

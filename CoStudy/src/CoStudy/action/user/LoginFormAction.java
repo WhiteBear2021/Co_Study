@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import CoStudy.action.Action;
 import CoStudy.action.ActionForward;
-import CoStudy.service.UserService;
 
 public class LoginFormAction implements Action {
 

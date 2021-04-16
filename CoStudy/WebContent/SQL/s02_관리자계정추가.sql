@@ -1,0 +1,1 @@
+insert into manager values(1,'manager1','12345');

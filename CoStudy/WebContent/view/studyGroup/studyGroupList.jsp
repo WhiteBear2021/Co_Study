@@ -10,7 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="makeGroupFormAction.do">방 만들기</a>
+<div class="container">
+<h3><a href="makeGroupFormAction.do">방 만들기</a></h3>
 	<table border="1">
 		<tr>
 			<td>번호</td>
@@ -26,15 +27,35 @@
 				<td><a href="studyGroupDetailAction.do?studygroup_no=${studyGroup.studygroup_no }">${studyGroup.studygroup_no }</a></td>
 				<td>${studyGroup.studygroup_name }</td>
 				<td>${studyGroup.made_date }</td>
-				<td>${studyGroup.categori_no }</td>
+				<td>${studyGroup.category_no }</td>
 				<td>${studyGroup.studygroup_location }</td>
 				<td>${studyGroup.current_user_number }</td>
 				<td>${studyGroup.max_user_number }</td>				
 			</tr>
 		</c:forEach>
 	</table>
-	
+		        <br>
+	        
+	        <br>
+	       
+	        <br>
+	        
+	        <br>
+	       
+	        <br>
+	        
+	        <br>
+	        
+	        <br>
+	        
+	        <br>
+	        
+	        <br>
+	       
+	        <br>
+	</div>
 	<!-- 페이지 영역 -->
+	
 	<!-- 이전 영역 -->
 	<c:if test="${listPage.startPage > 5 }">
 		<a href="stduyGroupListAction.do?pageNum=${listPage.startPage -1 }">[이전]</a>
@@ -46,7 +67,7 @@
 		<a href="studyGroupListAction.do?pageNum=${pageNo }">[${pageNo }]</a>
 		<c:if test="${listPage.requestPage == pageNo }"></b></c:if>
 	</c:forEach>
-	
+
 	<!-- 이후 영역 -->
 	<c:if test="${listPage.endPage < listPage.totalPageCount }">
 		<a href="studyGroupListAction.do?pageNum=${listPage.endPage +1 }">[이후]</a>

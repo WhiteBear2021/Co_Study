@@ -20,10 +20,7 @@ public class StudyGroupListAction implements Action {
 		forward.setRedirect(false);
 		
 		StudyGroupService service = StudyGroupService.getInstance();
-		/*
-		 * List<StudyGroupVO> studyGroupList =service.studyGroupList();
-		 * request.setAttribute("studyGroupList", studyGroupList);
-		 */
+
 		StudyGroupListVO listPage=service.studyGroupListInpoSerive(request);
 		request.setAttribute("listPage", listPage);
 		
