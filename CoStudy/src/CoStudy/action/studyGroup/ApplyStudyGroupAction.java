@@ -27,7 +27,7 @@ public class ApplyStudyGroupAction implements Action {
 			applyStudyGroup.setUser_no(user.getUser_no());
 			applyStudyGroup.setStudyGroup_no(studyGroup.getStudygroup_no());
 			service.insertApplyGroupStudy(applyStudyGroup);
-			forward.setPath("studyGroupListAction.do");
+			forward.setPath("studyGroupListInfoAction.do");
 			forward.setRedirect(false);
 		}else {
 			forward.setPath("/CoStudy/user/login.do");

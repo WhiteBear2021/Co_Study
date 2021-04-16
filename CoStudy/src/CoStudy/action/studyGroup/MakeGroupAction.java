@@ -16,7 +16,7 @@ public class MakeGroupAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward=new ActionForward();
 		HttpSession session=request.getSession();
-		forward.setPath("studyGroupListAction.do");
+		forward.setPath("studyGroupListInfoAction.do");
 		forward.setRedirect(false);
 
 		UserVO user=(UserVO)session.getAttribute("user");

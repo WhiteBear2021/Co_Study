@@ -9,11 +9,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="../common/header.jsp"></jsp:include><hr>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="insertForm.do">글작성</a>
+<div class="container">
+	<h3><a href="insertForm.do">글작성</a></h3>
 	<table border="1">
 		<tr>
 			<td>글번호</td>
@@ -53,9 +55,10 @@
 	</table>
 	<br>
 	<br>
-
+</div>
 	
 
 
 </body>
+<jsp:include page="../common/footer.jsp"></jsp:include> 
 </html>

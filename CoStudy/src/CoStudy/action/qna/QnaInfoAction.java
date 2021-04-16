@@ -20,6 +20,7 @@ public class QnaInfoAction implements Action {
 		
 		QnaPageVo qnaPage= service.QnaInfoService(request);
 		request.setAttribute("qnaPage", qnaPage);
+		
 		actionForward.setRedirect(false);
 		actionForward.setPath("/view/qna/manager_qna_list.jsp");
 		
