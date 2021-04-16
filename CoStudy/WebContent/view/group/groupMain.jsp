@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<jsp:include page="../common/header.jsp"></jsp:include>
 <meta charset="UTF-8">
 <link rel='stylesheet'
    href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 <link rel="stylesheet" href="../css/groupMain_style.css">
-
 <link type="text/css" rel="stylesheet" href="../css/timer.css">
 <link type="text/css" rel="stylesheet" href="../css/groupSidebar_list.css">
 
@@ -75,13 +75,7 @@
          </div>
       </div>
    </div>
-
-   <div class="container" id="group-Main-body">
-
-
-
-
-      <div class="col-lg-2">
+   <div class="col-lg-2" id="sidelist">
          <div class="naccs">
 
 
@@ -102,11 +96,13 @@
          </div>
       </div>
 
+   <div class="container" id="group-Main-body">
+   
       <input type="hidden" name="studyGroup_no" value="1"> <input
          type="hidden" name="studyGroup_no" value="1">
       <div id="background-body">
          <div class="container bootstrap snippets bootdey">
-            <div class="col-lg-8">
+            <div class="col-lg-8" id="peed">
                <div style="overflow: scroll; width: 800px; height: 700px;">
 
 
@@ -224,15 +220,14 @@
                   style="width: 70px; height: 70px;">작성</button>
             </div>
 
-         </form>
-
+         </form>  
 
 
 
       </div>
       </div>
-      
-</body>
+   <jsp:include page="../common/footer.jsp"></jsp:include> 
+</body> 
 <!-- partial -->
 <script
    src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

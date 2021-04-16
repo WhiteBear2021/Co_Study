@@ -85,17 +85,17 @@
 	border: 1px;
 	width: 1500px;
 	height: 850px;
-	padding: 20px;
 	position: relative;
+	
 }
 
 #peed {
-	width: 1000px;
-	height: 800px;
-	margin-left: 140px;
 	position: absolute;
-	padding-right: 40px;
-	
+	left: 80px;
+}
+
+#sidelist{
+	left: 150px;
 }
 
 #text-box {
@@ -145,7 +145,7 @@
 	border: 1px;
 	position: absolute;
 	bottom: 20px;
-	left: 400px;
+	left: 200px;
 }
 
 body{
