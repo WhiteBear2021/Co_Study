@@ -55,11 +55,11 @@ public class GroupPageDao {
       return list;
    }
 
-   public List<ApplyGroupMemberVO> selectApplyList() {
+   public List<ApplyGroupMemberVO> selectApplyList(int studygroup_no) {
       SqlSession sqlSession = MySqlSessionFactory.getSession();
       List<ApplyGroupMemberVO> list = null;
       try {
-         list = sqlSession.getMapper(GroupPageMapper.class).selectApplyList();
+         list = sqlSession.getMapper(GroupPageMapper.class).selectApplyList(studygroup_no);
 
       } catch (Exception e) {
          e.printStackTrace();

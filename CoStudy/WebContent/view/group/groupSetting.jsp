@@ -166,7 +166,7 @@ function AjaxConPost(acceptYn){
 											<td>${applyGroupMember.user_no }</td>
 											<td>
 											<input type="hidden" id="studyGroup_no" value="${applyGroupMember.studyGroup_no }">
-											<input type="hidden" id="user_no" value="${applyGroupMember.user_no}">
+											<input type="hidden" id="user_no" value="${applyGroupMember.user_no}"> 
 											<input type="button" id="yesBtn" onclick="AjaxConPost('Y')"
 												<%-- onclick="location.href='acceptMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'" --%>
 												value="수락"></td>

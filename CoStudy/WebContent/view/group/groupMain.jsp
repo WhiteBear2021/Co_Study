@@ -91,7 +91,7 @@
                </div>
                <div>
                   <span class="light"></span><span
-                     onclick="location.href='groupAcceptUser.do'">list-group</span>
+                     onclick="location.href='groupAcceptUser.do?studygroup_no=${studygroup_no }'">list-group</span>
                </div>
                <div>
                   <span class="light"></span><span>list</span>
