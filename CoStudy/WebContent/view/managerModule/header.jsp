@@ -8,7 +8,7 @@
 
 			<div class="">
 				<div class="main-menu-header">
-					<img class="img-radius" alt="User-Profile-Image">
+					<img class="img-radius" src="" alt="User-Profile-Image">
 					<div class="user-details">
 						<div id="more-details">
 							관리자 <i class="fa fa-caret-down"></i>
