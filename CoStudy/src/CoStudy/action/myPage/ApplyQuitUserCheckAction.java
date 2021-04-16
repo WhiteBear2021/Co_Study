@@ -16,7 +16,7 @@ public class ApplyQuitUserCheckAction implements Action {
 		UserService service = UserService.getInstance();	     		
 		UserVO user = service.login(request);
 		
-		System.out.println(user);
+//		System.out.println(user);
 		if(user!=null) {
 			forward.setRedirect(true);
 			forward.setPath("applyQuitUserFormAction.do");

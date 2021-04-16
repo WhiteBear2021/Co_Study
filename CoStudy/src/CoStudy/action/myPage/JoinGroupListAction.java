@@ -27,7 +27,7 @@ public class JoinGroupListAction implements Action{
 			System.out.println("study그룹조회 할 사용자 번호:"+user_no);		
 			MyPageService service=MyPageService.getInstance();			
 			List<StudyGroupVO> joinGroupList=service.joinGroupList(user_no);
-			System.out.println(joinGroupList);
+//			System.out.println(joinGroupList);
 			request.setAttribute("joinGroupList",joinGroupList);
 		}else {
 			forward.setPath("/CoStudy/user/login.do");
