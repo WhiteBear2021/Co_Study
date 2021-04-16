@@ -61,12 +61,6 @@ public class StudyGroupListVO {
 		this.endPage = endPage;
 	}
 
-	@Override
-	public String toString() {
-		return "StudyGroupListVO [list=" + list + ", requestPage=" + requestPage + ", totalPageCount=" + totalPageCount
-				+ ", startPage=" + startPage + ", endPage=" + endPage + "]";
-	}
-	
-	
+
 	
 }

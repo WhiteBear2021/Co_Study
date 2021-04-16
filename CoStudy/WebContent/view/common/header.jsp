@@ -36,7 +36,7 @@
                             <nav>  
                                 <ul id="navigation">  
                                     <li>
-                                    <a href="/CoStudy/studyGroup/studyGroupListAction.do">그룹 전체보기</a>
+                                    <a href="/CoStudy/studyGroup/studyGroupListInfoAction.do">그룹 전체보기</a>
                                     </li>
                                     <li class="hot">
                                     <a href="/CoStudy/studyGroup/makeGroupFormAction.do">그룹 만들기</a>

@@ -57,21 +57,37 @@
 	<!-- 페이지 영역 -->
 	
 	<!-- 이전 영역 -->
-	<c:if test="${listPage.startPage > 5 }">
-		<a href="stduyGroupListAction.do?pageNum=${listPage.startPage -1 }">[이전]</a>
+	
+	<nav aria-label="..." >
+	<ul class="pagination">
+	<c:if test="${listPage.startPage > 3 }">
+	<li class="page-item"><a class="page-link"
+		 href="studyGroupListInfoAction.do?pageNum=${listPage.startPage -1 }">[이전]</a></li>
 	</c:if>
 	
 	<!-- 페이지 목록 -->
-	<c:forEach var="pageNO" begin="${listPage.startPage }" end="${listPage.endPage }">
-		<c:if test="${listPage.requestPage == pageNo }"><b></c:if>
-		<a href="studyGroupListAction.do?pageNum=${pageNo }">[${pageNo }]</a>
-		<c:if test="${listPage.requestPage == pageNo }"></b></c:if>
+	<c:forEach var="pageNo" begin="${listPage.startPage }"
+	 end="${listPage.endPage }">
+		<c:if test="${listPage.requestPage == pageNo }">
+		<li class="page-item active"><span
+		class="page-link">${pageNo }<span
+		class="sr-only">(current)</span></span></li>
+		</c:if>
+		<c:if test="${listPage.requestPage != pageNo }">
+			<li class="page-item"><a class="page-link"
+		 href="studyGroupListInfoAction.do?pageNum=${pageNo }">${pageNo }</a></li>
+		 </c:if>
 	</c:forEach>
 
 	<!-- 이후 영역 -->
-	<c:if test="${listPage.endPage < listPage.totalPageCount }">
-		<a href="studyGroupListAction.do?pageNum=${listPage.endPage +1 }">[이후]</a>
+	<c:if
+	 test="${listPage.endPage < listPage.totalPageCount }">
+	 <li class="page-item"><a class="page-link"
+		 href="studyGroupListInfoAction.do?pageNum=${listPage.endPage +1 }">[이후]</a></li>
 	</c:if>
+	</ul>
+	</nav>
+	
 	
 	
 	

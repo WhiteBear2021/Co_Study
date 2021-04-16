@@ -1,3 +1,4 @@
+
 package CoStudy.mapper;
 
 import java.util.List;
@@ -9,9 +10,9 @@ import CoStudy.domain.StudyGroupVO;
 
 public interface StudyGroupMapper {
 	int insertStudyGroup(StudyGroupVO studyGroup);
-	List<StudyGroupVO> studyGroupList(RowBounds row);
 	StudyGroupVO studyGroupDetail(int studygroup_no);
 	int countstudyGroupList();
 	int insertApplyGroupStudy(ApplyGroupMemberVO applyGroupMember);
-	int getGroupNo(String studygroup_name);
+	List<StudyGroupVO> studyGroupListInfo(RowBounds row);
 }
+
