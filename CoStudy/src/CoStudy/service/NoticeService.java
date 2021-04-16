@@ -64,6 +64,7 @@ public class NoticeService {
 		HttpSession session=request.getSession();
 		ManagerVO manager=(ManagerVO) session.getAttribute("manager");
 		System.out.println("manager:"+manager);
+		
 		notice.setManager_no(manager.getManager_no());
 		
 
