@@ -17,10 +17,8 @@
 				</div>
 				<div class="collapse" id="nav-user-link">
 					<ul class="list-unstyled">
-						<li class="list-group-item"><a href="#"><i
-								class="feather icon-user m-r-5"></i>정보 수정</a></li>
-						<li class="list-group-item"><a href="#"><i
-								class="feather icon-settings m-r-5"></i>정보수정</a></li>
+						<li class="list-group-item"><a href="managerList.do"><i
+								class="feather icon-user m-r-5"></i>관리자 리스트/추가</a></li>
 						<li class="list-group-item"><a
 							href="#"><i
 								class="feather icon-log-out m-r-5"></i>로그아웃</a></li>
@@ -35,9 +33,9 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">디자인
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="#" target="_blank">배너 이미지
+						<li><a href="#" >배너 이미지
 								변경</a></li>
-						<li><a href="#" target="_blank">이미지
+						<li><a href="#" >이미지
 								편집</a></li>
 					</ul></li>
 				<li class="nav-item pcoded-hasmenu"><a href="#"
@@ -45,10 +43,10 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">사용자
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="#" target="_blank">전체 회원
+						<li><a href="../manageUser/userInfo.do" >전체 회원
 								리스트</a></li>
-						<li><a href="#" target="_blank">통계_회원</a></li>
-						<li><a href="#" target="_blank">새로운
+						<li><a href="#" >통계_회원</a></li>
+						<li><a href="../manageUser/newUser.do">새로운
 								회원</a></li>
 					</ul></li>
 				<li class="nav-item pcoded-hasmenu"><a href="#"
@@ -56,8 +54,8 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">공지사항
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="/CoStudy/Notice/noticeInfoAction.do" target="_blank">공지사항 리스트</a></li>
-						<li><a href="/CoStudy/Notice/noticeAction.do" target="_blank">공지사항 등록</a></li>
+						<li><a href="/CoStudy/Notice/noticeInfoAction.do" >공지사항 리스트</a></li>
+						<li><a href="/CoStudy/Notice/noticeAction.do" >공지사항 등록</a></li>
 
 					</ul></li>
 				<li class="nav-item pcoded-hasmenu"><a href="#!"
@@ -65,8 +63,8 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">자주묻는질문
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="#" target="_blank">자주묻는질문 리스트</a></li>
-						<li><a href="#" target="_blank">자주묻는질문 등록</a></li>
+						<li><a href="#" >자주묻는질문 리스트</a></li>
+						<li><a href="#" >자주묻는질문 등록</a></li>
 
 					</ul></li>
 
@@ -80,9 +78,9 @@
 							class="feather icon-layout"></i></span><span class="pcoded-mtext">스터디그룹
 							관리</span></a>
 					<ul class="pcoded-submenu">
-						<li><a href="#" target="_blank">스터디그룹
+						<li><a href="#" >스터디그룹
 								리스트</a></li>
-						<li><a href="#" target="_blank">통계_스터디그룹</a></li>
+						<li><a href="#" >통계_스터디그룹</a></li>
 
 					</ul></li>
 

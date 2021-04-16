@@ -3,8 +3,10 @@ package CoStudy.service;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import CoStudy.dao.NoticeDao;
+import CoStudy.domain.ManagerVO;
 import CoStudy.domain.NoticePageVO;
 import CoStudy.domain.NoticeVO;
 
@@ -58,8 +60,11 @@ public class NoticeService {
 		NoticeVO notice = new NoticeVO();
 		notice.setNotice_title(request.getParameter("notice_title"));
 		notice.setNotice_content(request.getParameter("notice_content"));
-		System.out.println(request.getParameter("notice_title"));
-		System.out.println(request.getParameter("notice_content"));
+
+		HttpSession session=request.getSession();
+		ManagerVO manager=(ManagerVO) session.getAttribute("manager");
+		notice.setManager_no(manager.getManager_no());
+		
 
 		return noticeDao.noticeCreate(notice);
 	}

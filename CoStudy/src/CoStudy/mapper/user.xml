@@ -12,7 +12,6 @@
 		<![CDATA[
 			select * from User_Info where TO_CHAR(user_register_date,'YY/MM/DD')=#{dateString}
 		]]>
-		<!-- select * from User_Info where user_register_date=#{dateString} -->
 
 	</select>
 

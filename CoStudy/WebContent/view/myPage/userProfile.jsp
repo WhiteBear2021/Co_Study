@@ -23,8 +23,8 @@
 								<li class="p-1"><a href="#">1:1 채팅목록&nbsp;&nbsp;<i class="bi bi-chat-square-quote fs-1"></i></a></li>
 								<li class="p-1"><a href="/CoStudy/myPage/joinGroupListAction.do">참가 그룹 목록&nbsp;&nbsp;<i class="bi bi-chat-quote fs-1"></i></a></li>
 								<li class="p-1"><a href="/CoStudy/myPage/categoryUpdateFormAction.do">관심 분야 수정&nbsp;&nbsp;<i class="bi bi-pencil-fill fs-1"></i></a></li>
-								<li class="p-1"><a href="/CoStudy/myPage/userUpdateFormAction.do">회원 정보 수정&nbsp;&nbsp;<i class="bi bi-pencil-square fs-1"></i></a></li>
-								<li class="p-1"><a href="/CoStudy/myPage/applyQuitUserCheckFormAction.do">회원 탈퇴 신청&nbsp;&nbsp;<i class="bi bi-x-circle fs-1"></i></a></li>
+								<li class="p-1"><a href="/CoStudy/myPage/userUpdateFormAction.do">회원 정보 수정&nbsp;&nbsp;<i class="bi bi-tools fs-1"></i></a></li>
+								<li class="p-1"><a href="/CoStudy/myPage/applyQuitUserCheckFormAction.do">회원 탈퇴 신청&nbsp;&nbsp;<i class="bi bi-person-x fs-1"></i></a></li>
 							</ul>
 						</nav>
 				</div>
@@ -37,34 +37,34 @@
 								<i class="bi bi-person-square fs-1"></i><br>
 								<b>NickName : CoStudy</b>
 						</div>
-						<div class="bg-white col-6 border border-primary p-0 m-4">
+						<div class="bg-white col-6 border border-primary p-0 m-2">
 							<h4>Infomation</h4>
 							<label>
-							<p class="m-0 p-1">아이디</p> ${sessionScope.user.user_id}
+							<p class="m-0 p-1"><b>아이디 :</b></p> <span class="fs-4">${sessionScope.user.user_id}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">생년월일</p> ${sessionScope.user.user_birth}
+							<p class="m-0 p-1"><b>생년월일 :</b></p> <span class="fs-4">${sessionScope.user.user_birth}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">이름</p> ${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}
+							<p class="m-0 p-1"><b>이름 :</b></p> <span class="fs-4">${sessionScope.user.user_lastName}${sessionScope.user.user_firstName}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">휴대전화 번호</p>${sessionScope.user.user_phoneNo }
+							<p class="m-0 p-1"><b>휴대전화 번호 :</b></p> <span class="fs-4">${sessionScope.user.user_phoneNo }</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">주소</p> ${sessionScope.user.user_address1}${sessionScope.user.user_address2}
+							<p class="m-0 p-1"><b>주소 :</b></p> <span class="fs-4">${sessionScope.user.user_address1}${sessionScope.user.user_address2}</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">이메일 주소</p> ${sessionScope.user.user_email }
+							<p class="m-0 p-1"><b>이메일 주소 :</b></p> <span class="fs-4">${sessionScope.user.user_email }</span>
 							</label>
 							<br>
 							<label>
-							<p class="m-0 p-1">	가입일</p>  ${sessionScope.user.user_register_date }
+							<p class="m-0 p-1"><b>가입일 :</b></p>  <span class="fs-4">${sessionScope.user.user_register_date }</span>
 							</label>
 
 						</div>

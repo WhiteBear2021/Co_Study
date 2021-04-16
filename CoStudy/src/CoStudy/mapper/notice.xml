@@ -17,7 +17,7 @@
 		#{notice_title},
 		#{notice_content},
 		SYSDATE,
-		1
+		#{manager_no}
 		)
 	</insert>
 	<select id="countNotice" resultType="int">

@@ -19,7 +19,8 @@
 	</select>
 	
 	<select id="joinGroupList" parameterType="int" resultType="StudyGroup">
-		select * from STUDYGROUP WHERE user_no=#{user_no}
+		select * from STUDYGROUP WHERE studygroup_no in (select studygroup_no
+                                            			 from groupuser where user_no = #{user_no})
 	</select>
 
 </mapper>

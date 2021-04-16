@@ -15,7 +15,76 @@
 
 <link type="text/css" rel="stylesheet"
 	href="../css/groupSidebar_list.css">
+	<script
+	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src="../js/side.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/timer.js"></script>
+<script type="text/javascript">
+
+(function($){
+  $('#ajaxConGetButton').click(function(){
+        AjaxConGet();
+    })
+    
+    /* $('#yesBtn').click(function(){
+        AjaxConPost();
+    }) */
+	
+});
+function AjaxConGet(){
+    var url = "http://localhost:8080/test/ajaxCon";
+    $.ajax({
+        type:"GET",
+        url:url,
+        dataType:"html",
+        data:{
+            name : $('#ajaxConName').val(),
+            age : $('#ajaxConAge').val()
+        },
+        success : function(data){
+            alert('ajax GET 통신 성공');
+            var $div = $('<div></div>');
+            var text = document.createTextNode(data);
+            $div.append(data);
+            $div.appendTo($('#myDiv'))
+        
+        },
+        error : function(request,status,error){
+            alert('code:'+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); //에러 상태에 대한 세부사항 출력
+            alert(e);
+        }
+    })
+    
+}
+ 
+function AjaxConPost(acceptYn){
+    var url = "acceptMember.do";
+    $.ajax({
+        type:"POST",
+        url:url,
+        dataType:"html",
+        data:{
+        	studyGroup_no : $('#studyGroup_no').val(),
+        	user_no : $('#user_no').val(),
+        	isAccept : acceptYn
+        },
+        success : function(data){
+            alert('수락하셨습니다.');
+            location.reload();
+        },
+        error : function(request,status,error){
+            alert('code:'+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error); //에러 상태에 대한 세부사항 출력
+            alert(e);
+        }
+    })
+    
+}
+
+</script>
 </head>
 
 <body>
@@ -86,20 +155,27 @@
 						<div id="acceptTable" class="table-box table-box--vertical"
 							style="width: 600px; height: 650px;">
 							<h2>그룹 신청 목록</h2>
+							<input type="hidden" name="studyGroup_no" value="1">
+							<%-- <input type="hidden" name="studygroup_no"
+								value="${studyGroup.studygroup_no }"> --%>
 							<table class="table table--vertical" id="accept-list">
-								<tr>
-									<td>...</td>
-
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
-								<tr>
-									<td>...</td>
-								</tr>
+								<tbody>
+									<c:forEach var="applyGroupMember" items="${applyUserList}">
+										<tr>
+											<td>${applyGroupMember.studyGroup_no }</td>
+											<td>${applyGroupMember.user_no }</td>
+											<td>
+											<input type="hidden" id="studyGroup_no" value="${applyGroupMember.studyGroup_no }">
+											<input type="hidden" id="user_no" value="${applyGroupMember.user_no}">
+											<input type="button" id="yesBtn" onclick="AjaxConPost('Y')"
+												<%-- onclick="location.href='acceptMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'" --%>
+												value="수락"></td>
+											<td><input type="button" onclick="AjaxConPost('N')"
+												<%-- onclick="location.href='refuseMember.do?studyGroup_no=${applyGroupMember.studyGroup_no }&user_no=${applyGroupMember.user_no}'"--%>
+												value="거절"></td>
+										</tr>
+									</c:forEach>
+								</tbody>
 
 
 							</table>
@@ -146,16 +222,5 @@
 	</div>
 
 </body>
-<!-- partial -->
-<script
-	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src="../js/side.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-<script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/timer.js"></script>
-
-
-</body>
 </html>
