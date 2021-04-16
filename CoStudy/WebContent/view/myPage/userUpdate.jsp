@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,34 +37,38 @@
 					<form action="userUpdateAction.do" method="post">
 					        <input type="hidden" name="user_no" value="${user.user_no}">
 					        <label>
-					        	<p>아이디 : ${sessionScope.user.user_id}
+					        	<p><b>아이디 :</b> ${sessionScope.user.user_id}
 					        </label>
 					        <label>
-					        	<p>비밀번호 : <input type="password" name="user_pw" value="${sessionScope.user.user_pw}"></p>
+					        	<p><b>비밀번호 :</b> <input type="password" name="user_pw" value="${sessionScope.user.user_pw}"></p>
 					        </label>
 					        <label>
-					        	<p>생년월일 : ${sessionScope.user.user_birth}
+					        	<p><b>생년월일 :</b> 
+					     		<fmt:parseDate var="dt" value="${sessionScope.user.user_birth}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:parseDate>
+								<fmt:formatDate value="${dt}" pattern="yyyy-MM-dd"/>
 					        </label>
 					        <label>
-					        	 <p> 성 : <input type="text" name="user_lastName" value="${sessionScope.user.user_lastName}"> 이름 : <input type="text" name="user_firstName" value="${sessionScope.user.user_firstName}"></p>
+					        	 <p> <b>성 :</b> <input type="text" name="user_lastName" value="${sessionScope.user.user_lastName}"> <b>이름 :</b> <input type="text" name="user_firstName" value="${sessionScope.user.user_firstName}"></p>
 					        </label>
 					        <label>
-					        	<p> 휴대전화 번호 : <input type="text" name="user_phoneNo" value="${sessionScope.user.user_phoneNo}"></p>
+					        	<p> <b>휴대전화 번호 :</b> <input type="text" name="user_phoneNo" value="${sessionScope.user.user_phoneNo}"></p>
 					        </label>
 					        <label>
-					        	<p>우편번호 : <input type="text" name="user_post" value="${sessionScope.user.user_post }"></p>
+					        	<p><b>우편번호 :</b> <input type="text" name="user_post" value="${sessionScope.user.user_post }"></p>
 					        </label>
 					        <label>
-					        	<p> 주소 : <input type="text" name="user_address1" value="${sessionScope.user.user_address1 }"></p>
+					        	<p> <b>주소 :</b> <input type="text" name="user_address1" value="${sessionScope.user.user_address1 }"></p>
 					        </label>
 					        <label>
-					        	<p>  상세주소 : <input type="text" name="user_address2" value="${sessionScope.user.user_address2}"></p>
+					        	<p>  <b>상세주소 :</b> <input type="text" name="user_address2" value="${sessionScope.user.user_address2}"></p>
 					        </label>
 					        <label>
-					        	<p>  이메일주소 : <input type="text" name="user_email" value="${sessionScope.user.user_email }"></p>
+					        	<p>  <b>이메일주소 :</b> <input type="text" name="user_email" value="${sessionScope.user.user_email }"></p>
 					        </label>
-					        <label>
-					        	<p>  가입일 : <input type="text" name="user_register_date" value="${sessionScope.user.user_register_date}" readonly="readonly"></p>
+					        <label>								
+					     		<fmt:parseDate var="dt" value="${sessionScope.user.user_register_date}" pattern="yyyy-MM-dd HH:mm:ss"></fmt:parseDate>
+								
+					        	<p>  <b>가입일 :</b> <input type="text" name="user_register_date" value=<fmt:formatDate value="${dt}" pattern="yyyy-MM-dd"/> readonly="readonly"></p>
 					        </label><br><br>
                             <div class="text-center">
 							<button type="submit" class="btn btn-primary p-1">수정</button>
