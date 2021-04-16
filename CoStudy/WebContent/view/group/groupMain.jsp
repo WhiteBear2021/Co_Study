@@ -8,12 +8,12 @@
 <link rel='stylesheet'
    href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 <link rel="stylesheet" href="../css/groupMain_style.css">
-<link
-   href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
-   rel="stylesheet">
+
 <link type="text/css" rel="stylesheet" href="../css/timer.css">
-<link type="text/css" rel="stylesheet"
-   href="../css/groupSidebar_list.css">
+<link type="text/css" rel="stylesheet" href="../css/groupSidebar_list.css">
+
+
+
 <link rel="stylesheet" type="text/css"
    href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
@@ -23,7 +23,7 @@
    <div id="wrapper">
       <div id="sidebar-wrapper">
          <ul class="sidebar-nav">
-            <!--nav-->
+
             <li>
                <nav id="side-userbox">
                   <input type="image" name="user_name" value="이름">
@@ -230,20 +230,22 @@
 
 
       </div>
+      </div>
+      
 </body>
 <!-- partial -->
 <script
+   src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script
    src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src="../../js/side.js"></script>
+<script src="../js/side.js"></script>
 <script
    src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-<script type="text/javascript" src="../../js/jquery.js"></script>
-<script type="text/javascript" src="../../js/timer.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/timer.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script
-   src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
 <script type="text/javascript">
    $(document).on(
