@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<footer class="container-fluid navbar-fixed-bottom" id="foo">
+	<footer class="container-fluid navbar-bottom" id="foo">
 		<h3 class="text-secondary" id="fo">(주)Costudy 사업자 정보</h3>
 		<p>(주)Costudy | 경기도 시흥시 황고개로 206번길 43</p>
 		<p>

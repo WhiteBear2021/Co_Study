@@ -82,14 +82,6 @@
 	position: relative;
 }
 
-#setting {
-	width: 1000px;
-	height: 800px;
-	margin-left: 140px;
-	position: absolute;
-	padding-right: 40px;
-
-}
 
 #text-box {
 	border-radius: 10px;
@@ -114,9 +106,8 @@
 	height: 200px;
 	padding: 20px;
 	margin-top: 40px;
-	margin-left: 20px;
-	background-color: white;
-	box-shadow: 2px 2px 2px 2px;
+
+
 }
 
 #group-Main-right-bottom {
@@ -125,9 +116,8 @@
 	height: 470px;
 	padding: 20px;
 	margin-top: 20px;
-	margin-left: 20px;
-	background-color: white;
-	box-shadow: 2px 2px 2px 2px;
+	
+
 	
 }
 
@@ -163,16 +153,13 @@ body{
 }
 
 #group-accept {
-	width: 750px; 
+	width: 800px; 
 	height: 650px;
 }
 
 #acceptTable {
-	border:solid 2px #3D5A5B;
-	background-color: white;  
-	position: relative;
-	overflow: scroll;
-	padding: 10px;
+	whide: 700px;
+	height: 650px;
 }
 
 
@@ -189,3 +176,13 @@ body{ -ms-overflow-style: none; }
 	margin-top: 20px;
 }
 
+h2 {
+	font-family: ;
+	padding: 2px;
+	font-weight: 800;
+	padding-left: 20px;
+}
+
+#yesBtn, #noBtn {
+
+}
