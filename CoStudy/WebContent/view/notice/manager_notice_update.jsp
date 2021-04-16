@@ -51,7 +51,7 @@
 
 
 								<div style="text-align: center;">
-									<button type="submit" class="button type1">수정하기</button>
+									<button type="submit" class="button type1">수정완료</button>
 
 								</div>
 							</form>
