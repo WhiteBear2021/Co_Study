@@ -13,7 +13,7 @@ import CoStudy.action.studyGroup.ApplyStudyGroupAction;
 import CoStudy.action.studyGroup.MakeGroupAction;
 import CoStudy.action.studyGroup.MakeGroupFormAction;
 import CoStudy.action.studyGroup.StudyGroupDetailAction;
-import CoStudy.action.studyGroup.StudyGroupListAction;
+import CoStudy.action.studyGroup.StudyGroupListInfoAction;
 import CoStudy.action.user.LoginAction;
 import CoStudy.action.user.LoginFormAction;
 import CoStudy.action.user.MyPageAction;
@@ -57,8 +57,8 @@ public class StudyGroupController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}   
-    	}else if(command.equals("studyGroupListAction.do")) {
-    		action = new StudyGroupListAction();
+    	}else if(command.equals("studyGroupListInfoAction.do")) {
+    		action = new StudyGroupListInfoAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

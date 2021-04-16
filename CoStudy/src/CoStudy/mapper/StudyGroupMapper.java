@@ -9,8 +9,11 @@ import CoStudy.domain.StudyGroupVO;
 
 public interface StudyGroupMapper {
 	int insertStudyGroup(StudyGroupVO studyGroup);
-	List<StudyGroupVO> studyGroupList(RowBounds row);
 	StudyGroupVO studyGroupDetail(int studygroup_no);
 	int countstudyGroupList();
 	int insertApplyGroupStudy(ApplyGroupMemberVO applyGroupMember);
+	
+	
+	
+	List<StudyGroupVO> studyGroupListInfo(RowBounds row);
 }

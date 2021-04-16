@@ -40,13 +40,12 @@ public class StudyGroupDao {
 		return re;
 	}
 	
-	public List<StudyGroupVO> studyGroupList(int startRow){
-		List<StudyGroupVO> studyGroupList = null;
+	public List<StudyGroupVO> studyGroupListInfo(int startRow){
+		List<StudyGroupVO> list = null;
 		SqlSession sqlSession = MySqlSessionFactory.getSession();
 		
 		try {
-			studyGroupList=sqlSession.getMapper(StudyGroupMapper.class).studyGroupList(new RowBounds(startRow,5));
-			
+			list=sqlSession.getMapper(StudyGroupMapper.class).studyGroupListInfo(new RowBounds(startRow,5));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -55,7 +54,7 @@ public class StudyGroupDao {
 			}
 		}
 		
-		return studyGroupList;
+		return list;
 	}
 	
 	public StudyGroupVO studyGroupDetail(int studygroup_no) {
