@@ -7,6 +7,7 @@ import CoStudy.domain.GroupPageBoardVO;
 
 public interface GroupPageMapper {
 
+	
 	int insertGroupBoard(GroupPageBoardVO groupPageBoardVO);
 	List<GroupPageBoardVO> selectGroupBoard(int studyGroup_no);
 	List<GroupPageBoardVO> groupBoardList();

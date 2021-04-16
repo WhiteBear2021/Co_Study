@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CoStudy.mapper.StudyGroupMapper">
 	<insert id="insertApplyGroupStudy" parameterType="ApplyGroupMember">
-		insert into apply_group_member values('N',#{user_no},#{studyGroup_no})
+		insert into apply_group_member values('O',#{user_no},#{studyGroup_no})
 	</insert>
 
 	<insert id="insertStudyGroup" parameterType="StudyGroup">

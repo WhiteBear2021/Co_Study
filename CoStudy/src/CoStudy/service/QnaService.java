@@ -3,10 +3,13 @@ package CoStudy.service;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import CoStudy.dao.QnaDao;
+import CoStudy.domain.ManagerVO;
 import CoStudy.domain.QnaPageVo;
 import CoStudy.domain.QnaVO;
+import CoStudy.domain.UserVO;
 
 public class QnaService {
 	private static QnaService qnaService=new QnaService();
@@ -65,9 +68,11 @@ public class QnaService {
 		QnaVO qna=new QnaVO();
 		qna.setQna_title(request.getParameter("qna_title"));
 		qna.setQna_content(request.getParameter("qna_content"));
-		
-		System.out.println(request.getParameter("qna_title"));
-		System.out.println(request.getParameter("qna_content"));
+//		HttpSession session=request.getSession();
+//		ManagerVO manager=(ManagerVO) session.getAttribute("manager");
+//		qna.setManager_no(manager.getManager_no());
+//		UserVO user = (UserVO) session.getAttribute("use");
+//		qna.setUser_no(user.getUser_no());
 		return qnaDao.QnaUserInsert(qna);
 		
 	}
@@ -78,8 +83,9 @@ public class QnaService {
 		qna.setQna_content(request.getParameter("qna_content"));
 		qna.setParentNo(Integer.parseInt(request.getParameter("qna_no")));
 		
-		System.out.println("qna_no:"+Integer.parseInt(request.getParameter("qna_no")));
-		System.out.println("제목:"+request.getParameter("qna_title"));
+		HttpSession session=request.getSession();
+		ManagerVO manager=(ManagerVO) session.getAttribute("manager");
+		qna.setManager_no(manager.getManager_no());
 		return qnaDao.QnaInsertManagerReply(qna);
 		
 	}
